@@ -4,8 +4,6 @@ public class PlayerController : MonoBehaviour
 {
 
     public float movementSpeed;
-    float movementInputX;
-    float movementInputY;
     Vector2 normalizedInput;
     Rigidbody2D rb;
 
@@ -17,10 +15,9 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        movementInputX = Input.GetAxisRaw("Horizontal");
-        movementInputY = Input.GetAxisRaw("Vertical");
-
-        normalizedInput = new Vector2(movementInputX, movementInputY).normalized;
+        normalizedInput = new Vector2(
+            Input.GetAxisRaw("Horizontal"),
+            Input.GetAxisRaw("Vertical")).normalized;
 
         rb.linearVelocity = normalizedInput * movementSpeed;
         
