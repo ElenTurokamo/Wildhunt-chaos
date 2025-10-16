@@ -2,15 +2,32 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public float movementSpeed;
+    float movementInputX;
+    float movementInputY;
+    Vector2 normalizedInput;
+    Rigidbody2D rb;
+
+    [SerializeField] float minPosX, maxPosX, minPosY, maxPosY;
+    void Awake()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        movementInputX = Input.GetAxisRaw("Horizontal");
+        movementInputY = Input.GetAxisRaw("Vertical");
+
+        normalizedInput = new Vector2(movementInputX, movementInputY).normalized;
+
+        rb.linearVelocity = normalizedInput * movementSpeed;
         
+        Vector2 clampedPosition = new Vector2(
+            Mathf.Clamp(transform.position.x, minPosX, maxPosX),
+            Mathf.Clamp(transform.position.y, minPosY, maxPosY));
+
+        rb.position = clampedPosition;
     }
 }

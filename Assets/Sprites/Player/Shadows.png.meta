@@ -115,12 +115,12 @@ TextureImporter:
       name: Shadows_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 14
-        width: 6
-        height: 6
+        x: 0
+        y: 0
+        width: 28
+        height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -133,99 +133,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Shadows_1
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 18
-        width: 6
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d46862ab7d94d4b00800000000000000
-      internalID: 814388298513811021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shadows_2
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 18
-        width: 6
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3007475b136096e90800000000000000
-      internalID: -7032082532594847741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shadows_3
-      rect:
-        serializedVersion: 2
-        x: 20
-        y: 14
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3b202eeac3fabec90800000000000000
-      internalID: -7139420109098843469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shadows_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 28
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 597a22af673e67b80800000000000000
-      internalID: -8397274355043489899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e65bf95765c6e54a9579e989c1006a5
     internalID: 0
     vertices: []
     indices: 
@@ -233,13 +145,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":28.0,"y":23.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Shadows_0: -8632807521500629345
-      Shadows_1: 814388298513811021
-      Shadows_2: -7032082532594847741
-      Shadows_3: -7139420109098843469
-      Shadows_4: -8397274355043489899
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
