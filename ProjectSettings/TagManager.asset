@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
@@ -41,3 +41,44 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackgroundFar
+    uniqueID: 1260870239
+    locked: 0
+  - name: BackgroundNear
+    uniqueID: 3389063763
+    locked: 0
+  - name: Midground
+    uniqueID: 4162098581
+    locked: 0
+  - name: Interactable
+    uniqueID: 3494853403
+    locked: 0
+  - name: Player -1
+    uniqueID: 530146605
+    locked: 0
+  - name: Player
+    uniqueID: 3835632349
+    locked: 0
+  - name: Player 1
+    uniqueID: 496480269
+    locked: 0
+  - name: Enemies
+    uniqueID: 2561630751
+    locked: 0
+  - name: Projectiles
+    uniqueID: 1800501743
+    locked: 0
+  - name: Foreground
+    uniqueID: 2050028929
+    locked: 0
+  - name: UI_World
+    uniqueID: 2702817547
+    locked: 0
+  - name: UI
+    uniqueID: 2716025549
+    locked: 0
+  - name: VFX_Top
+    uniqueID: 3103342519
+    locked: 0
+  m_RenderingLayers:
+  - Default
