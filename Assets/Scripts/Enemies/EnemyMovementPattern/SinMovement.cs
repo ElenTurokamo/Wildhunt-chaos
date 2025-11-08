@@ -1,16 +1,22 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SinMovement : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    float sinCenterX;
+
     void Start()
     {
-        
+        sinCenterX = transform.position.x;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        Vector2 pos = transform.position;
+
+        float sin = Mathf.Cos(pos.y);
+        pos.x = sinCenterX + sin;
+
+        transform.position = pos;
     }
 }
