@@ -231,11 +231,11 @@ MonoBehaviour:
   layers:
   - background1: {fileID: 1253390223676117383}
     background2: {fileID: 1316551659179127939}
-    scrollSpeed: 1
+    scrollSpeed: 2
     spriteHeight: 0
   - background1: {fileID: 4971925478348454596}
     background2: {fileID: 8117361981540623336}
-    scrollSpeed: 2
+    scrollSpeed: 4
     spriteHeight: 0
 --- !u!1 &5532589969411700694
 GameObject:
