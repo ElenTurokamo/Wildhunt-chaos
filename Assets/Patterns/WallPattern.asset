@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WallPattern
   m_EditorClassIdentifier: Assembly-CSharp::WallPattern
   patternName: 
-  enemyPrefab: {fileID: 2956199916723022952, guid: e912af19d61082c47996431a698498a3, type: 3}
+  enemyPrefab: {fileID: 2956199916723022952, guid: 65f19b67d049f8f4a9a313c2c3320c01, type: 3}
   threatCost: 1
   rows: 3
   cols: 5
