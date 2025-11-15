@@ -9,9 +9,9 @@ public class SnakePattern : WavePattern
 
     public override void Spawn(WaveController controller)
     {
-        float topY = Camera.main.orthographicSize + Camera.main.transform.position.y + 1f;
+        float topY = Camera.main.orthographicSize + Camera.main.transform.position.y + 2f;
         float camHalfWidth = Camera.main.orthographicSize * Camera.main.aspect;
-        float maxAmplitude = Mathf.Min(amplitude, camHalfWidth - 0.5f); // ограничиваем, чтобы не вылетало
+        float maxAmplitude = Mathf.Min(amplitude, camHalfWidth - 0.5f); 
 
         for (int i = 0; i < count; i++)
         {

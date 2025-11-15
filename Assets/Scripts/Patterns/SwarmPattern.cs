@@ -8,7 +8,7 @@ public class SwarmPattern : WavePattern
 
     public override void Spawn(WaveController controller)
     {
-        float topY = Camera.main.orthographicSize + Camera.main.transform.position.y + 1f;
+        float topY = Camera.main.orthographicSize + Camera.main.transform.position.y + 2f;
         float camHalfWidth = Camera.main.orthographicSize * Camera.main.aspect;
 
         float maxSpread = Mathf.Min(spread, camHalfWidth - 0.5f);
