@@ -3,15 +3,23 @@ using UnityEngine;
 
 public class EnemyDestructable : MonoBehaviour
 {
+    [Header("Настройки очков")]
+    public int baseScore = 10;
+    [HideInInspector] public int threatCost = 1;
 
     bool canBeDestroyed = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private ScoreSystem scoreSystem;
+
+    void Awake()
+    {
+        scoreSystem = Object.FindFirstObjectByType<ScoreSystem>();
+    }
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (transform.position.y < 5.0f && !canBeDestroyed)
@@ -33,15 +41,20 @@ public class EnemyDestructable : MonoBehaviour
         }
 
         Bullet bullet = collision.GetComponent<Bullet>();
-        if (bullet != null)
+        if (bullet != null && !bullet.isEnemy)
         {
-            if (!bullet.isEnemy) { 
-                Destroy(gameObject);
-                Destroy(bullet.gameObject);
+            if (scoreSystem != null)
+            {
+                int points = baseScore * threatCost;
+                scoreSystem.AddScore(points);
+            }
+
+            Destroy(gameObject);
+            Destroy(bullet.gameObject);
             }
         }
     }
-}
+
 
 
 

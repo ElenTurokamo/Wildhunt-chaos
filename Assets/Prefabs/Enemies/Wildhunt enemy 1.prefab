@@ -502,6 +502,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca6d7fb35bbedd54da1acdf9970a8a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDestructable
+  baseScore: 100
+  threatCost: 1
 --- !u!61 &7795122829797530916
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -623,6 +625,7 @@ MonoBehaviour:
   autoShoot: 1
   shootIntervalSeconds: 0.5
   shootDelaySeconds: 0
+  isActive: 0
 --- !u!1 &7232812639724957791
 GameObject:
   m_ObjectHideFlags: 0
