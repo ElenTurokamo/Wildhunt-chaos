@@ -8,7 +8,7 @@ public class CrossPattern : WavePattern
 
     public override void Spawn(WaveController controller)
     {
-        float topY = Camera.main.orthographicSize + Camera.main.transform.position.y + 2f;
+        float topY = Camera.main.orthographicSize + Camera.main.transform.position.y + 4f;
         float camHalfWidth = Camera.main.orthographicSize * Camera.main.aspect;
 
         float maxSpacing = Mathf.Min(spacing, camHalfWidth / length - 0.5f);

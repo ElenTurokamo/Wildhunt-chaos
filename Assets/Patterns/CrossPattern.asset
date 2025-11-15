@@ -15,5 +15,5 @@ MonoBehaviour:
   patternName: 
   enemyPrefab: {fileID: 2956199916723022952, guid: e912af19d61082c47996431a698498a3, type: 3}
   threatCost: 1
-  spacing: 1.2
+  spacing: 1.5
   length: 4

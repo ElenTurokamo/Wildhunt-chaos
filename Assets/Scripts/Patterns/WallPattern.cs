@@ -9,7 +9,7 @@ public class WallPattern : WavePattern
 
     public override void Spawn(WaveController controller)
     {
-        float topY = Camera.main.orthographicSize + Camera.main.transform.position.y + 2f;
+        float topY = Camera.main.orthographicSize + Camera.main.transform.position.y + 4f;
         float camHalfWidth = Camera.main.orthographicSize * Camera.main.aspect;
         float maxRowWidth = (cols - 1) * spacing / 2f;
 

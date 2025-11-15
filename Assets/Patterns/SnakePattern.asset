@@ -17,4 +17,4 @@ MonoBehaviour:
   threatCost: 1
   count: 8
   amplitude: 2
-  spacing: 1
+  spacing: 1.5

@@ -122,13 +122,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8253683002047354899}
-  - component: {fileID: 4410895961273889214}
   - component: {fileID: 4791745188139630153}
   - component: {fileID: 8379907996789820859}
   - component: {fileID: 2589519301032965068}
   - component: {fileID: 4571113591024877079}
   m_Layer: 0
-  m_Name: Regular enemy
+  m_Name: Regular enemy 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,21 +150,6 @@ Transform:
   - {fileID: 5600007897034894615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4410895961273889214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2956199916723022952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0452b10f5707804d92e09ec2f3a344a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SinMovement
-  amplitude: 1
-  frequency: 2
-  phaseOffset: 0
 --- !u!114 &4791745188139630153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,6 +248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca6d7fb35bbedd54da1acdf9970a8a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDestructable
+  baseScore: 10
+  threatCost: 1
 --- !u!1 &8965756241690956741
 GameObject:
   m_ObjectHideFlags: 0

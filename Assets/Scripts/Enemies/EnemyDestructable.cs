@@ -31,6 +31,10 @@ public class EnemyDestructable : MonoBehaviour
                 gun.isActive = true;
             }
         }
+        if (transform.position.y < -6f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
