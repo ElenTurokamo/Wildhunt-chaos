@@ -14,9 +14,14 @@ public class EnemyDestructable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y < 5.0f)
+        if (transform.position.y < 5.0f && !canBeDestroyed)
         {
             canBeDestroyed = true;
+            Gun[] guns = transform.GetComponentsInChildren<Gun>();
+            foreach (Gun gun in guns)
+            {
+                gun.isActive = true;
+            }
         }
     }
 

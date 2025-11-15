@@ -19,6 +19,10 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         guns = transform.GetComponentsInChildren<Gun>();
+        foreach (Gun gun in guns)
+        {
+            gun.isActive = true;
+        }
     }
 
     void Update()

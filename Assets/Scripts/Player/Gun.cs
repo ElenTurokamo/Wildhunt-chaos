@@ -12,6 +12,7 @@ public class Gun: MonoBehaviour
     float shootTimer = 0f;
     float delayTimer = 0f;
 
+    public bool isActive = false;
     void Start()
     {
 
@@ -19,6 +20,10 @@ public class Gun: MonoBehaviour
 
     void Update()
     {
+        if (!isActive)
+        {
+            return;
+        }
         direction = (transform.localRotation * Vector2.up).normalized;
 
         if (autoShoot){
