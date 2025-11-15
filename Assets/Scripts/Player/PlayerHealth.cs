@@ -11,6 +11,26 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Bullet bullet = collision.GetComponent<Bullet>();
+        if (bullet != null)
+        {
+            if (bullet.isEnemy)
+            {
+                Destroy(gameObject);
+                Destroy(bullet.gameObject);
+            }
+        }
+
+        EnemyDestructable destructable = collision.GetComponent<EnemyDestructable>();
+        if (destructable != null)
+        {
+            Destroy(gameObject);
+            Destroy(destructable.gameObject);    
+        }
     }
 }
