@@ -250,6 +250,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDestructable
   baseScore: 10
   threatCost: 1
+  health: 2
+  hitEffectPrefab: {fileID: 0}
 --- !u!1 &8965756241690956741
 GameObject:
   m_ObjectHideFlags: 0
