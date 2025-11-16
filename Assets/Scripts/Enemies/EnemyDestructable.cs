@@ -9,10 +9,13 @@ public class EnemyDestructable : MonoBehaviour
     [HideInInspector] public int threatCost = 1;
 
     [Header("Настройки здоровья")]
-    public int health = 3; // Количество попаданий, чтобы уничтожить врага
+    public int health = 3; 
 
     [Header("Эффект попадания")]
-    public float flashDuration = 0.1f; // Длительность мигания
+    public float flashDuration = 0.1f; 
+
+    [Header("Эффект взрыва при смерти")]
+    public GameObject explosionPrefab; 
 
     private bool canBeDestroyed = false;
     private ScoreSystem scoreSystem;
@@ -22,7 +25,6 @@ public class EnemyDestructable : MonoBehaviour
     void Awake()
     {
         scoreSystem = Object.FindFirstObjectByType<ScoreSystem>();
-        // Берём все SpriteRenderer дочерних объектов
         childRenderers = GetComponentsInChildren<SpriteRenderer>();
     }
 
@@ -51,7 +53,7 @@ public class EnemyDestructable : MonoBehaviour
         Bullet bullet = collision.GetComponent<Bullet>();
         if (bullet != null && !bullet.isEnemy)
         {
-            TakeDamage(1); // Каждый выстрел = 1 урон
+            TakeDamage(1);
             Destroy(bullet.gameObject);
         }
     }
@@ -60,7 +62,6 @@ public class EnemyDestructable : MonoBehaviour
     {
         health -= amount;
 
-        // Запускаем мигание дочерних спрайтов
         StartCoroutine(FlashHit());
 
         if (health <= 0)
@@ -70,22 +71,32 @@ public class EnemyDestructable : MonoBehaviour
                 int points = baseScore * threatCost;
                 scoreSystem.AddScore(points);
             }
+
+            // Эффект взрыва
+            if (explosionPrefab != null)
+            {
+                GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+                ParticleSystem ps = explosion.GetComponent<ParticleSystem>();
+                if (ps != null)
+                    Destroy(explosion, ps.main.duration + ps.main.startLifetime.constantMax);
+                else
+                    Destroy(explosion, 1f);
+            }
+
             Destroy(gameObject);
         }
     }
 
     private IEnumerator FlashHit()
     {
-        // Меняем цвет всех спрайтов на красный
         foreach (var sr in childRenderers)
         {
             if(sr != null)
-                sr.color = Color.lightPink;
+                sr.color = new Color(1f, 0.75f, 0.8f); 
         }
 
         yield return new WaitForSeconds(flashDuration);
 
-        // Возвращаем исходный цвет
         foreach (var sr in childRenderers)
         {
             if(sr != null)

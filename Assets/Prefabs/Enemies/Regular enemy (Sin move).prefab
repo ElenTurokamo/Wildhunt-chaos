@@ -268,7 +268,8 @@ MonoBehaviour:
   baseScore: 10
   threatCost: 1
   health: 1
-  hitEffectPrefab: {fileID: 0}
+  flashDuration: 0.1
+  explosionPrefab: {fileID: 1612062634570420469, guid: 74efb6b66c33917429b9526e1291b57e, type: 3}
 --- !u!1 &8965756241690956741
 GameObject:
   m_ObjectHideFlags: 0
