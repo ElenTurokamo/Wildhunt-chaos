@@ -48,7 +48,7 @@ MonoBehaviour:
   m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 0.051886797, g: 0.54218626, b: 1, a: 1}
+  m_Color: {r: 0.8941177, g: 0.43137258, b: 0.86666673, a: 1}
   m_Intensity: 6.53
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
@@ -68,8 +68,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00055000186, y: 0.0020499974, z: 0}
-    m_Extent: {x: 0.33835, y: 0.42235, z: 0}
+    m_Center: {x: 0.0015500039, y: 0.0022999942, z: 0}
+    m_Extent: {x: 0.41015, y: 0.4237, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -80,12 +80,16 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.3
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.03633742, y: -0.051589012, z: 0}
+  - {x: -0.078660846, y: -0.07796447, z: 0}
   - {x: -0.0012250245, y: -0.12221503, z: 0}
-  - {x: 0.04009621, y: -0.051521063, z: 0}
-  - {x: 0.036907107, y: 0.051352024, z: 0}
+  - {x: 0.078125946, y: -0.07728315, z: 0}
+  - {x: 0.110102236, y: -0.03128253, z: 0}
+  - {x: 0.111329, y: 0.030055763, z: 0}
+  - {x: 0.07739039, y: 0.07711411, z: 0}
   - {x: 0.001818642, y: 0.1258862, z: 0}
-  - {x: -0.037820235, y: 0.04742956, z: 0}
+  - {x: -0.07769012, y: 0.07809871, z: 0}
+  - {x: -0.108875476, y: 0.029442381, z: 0}
+  - {x: -0.1076487, y: -0.028828999, z: 0}
 --- !u!1 &7355728391408234526
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,10 +167,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1800501743
-  m_SortingLayer: 9
+  m_SortingLayer: 11
   m_SortingOrder: 0
-  m_Sprite: {fileID: 325323282961231739, guid: 22533531f8408114abd74b816b824dc6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.05374098, a: 1}
+  m_Sprite: {fileID: 1138540017325744610, guid: 49736be5addd47448be6ea74ea362bea, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -186,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 570218198547798904}
   - component: {fileID: 6242397387540072151}
-  - component: {fileID: 9057697293262070731}
+  - component: {fileID: 2606967340478133613}
   m_Layer: 0
   m_Name: Bullet-Type-1(Enemy)
   m_TagString: Untagged
@@ -224,11 +228,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   direction: {x: 0, y: 1}
-  speed: 20
+  speed: 15
   velocity: {x: 0, y: 0}
   isEnemy: 1
---- !u!61 &9057697293262070731
-BoxCollider2D:
+--- !u!58 &2606967340478133613
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -262,14 +266,4 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.08, y: 0.25}
-  m_EdgeRadius: 0
+  m_Radius: 0.12

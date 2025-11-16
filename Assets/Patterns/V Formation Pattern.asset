@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: V Formation Pattern
   m_EditorClassIdentifier: Assembly-CSharp::VFormationPattern
   patternName: 
-  enemyPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 2956199916723022952, guid: 65f19b67d049f8f4a9a313c2c3320c01, type: 3}
   threatCost: 1
   rows: 4
-  spacingX: 1.5
+  spacingX: 1.2
   spacingY: 1.2

@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000005f5a274b530201ca959514f81b3b4fd02d65991fdd1a9fe40db0971d1f62af98ef79516b81f5307a0bb919a1cd42e3a1b73ff9b8
+  m_ApplyToSortingLayers: 000000005f5a274b530201ca959514f81b3b4fd02d65991fdd1a9fe40db0971d1f62af98ef79516b81f5307a0bb919a1cd42e3a1b73ff9b8735b36140bffaa93
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -385,18 +385,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   normalPatterns:
-  - {fileID: 11400000, guid: 0fa1fe475c4e36b41b72b3971e712713, type: 2}
   - {fileID: 11400000, guid: 12ee662e980cade46a4b28d6bbcb1c51, type: 2}
+  - {fileID: 11400000, guid: 2fe208daeab524b44b6113551fda81f1, type: 2}
+  - {fileID: 11400000, guid: 0fa1fe475c4e36b41b72b3971e712713, type: 2}
   - {fileID: 11400000, guid: 43a50355f1b8be749846f115deadd54c, type: 2}
+  - {fileID: 11400000, guid: 1ad013734e3414e438e4b94ab3c0d57b, type: 2}
   - {fileID: 11400000, guid: 350c4125e39a0604fbefac51287b214b, type: 2}
   elitePatterns: []
   rarePatterns: []
-  baseDelay: 3
+  baseDelay: 5
   minDelay: 1.2
-  difficultyGrowth: 0.03
+  difficultyGrowth: 0.01
   bossPrefab: {fileID: 2839816345852371713, guid: 408177652c0aef045a2d698dcf32ef89, type: 3}
   bossSpawnPoint: {fileID: 1307215487}
-  bossInterval: 30
+  bossInterval: 20
   threat: {fileID: 621558099}
 --- !u!4 &621558101
 Transform:
