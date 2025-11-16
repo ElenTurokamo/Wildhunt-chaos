@@ -2,22 +2,25 @@ using UnityEngine;
 
 public class SinMovement : MonoBehaviour
 {
-    private float sinCenterX;
     public float amplitude = 1f;    // амплитуда колебаний
     public float frequency = 1f;    // частота колебаний
+    public float speed = 1f;        // скорость движения по Y
     public float phaseOffset = 0f;  // сдвиг фазы, чтобы враги были несинхронны
+
+    private float camCenterX;
 
     void Start()
     {
-        sinCenterX = transform.position.x;
+        camCenterX = Camera.main.transform.position.x; 
     }
 
     void FixedUpdate()
     {
         Vector3 pos = transform.position;
 
-        // X колеблется в зависимости от Y
-        pos.x = sinCenterX + Mathf.Sin(pos.y * frequency + phaseOffset) * amplitude;
+        pos.y -= speed * Time.fixedDeltaTime;
+
+        pos.x = camCenterX + Mathf.Sin(pos.y * frequency + phaseOffset) * amplitude;
 
         transform.position = pos;
     }

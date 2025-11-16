@@ -4,23 +4,37 @@ using UnityEngine;
 public class SwarmPattern : WavePattern
 {
     public int amount = 12;
-    public float spread = 3f;
-
+    public int columns = 4;          
+    public float horizontalSpacing = 1f;
+    public float verticalSpacing = 1f;   
     public override void Spawn(WaveController controller)
     {
-        float topY = Camera.main.orthographicSize + Camera.main.transform.position.y + 4f;
-        float camHalfWidth = Camera.main.orthographicSize * Camera.main.aspect;
+        Camera cam = Camera.main;
+        float topY = cam.orthographicSize + cam.transform.position.y + 4f;
+        float camX = cam.transform.position.x;
 
-        float maxSpread = Mathf.Min(spread, camHalfWidth - 0.5f);
+        var parent = new GameObject("SwarmGroup").transform;
 
+        int rows = Mathf.CeilToInt((float)amount / columns);
+
+        float totalWidth = (columns - 1) * horizontalSpacing;
+        float startX = camX - totalWidth * 0.5f;
+
+        int spawned = 0;
         for (int i = 0; i < amount; i++)
         {
-            if (!controller.threat.TrySpend(threatCost)) return;
+            if (!controller.threat.TrySpend(threatCost)) break;
 
-            float x = Random.Range(-maxSpread, maxSpread);
-            Vector3 pos = new Vector3(x, topY, 0);
+            int col = i % columns;
+            int row = i / columns;
 
-            Instantiate(enemyPrefab, pos, Quaternion.identity);
+            float x = startX + col * horizontalSpacing;
+            float y = topY - row * verticalSpacing;
+
+            Vector3 pos = new Vector3(x, y, 0f);
+            Instantiate(enemyPrefab, pos, Quaternion.identity, parent);
+            spawned++;
         }
+
     }
 }

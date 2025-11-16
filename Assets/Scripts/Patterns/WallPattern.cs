@@ -9,11 +9,17 @@ public class WallPattern : WavePattern
 
     public override void Spawn(WaveController controller)
     {
-        float topY = Camera.main.orthographicSize + Camera.main.transform.position.y + 4f;
-        float camHalfWidth = Camera.main.orthographicSize * Camera.main.aspect;
-        float maxRowWidth = (cols - 1) * spacing / 2f;
+        Camera cam = Camera.main;
+        float topY = cam.orthographicSize + cam.transform.position.y + 4f;
+        float camHalfWidth = cam.orthographicSize * cam.aspect;
 
-        if (maxRowWidth > camHalfWidth - 0.5f) spacing = (camHalfWidth - 0.5f) * 2f / (cols - 1);
+        float maxRowWidth = (cols - 1) * spacing / 2f;
+        if (maxRowWidth > camHalfWidth - 0.5f)
+            spacing = (camHalfWidth - 0.5f) * 2f / (cols - 1);
+
+        var parent = new GameObject("WallGroup").transform;
+
+        float startX = cam.transform.position.x - (cols - 1) * spacing / 2f;
 
         for (int y = 0; y < rows; y++)
         {
@@ -21,12 +27,12 @@ public class WallPattern : WavePattern
             {
                 if (!controller.threat.TrySpend(threatCost)) return;
 
-                float posX = (x - cols / 2f) * spacing;
+                float posX = startX + x * spacing;
                 float posY = topY + y * spacing;
 
-                Vector3 pos = new Vector3(posX, posY, 0);
+                Vector3 pos = new Vector3(posX, posY, 0f);
 
-                Instantiate(enemyPrefab, pos, Quaternion.identity);
+                Instantiate(enemyPrefab, pos, Quaternion.identity, parent);
             }
         }
     }
