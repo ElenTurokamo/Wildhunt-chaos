@@ -29,21 +29,31 @@ public class VFormationPattern : WavePattern
             }
         }
 
-        for (int row = 0; row < rows; row++)
+        // Спавним ряды с широкого к узкому, вершина V будет внизу
+        for (int row = rows - 1; row >= 0; row--)
         {
             if (!controller.threat.TrySpend(threatCost)) return;
 
-            float posY = topY - row * spacingY;
+            float posY = topY - (rows - 1 - row) * spacingY; // перевернутая логика
 
-            // Левый враг
-            float leftX = camX - row * spacingX;
-            Vector3 leftPos = new Vector3(leftX, posY, 0f);
-            Instantiate(enemyPrefab, leftPos, Quaternion.identity, parent);
+            if (row == 0)
+            {
+                // Вершина V — один враг
+                Vector3 centerPos = new Vector3(camX, posY, 0f);
+                Instantiate(enemyPrefab, centerPos, Quaternion.identity, parent);
+            }
+            else
+            {
+                // Левый враг
+                float leftX = camX - row * spacingX;
+                Vector3 leftPos = new Vector3(leftX, posY, 0f);
+                Instantiate(enemyPrefab, leftPos, Quaternion.identity, parent);
 
-            // Правый враг
-            float rightX = camX + row * spacingX;
-            Vector3 rightPos = new Vector3(rightX, posY, 0f);
-            Instantiate(enemyPrefab, rightPos, Quaternion.identity, parent);
+                // Правый враг
+                float rightX = camX + row * spacingX;
+                Vector3 rightPos = new Vector3(rightX, posY, 0f);
+                Instantiate(enemyPrefab, rightPos, Quaternion.identity, parent);
+            }
         }
     }
 }
