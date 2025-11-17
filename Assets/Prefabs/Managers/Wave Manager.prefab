@@ -55,9 +55,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 350c4125e39a0604fbefac51287b214b, type: 2}
   elitePatterns: []
   rarePatterns: []
-  baseDelay: 5
+  baseDelay: 4
   minDelay: 1.2
-  difficultyGrowth: 0.01
+  difficultyGrowth: 0.03
   bossPrefab: {fileID: 2839816345852371713, guid: 408177652c0aef045a2d698dcf32ef89, type: 3}
   bossSpawnPoint: {fileID: 8115839442595975925}
   bossInterval: 20
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfafb42d7ced24f429bdb0b179a2902c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThreatSystem
-  baseThreat: 15
+  baseThreat: 20
   growthRate: 0.5
 --- !u!1 &5198575860168960338
 GameObject:

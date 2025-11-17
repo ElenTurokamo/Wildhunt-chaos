@@ -22,6 +22,8 @@ public class PlayerHealth : MonoBehaviour
         {
             if (bullet.isEnemy)
             {
+                gameOverUI.SetActive(true);
+                Time.timeScale = 0f;
                 Destroy(gameObject);
                 Destroy(bullet.gameObject);
             }
@@ -32,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
         {
             gameOverUI.SetActive(true);
             Time.timeScale = 0f;
-            Destroy(gameObject);
+            Destroy(gameObject);    
             Destroy(destructable.gameObject);    
         }
     }
