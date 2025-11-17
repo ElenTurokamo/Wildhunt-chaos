@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public GameObject gameOverUI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,6 +30,8 @@ public class PlayerHealth : MonoBehaviour
         EnemyDestructable destructable = collision.GetComponent<EnemyDestructable>();
         if (destructable != null)
         {
+            gameOverUI.SetActive(true);
+            Time.timeScale = 0f;
             Destroy(gameObject);
             Destroy(destructable.gameObject);    
         }
