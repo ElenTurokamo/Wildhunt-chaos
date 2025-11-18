@@ -1,16 +1,16 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public MenuTransition transition;
+
     public void PlayGame()
     {
-        SceneManager.LoadScene("Game"); 
+        transition.Play(); 
     }
 
     public void QuitGame()
     {
         Application.Quit();
-        // Captain on the bridge
     }
 }
