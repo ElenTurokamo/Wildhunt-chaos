@@ -6,11 +6,11 @@ using UnityEngine.EventSystems;
 public class MenuTransition : MonoBehaviour
 {
     public CanvasGroup ui;
-    public Transform uiRoot;    // объект, который будет улетать вверх
+    public Transform uiRoot;   
     public float moveDistance = 1000f;
     public float duration = 1f;
 
-    public LightFader lightFader; // (создадим ниже)
+    public LightFader lightFader;
 
     void Start()
     {
@@ -40,15 +40,12 @@ public class MenuTransition : MonoBehaviour
             yield return null;
         }
 
-        // УНИЧТОЖАЕМ EventSystem из Menu СРАЗУ
         var eventSystem = FindFirstObjectByType<EventSystem>();
         if (eventSystem != null)
             Destroy(eventSystem.gameObject);
 
-        // Теперь грузим Game — ЧИСТО, СПОКОЙНО
         yield return SceneManager.LoadSceneAsync("Game", LoadSceneMode.Additive);
 
-        // И только потом — Unload Menu
         SceneManager.UnloadSceneAsync("Menu");
     }
 }

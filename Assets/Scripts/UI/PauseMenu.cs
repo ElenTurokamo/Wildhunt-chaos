@@ -35,7 +35,7 @@ public void GoToMenu()
     Time.timeScale = 1f;
     AudioListener.pause = false;
 
-    SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+    SceneManager.LoadScene("Bootstrap", LoadSceneMode.Single);
 }
 
 
