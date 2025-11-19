@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
@@ -29,9 +30,13 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
     }
 
-    public void GoToMenu()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
-    }
+public void GoToMenu()
+{
+    Time.timeScale = 1f;
+    AudioListener.pause = false;
+
+    SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+}
+
+
 }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class MenuTransition : MonoBehaviour
 {
@@ -27,7 +28,6 @@ public class MenuTransition : MonoBehaviour
         Vector3 startPos = uiRoot.localPosition;
         Vector3 targetPos = startPos + new Vector3(0, moveDistance, 0);
 
-        // Запуск изменения цвета света
         lightFader.FadeToGameColor();
 
         while (t < 1f)
@@ -40,10 +40,15 @@ public class MenuTransition : MonoBehaviour
             yield return null;
         }
 
-        // Загружаем GameScene поверх BackgroundScene
+        // УНИЧТОЖАЕМ EventSystem из Menu СРАЗУ
+        var eventSystem = FindFirstObjectByType<EventSystem>();
+        if (eventSystem != null)
+            Destroy(eventSystem.gameObject);
+
+        // Теперь грузим Game — ЧИСТО, СПОКОЙНО
         yield return SceneManager.LoadSceneAsync("Game", LoadSceneMode.Additive);
 
-        // Выгружаем MenuScene
+        // И только потом — Unload Menu
         SceneManager.UnloadSceneAsync("Menu");
     }
 }
