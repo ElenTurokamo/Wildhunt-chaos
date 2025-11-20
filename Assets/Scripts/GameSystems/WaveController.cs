@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class WaveController : MonoBehaviour
 {
@@ -24,6 +25,11 @@ public class WaveController : MonoBehaviour
     private float nextWaveTime;
     private float timeAlive = 0f;
     private float timeSinceLastBoss = 0f;
+
+    void Start()
+        {
+            SceneManager.SetActiveScene(gameObject.scene);
+        }
 
     void Update()
     {
