@@ -10,11 +10,9 @@ public class MenuTransition : MonoBehaviour
     public float moveDistance = 1000f;
     public float duration = 1f;
 
-    public LightFader lightFader;
-
     void Start()
     {
-        lightFader = FindFirstObjectByType<LightFader>();
+        
     }
 
     public void Play()
@@ -27,8 +25,6 @@ public class MenuTransition : MonoBehaviour
         float t = 0f;
         Vector3 startPos = uiRoot.localPosition;
         Vector3 targetPos = startPos + new Vector3(0, moveDistance, 0);
-
-        lightFader.FadeToGameColor();
 
         while (t < 1f)
         {
