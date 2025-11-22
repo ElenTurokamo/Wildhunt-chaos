@@ -491,7 +491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDestructable
   baseScore: 100
   threatCost: 1
-  health: 15
+  health: 20
   flashDuration: 0.1
   explosionPrefab: {fileID: 1612062634570420469, guid: 74efb6b66c33917429b9526e1291b57e, type: 3}
 --- !u!61 &7795122829797530916
@@ -579,9 +579,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb09a123b0e2814a8f96ac9a2b6c16f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopMovement
-  amplitude: 2
-  frequency: 1
-  speed: 3
+  speedY: 3
+  extraOffsetY: 1
+  amplitudeX: 3
+  xSpeed: 1
+  leftBoundX: -4.5
+  rightBoundX: 4.5
   phaseOffset: 0
 --- !u!1 &5603549047922309078
 GameObject:

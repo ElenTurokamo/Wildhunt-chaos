@@ -346,8 +346,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294939944
-  m_fontColor: {r: 0.15686275, g: 0.58431375, b: 1, a: 1}
+    rgba: 4294873546
+  m_fontColor: {r: 0.79215693, g: 0.5686275, b: 0.9960785, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -538,6 +538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScoreSystem
   scoreText: {fileID: 0}
   highScoreText: {fileID: 391025271}
+  runHighScoreText: {fileID: 0}
 --- !u!1 &657063086
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,7 +726,7 @@ GameObject:
   - component: {fileID: 760625689}
   - component: {fileID: 760625688}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LOGO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,5 +7,5 @@ public abstract class WavePattern : ScriptableObject
     public GameObject enemyPrefab;
     public int threatCost = 1; 
 
-    public abstract void Spawn(WaveController controller);
+    public abstract Transform Spawn(WaveController controller);
 }

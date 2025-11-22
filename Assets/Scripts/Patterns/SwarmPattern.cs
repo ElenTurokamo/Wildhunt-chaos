@@ -7,20 +7,34 @@ public class SwarmPattern : WavePattern
     public int columns = 4;          
     public float horizontalSpacing = 1f;
     public float verticalSpacing = 1f;   
-    public override void Spawn(WaveController controller)
+
+    public override Transform Spawn(WaveController controller)
     {
         Camera cam = Camera.main;
         float topY = cam.orthographicSize + cam.transform.position.y + 4f;
         float camX = cam.transform.position.x;
 
+        // создаём группу для всех врагов
         var parent = new GameObject("SwarmGroup").transform;
 
-        int rows = Mathf.CeilToInt((float)amount / columns);
+        // смещаем старт по Y, чтобы новая волна не накладывалась на предыдущие
+        var existingGroups = GameObject.FindObjectsByType<Transform>(FindObjectsSortMode.None);
+        foreach (var g in existingGroups)
+        {
+            if (g.name.StartsWith("SwarmGroup"))
+            {
+                float top = float.MinValue;
+                foreach (Transform child in g)
+                    if (child.position.y > top) top = child.position.y;
 
+                if (top + verticalSpacing > topY) topY = top + verticalSpacing;
+            }
+        }
+
+        int rows = Mathf.CeilToInt((float)amount / columns);
         float totalWidth = (columns - 1) * horizontalSpacing;
         float startX = camX - totalWidth * 0.5f;
 
-        int spawned = 0;
         for (int i = 0; i < amount; i++)
         {
             if (!controller.threat.TrySpend(threatCost)) break;
@@ -33,8 +47,8 @@ public class SwarmPattern : WavePattern
 
             Vector3 pos = new Vector3(x, y, 0f);
             Instantiate(enemyPrefab, pos, Quaternion.identity, parent);
-            spawned++;
         }
 
+        return parent; // возвращаем группу для WaveController
     }
 }

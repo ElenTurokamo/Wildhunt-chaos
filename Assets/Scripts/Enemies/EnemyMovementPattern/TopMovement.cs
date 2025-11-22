@@ -2,34 +2,35 @@ using UnityEngine;
 
 public class TopMovement : MonoBehaviour
 {
-    public float amplitude = 2f;    // амплитуда горизонтальных колебаний
-    public float frequency = 1f;    // частота колебаний
-    public float speed = 5f;        // скорость движения вниз
-    public float phaseOffset = 0f;  // сдвиг фазы для индивидуальности
+    [Header("Вертикальное движение")]
+    public float speedY = 5f;           // скорость движения вниз
+    public float extraOffsetY = 1.5f;   // дополнительное смещение вниз после достижения верхней границы
 
-    private float camLeftX;
-    private float camRightX;
+    [Header("Горизонтальное движение")]
+    public float amplitudeX = 2f;       // амплитуда колебаний по X
+    public float xSpeed = 2f;           // скорость колебаний по X
+    public float leftBoundX = -4.5f;    // левый предел движения
+    public float rightBoundX = 4.5f;    // правый предел движения
+    public float phaseOffset = 0f;      // индивидуальный сдвиг фазы
+
     private float camTopY;
-
     private bool reachedTop = false;
     private float startY;
+    private float startX;
 
-    private float halfWidth;  // половина ширины хитбокса
-    private float halfHeight; // половина высоты хитбокса
+    private float halfWidth;
+    private float halfHeight;
 
     void Start()
     {
         Camera cam = Camera.main;
         float camHeight = cam.orthographicSize;
-        float camWidth = cam.orthographicSize * cam.aspect;
 
-        camLeftX = cam.transform.position.x - camWidth;
-        camRightX = cam.transform.position.x + camWidth;
         camTopY = cam.transform.position.y + camHeight;
 
+        startX = transform.position.x;
         startY = transform.position.y;
 
-        // вычисляем размеры хитбокса
         var col = GetComponent<Collider2D>();
         if (col != null)
         {
@@ -50,20 +51,25 @@ public class TopMovement : MonoBehaviour
         if (!reachedTop)
         {
             // Движение вниз
-            pos.y -= speed * Time.fixedDeltaTime;
+            pos.y -= speedY * Time.fixedDeltaTime;
 
-            // Проверяем верхнюю границу хитбокса
+            // Проверка достижения верхней границы камеры
             if (pos.y + halfHeight <= camTopY)
             {
                 reachedTop = true;
-                startY = pos.y;
+                startY = pos.y - extraOffsetY; // Y-центр колебаний чуть ниже
+                startX = pos.x;                 // X-центр колебаний
             }
         }
         else
         {
-            // Горизонтальное колебание
-            pos.x = camLeftX + halfWidth + Mathf.PingPong(Time.time * amplitude, camRightX - camLeftX - 2*halfWidth);
+            // Горизонтальное колебание по синусу с отдельной скоростью
+            pos.x = startX + Mathf.Sin((Time.time + phaseOffset) * xSpeed) * amplitudeX;
+            pos.y = startY;
         }
+
+        // Ограничение по X
+        pos.x = Mathf.Clamp(pos.x, leftBoundX + halfWidth, rightBoundX - halfWidth);
 
         transform.position = pos;
     }

@@ -7,7 +7,7 @@ public class SnakePattern : WavePattern
     public float amplitude = 2f;
     public float spacing = 1f;
 
-    public override void Spawn(WaveController controller)
+    public override Transform Spawn(WaveController controller)
     {
         Camera cam = Camera.main;
         float camHalfWidth = cam.orthographicSize * cam.aspect;
@@ -37,7 +37,7 @@ public class SnakePattern : WavePattern
 
         for (int i = 0; i < count; i++)
         {
-            if (!controller.threat.TrySpend(threatCost)) return;
+            if (!controller.threat.TrySpend(threatCost)) break;
 
             float x = Mathf.Sin(i * 0.5f) * maxAmplitude;
             float y = topY + i * spacing;
@@ -49,5 +49,7 @@ public class SnakePattern : WavePattern
             var destructable = enemy.GetComponent<EnemyDestructable>();
             if (destructable != null) destructable.threatCost = threatCost;
         }
+
+        return parent; // возвращаем группу для WaveController
     }
 }
