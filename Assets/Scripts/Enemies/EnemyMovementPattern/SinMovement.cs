@@ -2,16 +2,28 @@ using UnityEngine;
 
 public class SinMovement : MonoBehaviour
 {
-    public float amplitude = 1f;    // амплитуда колебаний
-    public float frequency = 1f;    // частота колебаний
-    public float speed = 1f;        // скорость движения по Y
-    public float phaseOffset = 0f;  // сдвиг фазы, чтобы враги были несинхронны
+    [Header("Настройки движения")]
+    public float amplitude = 1f; 
+    public float frequency = 1f;
+    public float speed = 1f; 
+    public float phaseOffset = 0f;
+
+    [Header("Тип синусоиды")]
+    [Tooltip("Зеркальное отражение движения.")]
+    public bool isMirrored = false;
 
     private float camCenterX;
 
     void Start()
     {
-        camCenterX = Camera.main.transform.position.x; 
+        if (Camera.main != null)
+        {
+            camCenterX = Camera.main.transform.position.x; 
+        }
+        else
+        {
+            camCenterX = 0f;
+        }
     }
 
     void FixedUpdate()
@@ -20,7 +32,11 @@ public class SinMovement : MonoBehaviour
 
         pos.y -= speed * Time.fixedDeltaTime;
 
-        pos.x = camCenterX + Mathf.Sin(pos.y * frequency + phaseOffset) * amplitude;
+        float mirroredMultiplier = isMirrored ? -1f : 1f;
+
+        float sineOffset = Mathf.Sin(pos.y * frequency + phaseOffset) * amplitude * mirroredMultiplier;
+
+        pos.x = camCenterX + sineOffset;
 
         transform.position = pos;
     }

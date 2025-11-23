@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CrossPattern
   patternName: 
   enemyPrefab: {fileID: 2956199916723022952, guid: 65f19b67d049f8f4a9a313c2c3320c01, type: 3}
+  enemyPrefabAlt: {fileID: 2956199916723022952, guid: 65f19b67d049f8f4a9a313c2c3320c01, type: 3}
   threatCost: 1
   spacing: 1
   length: 1

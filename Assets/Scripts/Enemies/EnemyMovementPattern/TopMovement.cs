@@ -3,20 +3,24 @@ using UnityEngine;
 public class TopMovement : MonoBehaviour
 {
     [Header("Вертикальное движение")]
-    public float speedY = 5f;           // скорость движения вниз
-    public float extraOffsetY = 1.5f;   // дополнительное смещение вниз после достижения верхней границы
+    public float speedY = 5f;
+    public float extraOffsetY = 1.5f;
 
     [Header("Горизонтальное движение")]
-    public float amplitudeX = 2f;       // амплитуда колебаний по X
-    public float xSpeed = 2f;           // скорость колебаний по X
-    public float leftBoundX = -4.5f;    // левый предел движения
-    public float rightBoundX = 4.5f;    // правый предел движения
-    public float phaseOffset = 0f;      // индивидуальный сдвиг фазы
+    public float amplitudeX = 2f;
+    public float xSpeed = 2f;
+    public float leftBoundX = -4.5f;
+    public float rightBoundX = 4.5f;
+    public float phaseOffset = 0f;
 
     private float camTopY;
-    private bool reachedTop = false;
-    private float startY;
+    private bool reachedInitialTop = false;
+    private bool startedOscillation = false;
+
+    private float targetY;
     private float startX;
+
+    private float oscillationStartTime;
 
     private float halfWidth;
     private float halfHeight;
@@ -29,8 +33,7 @@ public class TopMovement : MonoBehaviour
         camTopY = cam.transform.position.y + camHeight;
 
         startX = transform.position.x;
-        startY = transform.position.y;
-
+        
         var col = GetComponent<Collider2D>();
         if (col != null)
         {
@@ -48,27 +51,42 @@ public class TopMovement : MonoBehaviour
     {
         Vector3 pos = transform.position;
 
-        if (!reachedTop)
+        if (!reachedInitialTop)
         {
-            // Движение вниз
+            // Phase 1: Moving down to the camera top boundary
             pos.y -= speedY * Time.fixedDeltaTime;
 
-            // Проверка достижения верхней границы камеры
             if (pos.y + halfHeight <= camTopY)
             {
-                reachedTop = true;
-                startY = pos.y - extraOffsetY; // Y-центр колебаний чуть ниже
-                startX = pos.x;                 // X-центр колебаний
+                reachedInitialTop = true;
+                targetY = pos.y - extraOffsetY;
+                startX = pos.x; 
+            }
+        }
+        else if (!startedOscillation)
+        {
+            // Phase 2: Sinking to the target Y level
+            
+            pos.y -= speedY * Time.fixedDeltaTime;
+
+            if (pos.y <= targetY)
+            {
+                pos.y = targetY;
+                startedOscillation = true;
+                oscillationStartTime = Time.time; 
             }
         }
         else
         {
-            // Горизонтальное колебание по синусу с отдельной скоростью
-            pos.x = startX + Mathf.Sin((Time.time + phaseOffset) * xSpeed) * amplitudeX;
-            pos.y = startY;
+            // Phase 3: Horizontal oscillation
+            
+            float timeSinceStart = (Time.time - oscillationStartTime) + phaseOffset;
+
+            pos.x = startX + Mathf.Sin(timeSinceStart * xSpeed) * amplitudeX;
+            pos.y = targetY;
         }
 
-        // Ограничение по X
+        // X-axis clamping
         pos.x = Mathf.Clamp(pos.x, leftBoundX + halfWidth, rightBoundX - halfWidth);
 
         transform.position = pos;
