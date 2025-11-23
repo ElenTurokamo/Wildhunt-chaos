@@ -6,20 +6,30 @@ public class ShieldEscortPattern : WavePattern
     [Header("Grid Settings")]
     public int rows = 3;
     public int columns = 3;
-    public float spacing = 1.5f;     // Distance between minions
-    public float groupOffsetX = 5f;  // Distance from center (0) to the center of the side groups
+    public float spacing = 1.5f;
+    public float groupOffsetX = 5f;
 
     [Header("Boss Settings")]
-    public int bossThreatCost = 10;  // Separate cost for the main enemy
-    public float bossOffsetY = 2f;   // Vertical offset for the boss relative to minions start
+    public int bossThreatCost = 10;
+    public float bossOffsetY = 2f;
 
     public override Transform Spawn(WaveController controller)
     {
-        // 1. Validation
         if (enemyPrefabAlt == null)
         {
-            Debug.LogError("ShieldEscortPattern: 'Enemy Prefab Alt' is missing! Assign the central enemy prefab.");
+            Debug.LogError("ShieldEscortPattern: 'Enemy Prefab Alt' missing.");
             return null;
+        }
+
+        // 1. Calculate Total Cost (All or Nothing)
+        int minionsPerSide = rows * columns;
+        int totalMinions = minionsPerSide * 2;
+        int totalCost = bossThreatCost + (totalMinions * threatCost);
+
+        // 2. Try to spend for the WHOLE wave at once
+        if (!controller.threat.TrySpend(totalCost))
+        {
+            return null; // Not enough points for the full formation
         }
 
         var parent = new GameObject("ShieldEscortGroup").transform;
@@ -27,47 +37,32 @@ public class ShieldEscortPattern : WavePattern
         Camera cam = Camera.main;
         float topY = cam.orthographicSize + cam.transform.position.y + 3f;
 
-        // 2. Spawn Boss (Central Unit) - Priority
-        // Try to spend points for the boss first
-        if (controller.threat.TrySpend(bossThreatCost))
+        // 3. Spawn Boss (Guaranteed)
+        Vector3 bossPos = new Vector3(0f, topY + bossOffsetY, 0f);
+        var boss = Instantiate(enemyPrefabAlt, bossPos, Quaternion.identity, parent);
+        
+        var bossDestructable = boss.GetComponent<EnemyDestructable>();
+        if (bossDestructable != null) 
         {
-            Vector3 bossPos = new Vector3(0f, topY + bossOffsetY, 0f);
-            var boss = Instantiate(enemyPrefabAlt, bossPos, Quaternion.identity, parent);
-            
-            // Assign threat cost if destructable
-            var bossDestructable = boss.GetComponent<EnemyDestructable>();
-            if (bossDestructable != null) 
-            {
-                bossDestructable.threatCost = bossThreatCost;
-            }
+            bossDestructable.threatCost = bossThreatCost; // Set score value
         }
 
-        // 3. Spawn Minions (Left and Right Grids)
-        // We iterate through columns and rows to build the grids
+        // 4. Spawn Minions (Guaranteed)
         for (int col = 0; col < columns; col++)
         {
             for (int row = 0; row < rows; row++)
             {
-                // Calculate local grid position (centered relative to its group)
-                // (col - (columns - 1) / 2f) creates indices like -1, 0, 1 for a size of 3
                 float xOffset = (col - (columns - 1) / 2f) * spacing;
                 float yOffset = row * spacing;
-
                 float yPos = topY + yOffset;
 
-                // --- Left Group ---
-                if (controller.threat.TrySpend(threatCost))
-                {
-                    float xLeft = -groupOffsetX + xOffset;
-                    SpawnMinion(enemyPrefab, new Vector3(xLeft, yPos, 0f), parent);
-                }
+                // Left Group
+                float xLeft = -groupOffsetX + xOffset;
+                SpawnMinion(enemyPrefab, new Vector3(xLeft, yPos, 0f), parent);
 
-                // --- Right Group ---
-                if (controller.threat.TrySpend(threatCost))
-                {
-                    float xRight = groupOffsetX + xOffset;
-                    SpawnMinion(enemyPrefab, new Vector3(xRight, yPos, 0f), parent);
-                }
+                // Right Group
+                float xRight = groupOffsetX + xOffset;
+                SpawnMinion(enemyPrefab, new Vector3(xRight, yPos, 0f), parent);
             }
         }
 
@@ -80,7 +75,7 @@ public class ShieldEscortPattern : WavePattern
         var destructable = minion.GetComponent<EnemyDestructable>();
         if (destructable != null)
         {
-            destructable.threatCost = threatCost;
+            destructable.threatCost = threatCost; // Set score value only
         }
     }
 }

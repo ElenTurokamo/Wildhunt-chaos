@@ -2947,6 +2947,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
+      propertyPath: baseDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
       propertyPath: bossInterval
       value: 60
       objectReference: {fileID: 0}
@@ -2969,7 +2973,7 @@ PrefabInstance:
     - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
       propertyPath: 'elitePatterns.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: 22731407a869bfc4c87c8991bc321eb3, type: 2}
+      objectReference: {fileID: 11400000, guid: 7dd3952a876a7b245994f222c9f2dd0e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

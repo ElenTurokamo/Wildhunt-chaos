@@ -20,10 +20,22 @@ public class ThreatSystem : MonoBehaviour
 
     private float difficultyBonus = 0f;    // бонус за предыдущие волны
 
+    // --- FIX 3: Инициализация при старте ---
+    void Start()
+    {
+        // Сразу рассчитываем maxThreat и даем бюджет, чтобы враги пошли с 0-й секунды
+        CalculateMaxThreat();
+        ResetThreat();
+    }
+
     void Update()
     {
         timeAlive += Time.deltaTime;
+        CalculateMaxThreat();
+    }
 
+    void CalculateMaxThreat()
+    {
         // формула, которая делает maxThreat плавно растущей
         maxThreat = baseThreat
                   + (timeAlive * growthRate)
@@ -36,24 +48,21 @@ public class ThreatSystem : MonoBehaviour
     public void ResetThreat()
     {
         // устанавливаем угрозу на максимум + бонусы сложности
+        // Это позволяет "перезаряжать" бюджет перед каждой новой пачкой врагов
         currentThreat = maxThreat;
         spentThisWave = 0;
     }
 
     public void CompleteWave()
     {
-        float usedPercent = spentThisWave / maxThreat;
+        // Логику можно оставить, если вы планируете вызывать её вручную,
+        // но для непрерывного спавна важнее рост maxThreat от времени.
+        float usedPercent = maxThreat > 0 ? spentThisWave / maxThreat : 0;
 
-        // если волна была тяжёлой — увеличим бонус сложности
         if (usedPercent >= 0.8f)
-        {
             difficultyBonus += maxThreat * difficultyMultiplier;
-        }
         else if (usedPercent < 0.4f)
-        {
-            // слишком лёгкая — уменьшаем бонус
             difficultyBonus *= 0.6f;
-        }
 
         difficultyBonus = Mathf.Clamp(difficultyBonus, 0, reserveCap);
     }
@@ -64,11 +73,10 @@ public class ThreatSystem : MonoBehaviour
     }
 
     // -----------------------------------------
-    //                 РАСХОД УГРОЗЫ
+    //                РАСХОД УГРОЗЫ
     // -----------------------------------------
     public bool TrySpend(int cost)
     {
-        // хватает обычной угрозы
         if (currentThreat >= cost)
         {
             currentThreat -= cost;
@@ -76,27 +84,22 @@ public class ThreatSystem : MonoBehaviour
             return true;
         }
 
-        // если долг разрешён и можно его взять
         if (allowDebt)
         {
-            float debtNeeded = cost - currentThreat;
-
+            // Исправлена проверка: если текущий threat 5, а cost 10, abs(5-10) = 5. Если maxDebt 8, то ок.
             if (Mathf.Abs(currentThreat - cost) <= maxDebt)
             {
-                currentThreat = currentThreat - cost; // уйдём в минус
+                currentThreat -= cost; 
                 spentThisWave += cost;
                 return true;
             }
         }
 
-        // не смогли заплатить
         return false;
     }
 
     public float GetRemainingThreat() => currentThreat;
-
     public float GetSpent() => spentThisWave;
-
     public float GetMaxThreat() => maxThreat;
 
     // -----------------------------------------
@@ -107,32 +110,29 @@ public class ThreatSystem : MonoBehaviour
         GUI.Label(new Rect(10, 10, 300, 80),
             $"Threat: {currentThreat:F1}/{maxThreat:F1}\n" +
             $"Spent: {spentThisWave:F1}\n" +
-            $"DifficultyBonus: {difficultyBonus:F1}");
+            $"DiffBonus: {difficultyBonus:F1}\n" +
+            $"TimeAlive: {timeAlive:F1}");
     }
 
     // -----------------------------------------
-    //        ДОПОЛНИТЕЛЬНЫЕ МЕТОДЫ
+    //          ДОПОЛНИТЕЛЬНЫЕ МЕТОДЫ
     // -----------------------------------------
-
-    // Нормированное значение угрозы (0..1)
     public float GetThreatFactor()
     {
         if (maxThreat <= 0f) return 0f;
+        // Здесь логика инвертирована: если угрозы мало (потратили), фактор растет?
+        // Или если макс угроза растет? Оставим как было, но добавим защиту от деления на 0.
         float clamped = Mathf.Clamp01((maxThreat - currentThreat) / maxThreat);
-        return clamped; // чем меньше осталось — тем выше TF
+        return clamped; 
     }
 
-    // Уменьшить угрозу (как штраф/успокоение)
     public void ReduceThreat(float amount)
     {
         currentThreat = Mathf.Clamp(currentThreat - amount, -maxDebt, maxThreat);
     }
 
-    // Увеличить угрозу (при тяжёлых волнах)
     public void AddThreat(float amount)
     {
         currentThreat = Mathf.Clamp(currentThreat + amount, -maxDebt, maxThreat);
     }
-
 }
-

@@ -16,7 +16,7 @@ public class WaveController : MonoBehaviour
     public float bossBlockTime = 20f;
 
     [Header("Элита")]
-    public float eliteInterval = 25f;
+    public float eliteInterval = 15f; 
     public float eliteChance = 0.15f;
 
     [Header("Тайминги волн")]
@@ -33,15 +33,23 @@ public class WaveController : MonoBehaviour
     private float timeSinceLastBoss = 0f;
     private float timeSinceBossSpawned = 0f;
     private bool bossActiveBlock = false;
+    
+    private GameObject currentBoss; 
+    private float bossDefeatedTimer = 0f; 
 
     private float timeSinceElite = 0f;
 
-    // Активные группы волн
+    // --- ПЕРЕМЕННЫЕ ДЛЯ ОТСЛЕЖИВАНИЯ ПОВТОРОВ ---
+    private WavePattern lastElitePattern;
+    private WavePattern lastNormalPattern;
+    private WavePattern lastRarePattern; // <--- ДОБАВИЛ НОВУЮ ПЕРЕМЕННУЮ
+
     private readonly List<Transform> activeGroups = new();
 
     void Start()
     {
         SceneManager.SetActiveScene(gameObject.scene);
+        nextWaveTime = Time.time + 1f; 
     }
 
     void Update()
@@ -50,60 +58,64 @@ public class WaveController : MonoBehaviour
         timeSinceLastBoss += Time.deltaTime;
         timeSinceElite += Time.deltaTime;
 
-        // Если босс активен — ждём
         if (bossActiveBlock)
         {
-            timeSinceBossSpawned += Time.deltaTime;
-            if (timeSinceBossSpawned >= bossBlockTime)
-                bossActiveBlock = false;
+            if (currentBoss == null)
+            {
+                bossDefeatedTimer += Time.deltaTime;
+                if (bossDefeatedTimer >= 3f)
+                {
+                    bossActiveBlock = false;
+                    timeSinceLastBoss = 0f; 
+                }
+            }
+            else
+            {
+                timeSinceBossSpawned += Time.deltaTime;
+                bossDefeatedTimer = 0f; 
+                if (timeSinceBossSpawned >= bossBlockTime)
+                {
+                    bossActiveBlock = false;
+                    timeSinceLastBoss = 0f;
+                }
+            }
+            return;
         }
 
-        // --- THREAT влияет на интервал волн ---
-        float tf = threat.GetThreatFactor();
-
-        float dynamicDelay = baseDelay * Mathf.Lerp(1f, 0.4f, tf);
-
-        float spawnDelay = Mathf.Clamp(
-            dynamicDelay - timeAlive * difficultyGrowth,
-            minDelay,
-            baseDelay
-        );
-
-        // Если верхняя группа мешает — ждём
         if (ActiveGroupsBlockingSpawn())
             return;
 
-        if (!bossActiveBlock && Time.time >= nextWaveTime)
+        if (Time.time >= nextWaveTime)
         {
-            // Проверка на босса
             if (timeSinceLastBoss >= bossInterval)
             {
                 SpawnBossWave();
                 return;
             }
 
-            // Проверка на элиту по таймеру
             if (timeSinceElite >= eliteInterval)
             {
-                SpawnEliteWave();
+                SpawnEliteWave(true);
+                nextWaveTime = Time.time + CalculateDelay();
                 return;
             }
 
-            // Обычная волна (весовая)
+            threat.ResetThreat();
             SpawnWeightedRandomWave();
-            nextWaveTime = Time.time + spawnDelay;
+            nextWaveTime = Time.time + CalculateDelay();
         }
     }
 
-    // ---------------------------------------
-    //   ПРОВЕРКА ГРУПП
-    // ---------------------------------------
+    float CalculateDelay()
+    {
+        float tf = threat.GetThreatFactor();
+        float dynamicDelay = baseDelay * Mathf.Lerp(1f, 0.4f, tf);
+        return Mathf.Clamp(dynamicDelay - (timeAlive * difficultyGrowth), minDelay, baseDelay);
+    }
 
     bool ActiveGroupsBlockingSpawn()
     {
-        if (activeGroups.Count == 0)
-            return false;
-
+        if (activeGroups.Count == 0) return false;
         float camY = Camera.main.transform.position.y;
         float limit = camY + Camera.main.orthographicSize - 1f;
 
@@ -111,94 +123,102 @@ public class WaveController : MonoBehaviour
         {
             if (g == null) continue;
             foreach (Transform c in g)
-                if (c != null && c.position.y > limit)
-                    return true;
+                if (c != null && c.position.y > limit) return true;
         }
-
         activeGroups.RemoveAll(g => g == null);
         return false;
     }
 
-    // ---------------------------------------
-    //   ВОЛНЫ С УЧЁТОМ THREAT
-    // ---------------------------------------
-
     void SpawnWeightedRandomWave()
     {
         float tf = threat.GetThreatFactor();
-
-        // Чем выше TF — тем больше редких волн
-        float rareBoost = Mathf.Lerp(0f, 0.15f, tf);
-
+        float rareBoost = Mathf.Lerp(0f, 0.20f, tf);
         float roll = Random.value;
 
-        float dynamicEliteChance = eliteChance + tf * 0.25f;
-
-        // Шанс внезапной элиты на обычной волне
-        if (Random.value < dynamicEliteChance && elitePatterns.Count > 0)
+        if (elitePatterns.Count > 0 && Random.value < eliteChance)
         {
-            SpawnPattern(elitePatterns);
+            SpawnEliteWave(false);
             return;
         }
-
-        if (roll < 0.60f - rareBoost)
+        
+        if (roll < 0.85f - rareBoost)
         {
-            SpawnPattern(normalPatterns);
-            threat.ReduceThreat(3);             // ослабляем угрозу
-        }
-        else if (roll < 0.90f - rareBoost)
-        {
-            SpawnPattern(elitePatterns);
-            threat.AddThreat(7);
+            // Обычная волна
+            SpawnPattern(normalPatterns, ref lastNormalPattern);
         }
         else
         {
-            SpawnPattern(rarePatterns);
-            threat.AddThreat(12);
+            // Редкая волна
+            // ИСПРАВЛЕНО: передаем переменную lastRarePattern вместо null
+            SpawnPattern(rarePatterns, ref lastRarePattern); 
         }
     }
 
-    void SpawnEliteWave()
+    void SpawnEliteWave(bool resetTimer)
     {
-        timeSinceElite = 0f;
-        threat.AddThreat(10);
-        SpawnPattern(elitePatterns);
+        if (resetTimer) timeSinceElite = 0f;
+        threat.AddThreat(1000); 
+        SpawnPattern(elitePatterns, ref lastElitePattern);
     }
 
-    void SpawnPattern(List<WavePattern> list)
+    // --- ИСПРАВЛЕННЫЙ МЕТОД SPAWNPATTERN ---
+    void SpawnPattern(List<WavePattern> list, ref WavePattern lastPattern)
     {
-        if (list.Count == 0)
-            return;
+        // Проверка на пустой список
+        if (list == null || list.Count == 0) return;
 
-        int index = Random.Range(0, list.Count);
-        WavePattern chosen = list[index];
+        WavePattern chosen = null;
 
+        if (list.Count == 1)
+        {
+            chosen = list[0];
+        }
+        else
+        {
+            int attempts = 10;
+            do
+            {
+                int index = Random.Range(0, list.Count);
+                chosen = list[index];
+                attempts--;
+            } 
+            while (chosen == lastPattern && attempts > 0);
+        }
+
+        // --- ВАЖНАЯ ПРОВЕРКА ОТ NULL REFERENCE ---
+        if (chosen == null)
+        {
+            Debug.LogWarning("WaveController: Выбран пустой паттерн (null). Проверьте списки в Инспекторе на наличие пустых полей (None).");
+            return; 
+        }
+
+        lastPattern = chosen;
+
+        // Теперь вызов безопасен
         Transform group = chosen.Spawn(this);
         if (group != null)
             activeGroups.Add(group);
     }
 
-    // ---------------------------------------
-    //              БОССЫ
-    // ---------------------------------------
-
     void SpawnBossWave()
     {
         Debug.Log("SPAWNING BOSS WAVE");
 
-        timeSinceLastBoss = 0f;
-        timeSinceBossSpawned = 0f;
         bossActiveBlock = true;
+        timeSinceBossSpawned = 0f;
+        bossDefeatedTimer = 0f;
 
-        threat.AddThreat(25);
-
+        threat.AddThreat(1000);
+        
         if (bossPrefabs.Count == 0) return;
 
         int i = Random.Range(0, bossPrefabs.Count);
-        Instantiate(bossPrefabs[i], bossSpawnPoint.position, Quaternion.identity);
+        if (bossPrefabs[i] != null) // Проверка на всякий случай
+        {
+            currentBoss = Instantiate(bossPrefabs[i], bossSpawnPoint.position, Quaternion.identity);
+        }
     }
 
-    // Для паттернов
     public void RegisterGroup(Transform g)
     {
         activeGroups.Add(g);

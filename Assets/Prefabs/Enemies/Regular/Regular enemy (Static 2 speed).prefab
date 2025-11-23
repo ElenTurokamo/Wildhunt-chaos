@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 2589519301032965068}
   - component: {fileID: 4571113591024877079}
   m_Layer: 0
-  m_Name: Regular enemy (Static)
+  m_Name: Regular enemy (Static 2 speed)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

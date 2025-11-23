@@ -9,16 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a423a74f5f0390b4fa154dea0261f5f8, type: 3}
-  m_Name: Shield Escort Pattern
-  m_EditorClassIdentifier: Assembly-CSharp::ShieldEscortPattern
+  m_Script: {fileID: 11500000, guid: 7564caf3cfb761c47aadad64c1085dec, type: 3}
+  m_Name: Two Shields Pattern
+  m_EditorClassIdentifier: Assembly-CSharp::TwoShieldsPattern
   patternName: 
-  enemyPrefab: {fileID: 2956199916723022952, guid: de4f25decab21e44c974d39d0ec86618, type: 3}
+  enemyPrefab: {fileID: 1834585895279134051, guid: 6428ee48605c1344689f6565c9af2b14, type: 3}
   enemyPrefabAlt: {fileID: 1834585895279134051, guid: 6428ee48605c1344689f6565c9af2b14, type: 3}
   threatCost: 30
-  rows: 3
-  columns: 3
-  spacing: 1
-  groupOffsetX: 5
-  bossThreatCost: 5
-  bossOffsetY: 2
+  spacing: 4
+  centerX: 0
