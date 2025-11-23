@@ -2955,9 +2955,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
+      propertyPath: elitePatterns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
       propertyPath: 'bossPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 2839816345852371713, guid: 408177652c0aef045a2d698dcf32ef89, type: 3}
+    - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
+      propertyPath: 'elitePatterns.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 22731407a869bfc4c87c8991bc321eb3, type: 2}
+    - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
+      propertyPath: 'elitePatterns.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 22731407a869bfc4c87c8991bc321eb3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
