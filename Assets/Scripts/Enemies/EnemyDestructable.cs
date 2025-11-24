@@ -22,10 +22,13 @@ public class EnemyDestructable : MonoBehaviour
 
     private SpriteRenderer[] childRenderers;
 
+    private EnemySound enemySound;
+
     void Awake()
     {
         scoreSystem = Object.FindFirstObjectByType<ScoreSystem>();
         childRenderers = GetComponentsInChildren<SpriteRenderer>();
+        enemySound = GetComponent<EnemySound>();
     }
 
     void Update()
@@ -53,6 +56,7 @@ public class EnemyDestructable : MonoBehaviour
         Bullet bullet = collision.GetComponent<Bullet>();
         if (bullet != null && !bullet.isEnemy)
         {
+            enemySound.PlayHitAt(transform.position);
             TakeDamage(1);
             Destroy(bullet.gameObject);
         }
@@ -72,6 +76,8 @@ public class EnemyDestructable : MonoBehaviour
                 scoreSystem.AddScore(points);
             }
 
+            enemySound.PlayDeathAt(transform.position);
+
             // Эффект взрыва
             if (explosionPrefab != null)
             {
@@ -82,7 +88,7 @@ public class EnemyDestructable : MonoBehaviour
                 else
                     Destroy(explosion, 1f);
             }
-
+    
             Destroy(gameObject);
         }
     }
