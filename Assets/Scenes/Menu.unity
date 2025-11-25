@@ -346,8 +346,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294873546
-  m_fontColor: {r: 0.79215693, g: 0.5686275, b: 0.9960785, a: 1}
+    rgba: 4294802412
+  m_fontColor: {r: 0.9254902, g: 0.48235294, b: 0.99215686, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -539,6 +539,14 @@ MonoBehaviour:
   scoreText: {fileID: 0}
   highScoreText: {fileID: 391025271}
   runHighScoreText: {fileID: 0}
+  pulseScale: 1.2
+  pulseDuration: 1
+  floatingTextPrefab: {fileID: 0}
+  spawnPosition: 1
+  verticalOffset: 50
+  horizontalPadding: 20
+  floatDuration: 1
+  floatSpeed: 100
 --- !u!1001 &586352057
 PrefabInstance:
   m_ObjectHideFlags: 0
