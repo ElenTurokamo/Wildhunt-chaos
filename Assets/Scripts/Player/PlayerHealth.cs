@@ -5,6 +5,7 @@ public class PlayerHealth : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject gameplayUI;  
     [SerializeField] private GameObject gameOverUI; 
+    [SerializeField] private GameObject pauseMenu; 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,6 +29,10 @@ public class PlayerHealth : MonoBehaviour
     {
         if (gameplayUI != null)
             gameplayUI.SetActive(false);
+
+        if (pauseMenu != null)
+            pauseMenu.SetActive(false);
+            Destroy(pauseMenu);
 
         if (gameOverUI != null)
             gameOverUI.SetActive(true);
