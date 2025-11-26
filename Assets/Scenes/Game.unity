@@ -3547,7 +3547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9172159840972191693, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: pulseScale
-      value: 1.07
+      value: 1.08
       objectReference: {fileID: 0}
     - target: {fileID: 9172159840972191693, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: floatDuration
@@ -3563,7 +3563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9172159840972191693, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: pulseDuration
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 9172159840972191693, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: verticalOffset

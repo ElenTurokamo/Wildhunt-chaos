@@ -2,19 +2,42 @@ using UnityEngine;
 
 public class BackgroundScroller : MonoBehaviour
 {
+    // 1. Создаем структуру для хранения наборов спрайтов (Тем)
+    [System.Serializable]
+    public class Theme
+    {
+        public string name; 
+        public Sprite[] layerSprites; 
+    }
+
     [System.Serializable]
     public class Layer
     {
-        public Transform background1; // основной (будет установлен в (0,0))
-        public Transform background2; // копия (будет установленa в (0, spriteHeight))
+        public Transform background1;
+        public Transform background2; 
         public float scrollSpeed = 1f;
         [HideInInspector] public float spriteHeight;
     }
 
-    public Layer[] layers;
+    [Header("Настройки тем")]
+    public Theme[] themes; 
+
+    [Header("Настройки слоев")]
+    public Layer[] layers; 
 
     void Start()
     {
+        if (themes.Length > 0)
+        {
+            int randomIndex = Random.Range(0, themes.Length);
+            Theme selectedTheme = themes[randomIndex];
+            ApplyTheme(selectedTheme);
+        }
+        else
+        {
+            Debug.LogWarning("BackgroundScroller: Список тем пуст! Используются спрайты, уже назначенные на сцене.");
+        }
+
         foreach (var layer in layers)
         {
             if (layer.background1 == null || layer.background2 == null)
@@ -23,7 +46,6 @@ public class BackgroundScroller : MonoBehaviour
                 continue;
             }
 
-            // Получаем высоту в мировых единицах (учитывает масштаб)
             SpriteRenderer sr = layer.background1.GetComponent<SpriteRenderer>();
             if (sr == null)
             {
@@ -33,15 +55,36 @@ public class BackgroundScroller : MonoBehaviour
 
             layer.spriteHeight = sr.bounds.size.y;
 
-            // Ставим background1 ровно в мировую позицию (0,0) (оставляем z как был)
             layer.background1.position = new Vector3(0f, 0f, layer.background1.position.z);
 
-            // Ставим background2 ровно над ним (чтобы отрисовка с самого старта была бесшовной)
             layer.background2.position = new Vector3(
                 0f,
                 layer.background1.position.y + layer.spriteHeight,
                 layer.background2.position.z
             );
+        }
+    }
+
+    void ApplyTheme(Theme theme)
+    {
+        for (int i = 0; i < layers.Length; i++)
+        {
+            if (i >= theme.layerSprites.Length)
+            {
+                Debug.LogError($"В теме '{theme.name}' не хватает спрайтов для слоя {i}!");
+                continue;
+            }
+
+            Sprite spriteToUse = theme.layerSprites[i];
+
+            if (spriteToUse == null) continue;
+
+
+            var sr1 = layers[i].background1.GetComponent<SpriteRenderer>();
+            var sr2 = layers[i].background2.GetComponent<SpriteRenderer>();
+
+            if (sr1 != null) sr1.sprite = spriteToUse;
+            if (sr2 != null) sr2.sprite = spriteToUse;
         }
     }
 
@@ -51,12 +94,10 @@ public class BackgroundScroller : MonoBehaviour
         {
             if (layer.background1 == null || layer.background2 == null) continue;
 
-            // Двигаем оба слоя вниз одинаково (мировые координаты)
             Vector3 delta = Vector3.down * layer.scrollSpeed * Time.deltaTime;
             layer.background1.position += delta;
             layer.background2.position += delta;
 
-            // Когда один полностью уходит вниз (ниже -spriteHeight), перемещаем его ровно над другим
             if (layer.background1.position.y <= -layer.spriteHeight)
                 MoveToTop(layer.background1, layer.background2, layer.spriteHeight);
 

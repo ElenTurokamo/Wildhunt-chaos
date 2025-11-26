@@ -131,6 +131,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2405717921451079512, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
+      propertyPath: themes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405717921451079512, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
+      propertyPath: themes.Array.data[0].name
+      value: Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405717921451079512, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
+      propertyPath: themes.Array.data[0].layerSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405717921451079512, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
+      propertyPath: 'themes.Array.data[0].layerSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -8607710145998520207, guid: 6afe127eee49334488a087703eb7eca7, type: 3}
+    - target: {fileID: 2405717921451079512, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
+      propertyPath: 'themes.Array.data[0].layerSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -8816951104503228672, guid: 4edff955071b2e64aa6fe8a3b75a7fe6, type: 3}
+    - target: {fileID: 3018063797814482961, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3907069025853537916, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -184,6 +208,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8149453841194942837, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149453841194942837, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -200,7 +228,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3018063797814482961, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
