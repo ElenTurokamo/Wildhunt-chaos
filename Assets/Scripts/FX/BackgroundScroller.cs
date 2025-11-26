@@ -2,12 +2,15 @@ using UnityEngine;
 
 public class BackgroundScroller : MonoBehaviour
 {
-    // 1. Создаем структуру для хранения наборов спрайтов (Тем)
     [System.Serializable]
     public class Theme
     {
         public string name; 
-        public Sprite[] layerSprites; 
+        public Sprite[] layerSprites;
+        
+        // --- НОВОЕ: Опциональный префаб (эффекты, партиклы, оверлей) ---
+        [Tooltip("Опционально. Префаб (например, партиклы дождя), который заспавнится как дочерний объект.")]
+        public GameObject optionalPrefab; 
     }
 
     [System.Serializable]
@@ -67,6 +70,7 @@ public class BackgroundScroller : MonoBehaviour
 
     void ApplyTheme(Theme theme)
     {
+        // 1. Применяем спрайты слоев
         for (int i = 0; i < layers.Length; i++)
         {
             if (i >= theme.layerSprites.Length)
@@ -79,12 +83,22 @@ public class BackgroundScroller : MonoBehaviour
 
             if (spriteToUse == null) continue;
 
-
             var sr1 = layers[i].background1.GetComponent<SpriteRenderer>();
             var sr2 = layers[i].background2.GetComponent<SpriteRenderer>();
 
             if (sr1 != null) sr1.sprite = spriteToUse;
             if (sr2 != null) sr2.sprite = spriteToUse;
+        }
+
+        // --- НОВОЕ: Логика спавна опционального объекта ---
+        if (theme.optionalPrefab != null)
+        {
+            // Создаем объект. 
+            // Второй аргумент 'transform' делает его дочерним объектом того, на чем висит этот скрипт.
+            GameObject createdObject = Instantiate(theme.optionalPrefab, transform);
+            
+            // Сбрасываем локальную позицию в (0,0,0), чтобы он встал ровно по центру родителя
+            createdObject.transform.localPosition = Vector3.zero;
         }
     }
 
