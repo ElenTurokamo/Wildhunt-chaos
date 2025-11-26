@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     bool speedUp;
 
     [SerializeField] float minPosX, maxPosX, minPosY, maxPosY;
+    public bool isControlsActive = false;
 
     void Start()
     {
@@ -46,17 +47,20 @@ public class PlayerController : MonoBehaviour
     }
 
     void FixedUpdate()
-    {
-        normalizedInput = new Vector2(
-            Input.GetAxisRaw("Horizontal"),
-            Input.GetAxisRaw("Vertical")).normalized;
+        {
+            normalizedInput = new Vector2(
+                Input.GetAxisRaw("Horizontal"),
+                Input.GetAxisRaw("Vertical")).normalized;
 
-        rb.linearVelocity = normalizedInput * movementSpeed;
-        
-        Vector2 clampedPosition = new Vector2(
-            Mathf.Clamp(transform.position.x, minPosX, maxPosX),
-            Mathf.Clamp(transform.position.y, minPosY, maxPosY));
+            rb.linearVelocity = normalizedInput * movementSpeed;
+            
+            if (isControlsActive)
+            {
+                Vector2 clampedPosition = new Vector2(
+                    Mathf.Clamp(transform.position.x, minPosX, maxPosX),
+                    Mathf.Clamp(transform.position.y, minPosY, maxPosY));
 
-        rb.position = clampedPosition;
-    }
+                rb.position = clampedPosition;
+            }
+        }
 }

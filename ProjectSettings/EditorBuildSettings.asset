@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Background.unity
     guid: b34cd7f2e1ac43d44a4f784dc67da0da
   - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: 6a06bb33a5f66324a8ffb1e53d147607
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 4b0c18109690f2a4d97075ee8bff25e7
   - enabled: 1

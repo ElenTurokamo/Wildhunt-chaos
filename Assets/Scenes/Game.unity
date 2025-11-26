@@ -2305,7 +2305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2368846839658694080, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.05
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 2368846839658694080, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2354,8 +2354,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 477131009155998355, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1458269908}
   m_SourcePrefab: {fileID: 100100000, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
+--- !u!1 &1458269907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 477131009155998355, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
+  m_PrefabInstance: {fileID: 1458269906}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1458269908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458269907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba361b72dc635d4f9c841a254f0dfe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterEntryEffect
+  finalPosition: {x: 0, y: -3.05, z: 0}
+  duration: 1
+  delay: 0.3
 --- !u!114 &1469942882 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1009177806166516651, guid: c39710a3a5f253a4fadad0b782124b7d, type: 3}
@@ -3404,13 +3427,130 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6889728046979002439, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6207452953426230855}
+    - targetCorrespondingSourceObject: {fileID: 6889728046979002439, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6207452953426230854}
+    - targetCorrespondingSourceObject: {fileID: 6511664295793203024, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6207452953426230851}
+    - targetCorrespondingSourceObject: {fileID: 6511664295793203024, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6207452953426230850}
+    - targetCorrespondingSourceObject: {fileID: 771648105362143538, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6207452953426230853}
+    - targetCorrespondingSourceObject: {fileID: 771648105362143538, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6207452953426230852}
   m_SourcePrefab: {fileID: 100100000, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
 --- !u!1 &6207452953426230846 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7077199357171465176, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
   m_PrefabInstance: {fileID: 6207452953426230845}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6207452953426230847 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6511664295793203024, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+  m_PrefabInstance: {fileID: 6207452953426230845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6207452953426230848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 771648105362143538, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+  m_PrefabInstance: {fileID: 6207452953426230845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6207452953426230849 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6889728046979002439, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+  m_PrefabInstance: {fileID: 6207452953426230845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6207452953426230850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207452953426230847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a93919b2fe0409845892179585c810e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameUIEntryEffect
+  startOffsetX: 100
+  comeFromRight: 0
+  duration: 1
+  delay: 0.6
+--- !u!225 &6207452953426230851
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207452953426230847}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &6207452953426230852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207452953426230848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a93919b2fe0409845892179585c810e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameUIEntryEffect
+  startOffsetX: 100
+  comeFromRight: 1
+  duration: 1
+  delay: 0.6
+--- !u!225 &6207452953426230853
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207452953426230848}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &6207452953426230854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207452953426230849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a93919b2fe0409845892179585c810e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameUIEntryEffect
+  startOffsetX: 100
+  comeFromRight: 0
+  duration: 1
+  delay: 0.6
+--- !u!225 &6207452953426230855
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207452953426230849}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

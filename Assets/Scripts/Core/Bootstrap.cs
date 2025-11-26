@@ -6,27 +6,24 @@ public class Bootstrap : MonoBehaviour
 {
     public static bool RestartFlag = false;
 
-    private const string LoadingSceneName = "LoadingScene"; 
-    private const string GameSceneName = "Game";
-    private const string MenuSceneName = "Menu";
-
     private IEnumerator Start()
     {
         yield return SceneManager.LoadSceneAsync("Background", LoadSceneMode.Additive);
 
         string targetScene;
+
         if (RestartFlag)
         {
             RestartFlag = false;
-            targetScene = GameSceneName;
+            targetScene = "Game";
         }
         else
         {
-            targetScene = MenuSceneName;
+            targetScene = "Menu";
         }
 
-        PlayerPrefs.SetString("SceneToLoad", targetScene); 
-        
-        SceneManager.LoadScene(LoadingSceneName); 
+        PlayerPrefs.SetString("SceneToLoad", targetScene);
+
+        yield return SceneManager.LoadSceneAsync("LoadingScene", LoadSceneMode.Additive);
     }
 }
