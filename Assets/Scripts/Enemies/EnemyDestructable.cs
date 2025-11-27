@@ -58,7 +58,7 @@ Bullet bullet = collision.GetComponent<Bullet>();
         {
             if (AudioManager.instance != null)
             {
-                AudioManager.instance.PlaySFX(hitSoundName);
+                AudioManager.instance.PlaySFXOneShot(hitSoundName);
             }
             TakeDamage(1);
             Destroy(bullet.gameObject);
@@ -81,7 +81,7 @@ Bullet bullet = collision.GetComponent<Bullet>();
 
             if (AudioManager.instance != null)
             {
-                AudioManager.instance.PlaySFX(deathSoundName);
+                AudioManager.instance.PlaySFXOneShot(deathSoundName);
             }
 
             if (explosionPrefab != null)

@@ -211,38 +211,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3867734159682413410, guid: c24d6b1d8d861894ba44eb3f7d5ff31c, type: 3}
-      propertyPath: bossMusicName
-      value: GameMusicBoss
-      objectReference: {fileID: 0}
-    - target: {fileID: 3867734159682413410, guid: c24d6b1d8d861894ba44eb3f7d5ff31c, type: 3}
-      propertyPath: gameMusicName
-      value: GameMusic
-      objectReference: {fileID: 0}
-    - target: {fileID: 3867734159682413410, guid: c24d6b1d8d861894ba44eb3f7d5ff31c, type: 3}
-      propertyPath: menuMusicName
-      value: MenuMusic
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871187252470199521, guid: c24d6b1d8d861894ba44eb3f7d5ff31c, type: 3}
-      propertyPath: sounds.Array.data[0].name
-      value: MenuMusic
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871187252470199521, guid: c24d6b1d8d861894ba44eb3f7d5ff31c, type: 3}
-      propertyPath: sounds.Array.data[1].name
-      value: GameMusic
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871187252470199521, guid: c24d6b1d8d861894ba44eb3f7d5ff31c, type: 3}
-      propertyPath: sounds.Array.data[2].name
-      value: GameMusicBoss
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871187252470199521, guid: c24d6b1d8d861894ba44eb3f7d5ff31c, type: 3}
-      propertyPath: sounds.Array.data[3].volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5871187252470199521, guid: c24d6b1d8d861894ba44eb3f7d5ff31c, type: 3}
-      propertyPath: sounds.Array.data[4].volume
-      value: 0.7
-      objectReference: {fileID: 0}
     - target: {fileID: 7217533072733323413, guid: c24d6b1d8d861894ba44eb3f7d5ff31c, type: 3}
       propertyPath: m_Name
       value: AudioManager

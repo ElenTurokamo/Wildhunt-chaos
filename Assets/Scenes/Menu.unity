@@ -320,6 +320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 312864793}
   - component: {fileID: 312864794}
+  - component: {fileID: 312864795}
   m_Layer: 5
   m_Name: MasterVolume
   m_TagString: Untagged
@@ -413,6 +414,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &312864795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312864792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6099ef6539bfa4242aca140058b02a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFX2DSource
+  soundName: Click_UI
+  condition: 7
+  targetTag: 
+  destroyAfterPlay: 0
+  destroyDelay: 0
 --- !u!1 &316838268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,6 +1586,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1983652515882423966, guid: 3e1e56300fd78ae479668d3dfd4641e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1309163353}
+    - targetCorrespondingSourceObject: {fileID: 1983652515882423966, guid: 3e1e56300fd78ae479668d3dfd4641e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1309163355}
   m_SourcePrefab: {fileID: 100100000, guid: 3e1e56300fd78ae479668d3dfd4641e9, type: 3}
 --- !u!224 &586352058 stripped
 RectTransform:
@@ -2108,6 +2129,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1983652515882423966, guid: 3e1e56300fd78ae479668d3dfd4641e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1915266933}
+    - targetCorrespondingSourceObject: {fileID: 1983652515882423966, guid: 3e1e56300fd78ae479668d3dfd4641e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1915266935}
   m_SourcePrefab: {fileID: 100100000, guid: 3e1e56300fd78ae479668d3dfd4641e9, type: 3}
 --- !u!1 &714607416
 GameObject:
@@ -3317,6 +3341,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1983652515882423966, guid: 3e1e56300fd78ae479668d3dfd4641e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1254881331}
+    - targetCorrespondingSourceObject: {fileID: 1983652515882423966, guid: 3e1e56300fd78ae479668d3dfd4641e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1254881334}
   m_SourcePrefab: {fileID: 100100000, guid: 3e1e56300fd78ae479668d3dfd4641e9, type: 3}
 --- !u!224 &1254881327 stripped
 RectTransform:
@@ -3351,6 +3378,23 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1254881334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254881328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6099ef6539bfa4242aca140058b02a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFX2DSource
+  soundName: Click_UI
+  condition: 7
+  targetTag: 
+  destroyAfterPlay: 0
+  destroyDelay: 0
 --- !u!1 &1265952524
 GameObject:
   m_ObjectHideFlags: 0
@@ -3481,6 +3525,23 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1309163355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309163350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6099ef6539bfa4242aca140058b02a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFX2DSource
+  soundName: Click_UI
+  condition: 7
+  targetTag: 
+  destroyAfterPlay: 0
+  destroyDelay: 0
 --- !u!1 &1325034650
 GameObject:
   m_ObjectHideFlags: 0
@@ -3491,6 +3552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1325034651}
   - component: {fileID: 1325034652}
+  - component: {fileID: 1325034653}
   m_Layer: 5
   m_Name: 'EffectsVolume '
   m_TagString: Untagged
@@ -3584,6 +3646,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1325034653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325034650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6099ef6539bfa4242aca140058b02a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFX2DSource
+  soundName: Click_UI
+  condition: 7
+  targetTag: 
+  destroyAfterPlay: 0
+  destroyDelay: 0
 --- !u!1 &1345587634
 GameObject:
   m_ObjectHideFlags: 0
@@ -4380,6 +4459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1810371857}
   - component: {fileID: 1810371858}
+  - component: {fileID: 1810371859}
   m_Layer: 5
   m_Name: 'MusicVolume '
   m_TagString: Untagged
@@ -4473,6 +4553,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1810371859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810371856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6099ef6539bfa4242aca140058b02a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFX2DSource
+  soundName: Click_UI
+  condition: 7
+  targetTag: 
+  destroyAfterPlay: 0
+  destroyDelay: 0
 --- !u!1 &1915266930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1983652515882423966, guid: 3e1e56300fd78ae479668d3dfd4641e9, type: 3}
@@ -4505,6 +4602,23 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1915266935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915266930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6099ef6539bfa4242aca140058b02a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFX2DSource
+  soundName: Click_UI
+  condition: 7
+  targetTag: 
+  destroyAfterPlay: 0
+  destroyDelay: 0
 --- !u!1 &1935601780
 GameObject:
   m_ObjectHideFlags: 0
@@ -5292,6 +5406,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1983652515882423966, guid: 3e1e56300fd78ae479668d3dfd4641e9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7603444762407261413}
+    - targetCorrespondingSourceObject: {fileID: 1983652515882423966, guid: 3e1e56300fd78ae479668d3dfd4641e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7603444762407261415}
   m_SourcePrefab: {fileID: 100100000, guid: 3e1e56300fd78ae479668d3dfd4641e9, type: 3}
 --- !u!114 &7603444762407261410 stripped
 MonoBehaviour:
@@ -5331,6 +5448,23 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &7603444762407261415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694644418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6099ef6539bfa4242aca140058b02a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFX2DSource
+  soundName: Play_UI
+  condition: 7
+  targetTag: 
+  destroyAfterPlay: 0
+  destroyDelay: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

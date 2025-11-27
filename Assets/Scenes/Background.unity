@@ -140,7 +140,15 @@ PrefabInstance:
       value: Forest
       objectReference: {fileID: 0}
     - target: {fileID: 2405717921451079512, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
+      propertyPath: themes.Array.data[1].name
+      value: Snow Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405717921451079512, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
       propertyPath: themes.Array.data[0].layerSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405717921451079512, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
+      propertyPath: themes.Array.data[1].layerSprites.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2405717921451079512, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
@@ -151,6 +159,14 @@ PrefabInstance:
       propertyPath: 'themes.Array.data[0].layerSprites.Array.data[1]'
       value: 
       objectReference: {fileID: -8816951104503228672, guid: 4edff955071b2e64aa6fe8a3b75a7fe6, type: 3}
+    - target: {fileID: 2405717921451079512, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
+      propertyPath: 'themes.Array.data[1].layerSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -8323354739143790269, guid: 9c95e008eb8906943a3175509015622c, type: 3}
+    - target: {fileID: 2405717921451079512, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
+      propertyPath: 'themes.Array.data[1].layerSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -7439010665767089887, guid: 684aa9e03756250458b119e8a9504876, type: 3}
     - target: {fileID: 3018063797814482961, guid: 329ca472d5fa33d4da1faeff9c786315, type: 3}
       propertyPath: m_IsActive
       value: 0

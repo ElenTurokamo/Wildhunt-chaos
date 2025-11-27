@@ -44,10 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920de009ce2d27e4d915e3e58b55f102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicSource
-  menuMusicName: MenuMusic-1
-  gameMusicName: GameMusic-1
+  menuMusicName: MenuMusic
+  gameMusicName: GameMusic
   deathMusicName: DeathMusic
-  bossMusicName: GameMusic-2
+  bossMusicName: GameMusicBoss
+  musicFadeTime: 1.5
   deathScreenTag: DeathScreen
   bossObjectTag: BossActive
 --- !u!1 &7217533072733323413
@@ -98,21 +99,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   mainMixer: {fileID: 24100000, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
   sounds:
-  - name: MenuMusic-1
+  - name: MenuMusic
     clip: {fileID: 8300000, guid: 47881b60192289243a1416f9aa0d2df2, type: 3}
     mixerGroup: {fileID: -4916374132875042146, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: GameMusic-1
+  - name: GameMusic
     clip: {fileID: 8300000, guid: 35c4e94e7a1829345b2ab5adb9a60247, type: 3}
     mixerGroup: {fileID: -4916374132875042146, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: GameMusic-2
+  - name: GameMusicBoss
     clip: {fileID: 8300000, guid: 4c0acbda6ca0d1a41afeebc72b0a678a, type: 3}
     mixerGroup: {fileID: -4916374132875042146, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
     volume: 1
@@ -122,12 +123,26 @@ MonoBehaviour:
   - name: EnemyExplosion-1
     clip: {fileID: 8300000, guid: 447e6f8401d72ac4196d201a47cbfb73, type: 3}
     mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: EnemyHit-1
     clip: {fileID: 8300000, guid: 170b421ef2536a64c86754033eb56758, type: 3}
+    mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Play_UI
+    clip: {fileID: 8300000, guid: c8207fcc25ce4c74f8c2885003101363, type: 3}
+    mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Click_UI
+    clip: {fileID: 8300000, guid: f6eb81f01426b9c49adac339d6032fd8, type: 3}
     mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
     volume: 1
     pitch: 1

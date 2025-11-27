@@ -46,11 +46,15 @@ public class AudioManager : MonoBehaviour
         LoadVolume();
     }
 
-    public void PlaySFX(string name)
+    public void PlaySFXOneShot(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null) return;
-        s.source.Play();
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+        s.source.PlayOneShot(s.clip, s.source.volume); 
     }
 
     public void PlayMusic(string name, float fadeDuration = 1.0f)
