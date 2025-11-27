@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections;
 
@@ -17,18 +16,19 @@ public class EnemyDestructable : MonoBehaviour
     [Header("Эффект взрыва при смерти")]
     public GameObject explosionPrefab; 
 
+    [Header("Звуки")] 
+    public string hitSoundName = "EnemyHit-1";
+    public string deathSoundName = "EnemyExplosion-1";
+
     private bool canBeDestroyed = false;
     private ScoreSystem scoreSystem;
-
     private SpriteRenderer[] childRenderers;
 
-    private EnemySound enemySound;
 
     void Awake()
     {
         scoreSystem = Object.FindFirstObjectByType<ScoreSystem>();
         childRenderers = GetComponentsInChildren<SpriteRenderer>();
-        enemySound = GetComponent<EnemySound>();
     }
 
     void Update()
@@ -53,10 +53,13 @@ public class EnemyDestructable : MonoBehaviour
     {
         if (!canBeDestroyed) return;
 
-        Bullet bullet = collision.GetComponent<Bullet>();
+Bullet bullet = collision.GetComponent<Bullet>();
         if (bullet != null && !bullet.isEnemy)
         {
-            enemySound.PlayHitAt(transform.position);
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.Play(hitSoundName);
+            }
             TakeDamage(1);
             Destroy(bullet.gameObject);
         }
@@ -76,9 +79,11 @@ public class EnemyDestructable : MonoBehaviour
                 scoreSystem.AddScore(points);
             }
 
-            enemySound.PlayDeathAt(transform.position);
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.Play(deathSoundName);
+            }
 
-            // Эффект взрыва
             if (explosionPrefab != null)
             {
                 GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);

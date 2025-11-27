@@ -9,7 +9,6 @@ public class AudioManager : MonoBehaviour
     public AudioMixer mainMixer;
     public Sound[] sounds;
 
-    // Ключи для сохранения настроек
     private const string MASTER_KEY = "MasterVolume";
     private const string MUSIC_KEY = "MusicVolume";
     private const string SFX_KEY = "EffectsVolume";
@@ -51,16 +50,18 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
-        s.source.Play();
+        s.source.PlayOneShot(s.clip);
     }
 
     public void Stop(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s != null) s.source.Stop();
+        if (s != null) 
+        {
+            s.source.Stop();
+        }
     }
 
-    // Методы для UI слайдеров (значения от -80 до 0 или -80 до 20)
     public void SetMasterVolume(float volume)
     {
         mainMixer.SetFloat(MASTER_KEY, volume);
