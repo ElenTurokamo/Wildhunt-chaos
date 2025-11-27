@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7217533072733323413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3817553228960712618}
+  - component: {fileID: 5871187252470199521}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3817553228960712618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7217533072733323413}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5871187252470199521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7217533072733323413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b0f14a0f2b8e442a27e05cf94e9b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  mainMixer: {fileID: 24100000, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+  sounds:
+  - name: MenuMusic-1
+    clip: {fileID: 8300000, guid: 47881b60192289243a1416f9aa0d2df2, type: 3}
+    mixerGroup: {fileID: -4916374132875042146, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+    volume: 0
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: GameMusic-1
+    clip: {fileID: 8300000, guid: 35c4e94e7a1829345b2ab5adb9a60247, type: 3}
+    mixerGroup: {fileID: -4916374132875042146, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+    volume: 0
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: GameMusic-2
+    clip: {fileID: 8300000, guid: 4c0acbda6ca0d1a41afeebc72b0a678a, type: 3}
+    mixerGroup: {fileID: -4916374132875042146, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+    volume: 0
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: EnemyExplosion-1
+    clip: {fileID: 8300000, guid: 447e6f8401d72ac4196d201a47cbfb73, type: 3}
+    mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyHit-1
+    clip: {fileID: 8300000, guid: 170b421ef2536a64c86754033eb56758, type: 3}
+    mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
