@@ -8,7 +8,6 @@ public class BackgroundScroller : MonoBehaviour
         public string name; 
         public Sprite[] layerSprites;
         
-        // --- НОВОЕ: Опциональный префаб (эффекты, партиклы, оверлей) ---
         [Tooltip("Опционально. Префаб (например, партиклы дождя), который заспавнится как дочерний объект.")]
         public GameObject optionalPrefab; 
     }
@@ -93,12 +92,7 @@ public class BackgroundScroller : MonoBehaviour
         // --- НОВОЕ: Логика спавна опционального объекта ---
         if (theme.optionalPrefab != null)
         {
-            // Создаем объект. 
-            // Второй аргумент 'transform' делает его дочерним объектом того, на чем висит этот скрипт.
-            GameObject createdObject = Instantiate(theme.optionalPrefab, transform);
-            
-            // Сбрасываем локальную позицию в (0,0,0), чтобы он встал ровно по центру родителя
-            createdObject.transform.localPosition = Vector3.zero;
+            Instantiate(theme.optionalPrefab, transform);   
         }
     }
 
