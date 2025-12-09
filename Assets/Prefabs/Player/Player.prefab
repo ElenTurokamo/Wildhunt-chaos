@@ -131,6 +131,7 @@ MonoBehaviour:
   maxPosX: 4.5
   minPosY: -4.5
   maxPosY: 4.5
+  isControlsActive: 0
 --- !u!212 &5528840410704234364
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -201,7 +202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33640bef0a73d3741a440771edc3367f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  gameplayUI: {fileID: 0}
   gameOverUI: {fileID: 0}
+  pauseMenu: {fileID: 0}
 --- !u!1 &2161714762441154534
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,6 +536,14 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5946596670694246493, guid: 275412496b53fd1499374644c15e1fe6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946596670694246493, guid: 275412496b53fd1499374644c15e1fe6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946596670694246493, guid: 275412496b53fd1499374644c15e1fe6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2
       objectReference: {fileID: 0}
@@ -616,11 +627,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5946596670694246493, guid: 275412496b53fd1499374644c15e1fe6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5946596670694246493, guid: 275412496b53fd1499374644c15e1fe6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5946596670694246493, guid: 275412496b53fd1499374644c15e1fe6, type: 3}
       propertyPath: m_LocalPosition.x

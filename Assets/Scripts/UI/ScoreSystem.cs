@@ -4,7 +4,6 @@ using System.Collections;
 
 public class ScoreSystem : MonoBehaviour
 {
-    // ... (Ваши существующие поля UI и Настройки)
     [Header("UI")]
     [SerializeField] private TMP_Text scoreText;   
     [SerializeField] private TMP_Text highScoreText; 
@@ -17,22 +16,29 @@ public class ScoreSystem : MonoBehaviour
 
     private SaveData saveData;
 
+    private Color defaultScoreColor;
+
     [Header("Эффекты (Pulse)")]
     [SerializeField] private float pulseScale = 1.2f; 
     [SerializeField] private float pulseDuration = 1.0f;
+    [SerializeField] private Color pulseColor = Color.white;
 
-    public enum FloatingTextPosition { Center, RightEdge, LeftEdge } // Новое перечисление
+    public enum FloatingTextPosition { Center, RightEdge, LeftEdge } 
 
 [Header("Эффекты (Floating Text)")]
     [SerializeField] private GameObject floatingTextPrefab;
     [SerializeField] private FloatingTextPosition spawnPosition = FloatingTextPosition.RightEdge; 
     [SerializeField] private float verticalOffset = 50f; 
-    [SerializeField] private float horizontalPadding = 20f; // <-- Новое поле для смещения в пикселях
+    [SerializeField] private float horizontalPadding = 20f; 
     [SerializeField] private float floatDuration = 1.0f;
     [SerializeField] private float floatSpeed = 100f;
 
     void Start()
     {
+        if (scoreText != null)
+        {
+            defaultScoreColor = scoreText.color;
+        }
         saveData = SaveSystem.Load();
         highScore = saveData != null ? saveData.highScore : 0;
 
@@ -61,10 +67,10 @@ public class ScoreSystem : MonoBehaviour
         UpdateScoreUI();
         UpdateRunHighScoreUI();
         
-        StartPulse(scoreText.transform);
+        StartPulse(scoreText); 
         if (currentScore >= runHighScore)
         {
-             StartPulse(runHighScoreText.transform);
+             StartPulse(runHighScoreText);
         }
 
         SpawnFloatingText(points);
@@ -84,27 +90,21 @@ private void SpawnFloatingText(int points)
 
         tmp.text = "+" + points;
         
-        // --- Логика определения позиции ---
         Vector3 spawnPoint = scoreText.transform.position;
         float scoreTextWidth = scoreText.textBounds.size.x * scoreText.rectTransform.lossyScale.x;
         
-        // Вычисляем ширину созданного всплывающего текста
         tmp.ForceMeshUpdate(); 
         float floatingTextWidth = tmp.textBounds.size.x * tmp.rectTransform.lossyScale.x;
         
-        // Учет ширины текущего счетчика для смещения
         switch (spawnPosition)
         {
             case FloatingTextPosition.RightEdge:
-                // Сдвиг к правому краю счета + половина ширины всплывающего текста + ручной отступ
                 spawnPoint.x += (scoreTextWidth / 2f) + (floatingTextWidth / 2f) + horizontalPadding;
                 break;
             case FloatingTextPosition.LeftEdge:
-                // Сдвиг к левому краю счета - половина ширины всплывающего текста - ручной отступ
                 spawnPoint.x -= (scoreTextWidth / 2f) + (floatingTextWidth / 2f) + horizontalPadding;
                 break;
             case FloatingTextPosition.Center:
-                // Добавляем только ручной отступ по X, если нужно
                 spawnPoint.x += horizontalPadding; 
                 break;
         }
@@ -112,7 +112,6 @@ private void SpawnFloatingText(int points)
         spawnPoint.y += verticalOffset;
 
         instance.transform.position = spawnPoint;
-        // ----------------------------------
 
         StartCoroutine(AnimateFloatingText(tmp));
     }
@@ -128,10 +127,8 @@ private void SpawnFloatingText(int points)
             timer += Time.deltaTime;
             float progress = timer / floatDuration;
 
-            // Движение вверх
             target.transform.position = startPos + (Vector3.up * floatSpeed * timer);
 
-            // Исчезновение (Fade Out)
             target.color = new Color(startColor.r, startColor.g, startColor.b, Mathf.Lerp(startColor.a, 0, progress));
 
             yield return null;
@@ -139,8 +136,6 @@ private void SpawnFloatingText(int points)
 
         Destroy(target.gameObject);
     }
-
-    // --- Остальной код без изменений ---
 
     public void ResetScore()
     {
@@ -184,27 +179,56 @@ private void SpawnFloatingText(int points)
 
     public int GetRunHighScore() => runHighScore;
 
-    private void StartPulse(Transform targetTransform)
+    private void StartPulse(TMP_Text targetText)
     {
-        StopCoroutine(PulseScale(targetTransform)); 
-        StartCoroutine(PulseScale(targetTransform));
+        StopCoroutine(PulseEffect(targetText)); 
+        StartCoroutine(PulseEffect(targetText));
     }
 
-    private IEnumerator PulseScale(Transform targetTransform)
+    private IEnumerator PulseEffect(TMP_Text targetText)
     {
-        targetTransform.localScale = Vector3.one * pulseScale;
+        if (targetText == null) yield break;
+
+        Color startColor = targetText == scoreText ? defaultScoreColor : targetText.color;
+        
+        targetText.transform.localScale = Vector3.one * pulseScale;
+        targetText.color = pulseColor;
 
         float timer = 0f;
-        Vector3 startScale = targetTransform.localScale;
+        Vector3 startScale = targetText.transform.localScale;
         Vector3 endScale = Vector3.one;
 
         while (timer < pulseDuration)
         {
             timer += Time.deltaTime;
             float progress = timer / pulseDuration; 
-            targetTransform.localScale = Vector3.Lerp(startScale, endScale, progress);
+            
+            targetText.transform.localScale = Vector3.Lerp(startScale, endScale, progress);
+            
+            targetText.color = Color.Lerp(pulseColor, startColor, progress);
+            
             yield return null; 
         }
-        targetTransform.localScale = endScale;
+        
+        targetText.transform.localScale = endScale;
+        targetText.color = startColor;
     }
+
+    // private IEnumerator PulseScale(Transform targetTransform)
+    // {
+    //     targetTransform.localScale = Vector3.one * pulseScale;
+
+    //     float timer = 0f;
+    //     Vector3 startScale = targetTransform.localScale;
+    //     Vector3 endScale = Vector3.one;
+
+    //     while (timer < pulseDuration)
+    //     {
+    //         timer += Time.deltaTime;
+    //         float progress = timer / pulseDuration; 
+    //         targetTransform.localScale = Vector3.Lerp(startScale, endScale, progress);
+    //         yield return null; 
+    //     }
+    //     targetTransform.localScale = endScale;
+    // }
 }

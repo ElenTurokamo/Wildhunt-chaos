@@ -13,7 +13,10 @@ public class PlayerHealth : MonoBehaviour
         if (bullet != null && bullet.isEnemy)
         {
             PlayerDie();
-            Destroy(bullet.gameObject);
+            if (!bullet.isLaser)
+            {
+                Destroy(bullet.gameObject);
+            }
             return;
         }
 

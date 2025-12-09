@@ -15,7 +15,7 @@ MonoBehaviour:
   patternName: 
   enemyPrefab: {fileID: 2956199916723022952, guid: de4f25decab21e44c974d39d0ec86618, type: 3}
   enemyPrefabAlt: {fileID: 1834585895279134051, guid: 6428ee48605c1344689f6565c9af2b14, type: 3}
-  threatCost: 30
+  threatCost: 10
   rows: 3
   columns: 3
   spacing: 1

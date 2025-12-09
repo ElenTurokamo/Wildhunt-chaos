@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3051219434753402008}
   - component: {fileID: 6254610367339284983}
   - component: {fileID: 5428527997803390693}
+  - component: {fileID: -7628535181653649532}
   m_Layer: 0
   m_Name: Comets
   m_TagString: Untagged
@@ -116,7 +117,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 6
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4895,3 +4896,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-7628535181653649532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3364909398159701462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa9fd05a833bd24dbd5eb383e2665c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  speed: 4

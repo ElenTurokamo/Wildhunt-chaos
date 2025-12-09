@@ -67,11 +67,20 @@ TagManager:
   - name: Enemies
     uniqueID: 2561630751
     locked: 0
+  - name: Enemies 1
+    uniqueID: 460997105
+    locked: 0
   - name: Elites
     uniqueID: 339106675
     locked: 0
+  - name: Elites 1
+    uniqueID: 1478056291
+    locked: 0
   - name: Bosses
     uniqueID: 2477457163
+    locked: 0
+  - name: Bosses 1
+    uniqueID: 2843176561
     locked: 0
   - name: Projectiles
     uniqueID: 1800501743

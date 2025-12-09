@@ -935,7 +935,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1472030677
-  m_SortingLayer: 14
+  m_SortingLayer: 17
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -3118,12 +3118,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
       propertyPath: elitePatterns.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
       propertyPath: 'bossPrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 2839816345852371713, guid: 408177652c0aef045a2d698dcf32ef89, type: 3}
+    - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
+      propertyPath: normalPatterns.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
       propertyPath: 'elitePatterns.Array.data[0]'
       value: 
@@ -3132,6 +3136,22 @@ PrefabInstance:
       propertyPath: 'elitePatterns.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 7dd3952a876a7b245994f222c9f2dd0e, type: 2}
+    - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
+      propertyPath: 'elitePatterns.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 23ffdf054fda24042a878f389c5280f0, type: 2}
+    - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
+      propertyPath: 'elitePatterns.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 31f9ee9ba1e91d046a60071a92812c68, type: 2}
+    - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
+      propertyPath: 'elitePatterns.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a56485f9bfb9ee41a8a71aa300c2982, type: 2}
+    - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
+      propertyPath: 'normalPatterns.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 350c4125e39a0604fbefac51287b214b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3243,19 +3263,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5481035200154155066, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: m_fontColor.b
-      value: 0.990566
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5481035200154155066, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: m_fontColor.g
-      value: 0.4812656
+      value: 0.50484604
       objectReference: {fileID: 0}
     - target: {fileID: 5481035200154155066, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: m_fontColor.r
-      value: 0.92575866
+      value: 0.4575472
       objectReference: {fileID: 0}
     - target: {fileID: 5481035200154155066, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4294802412
+      value: 4294934901
       objectReference: {fileID: 0}
     - target: {fileID: 7077199357171465176, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: m_Name
@@ -3400,6 +3420,18 @@ PrefabInstance:
     - target: {fileID: 9172159840972191693, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: pulseScale
       value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172159840972191693, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+      propertyPath: pulseColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172159840972191693, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+      propertyPath: pulseColor.g
+      value: 0.79757994
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172159840972191693, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+      propertyPath: pulseColor.r
+      value: 0.7783019
       objectReference: {fileID: 0}
     - target: {fileID: 9172159840972191693, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: floatDuration

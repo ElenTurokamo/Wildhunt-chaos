@@ -1,8 +1,7 @@
 using UnityEngine;
 
-public class Gun: MonoBehaviour
+public class Gun : MonoBehaviour
 {
-
     public Bullet bullet;
     Vector2 direction;
 
@@ -13,20 +12,17 @@ public class Gun: MonoBehaviour
     float delayTimer = 0f;
 
     public bool isActive = false;
-    void Start()
-    {
 
-    }
+    private Bullet currentFiredBullet; 
 
     void Update()
     {
-        if (!isActive)
-        {
-            return;
-        }
+        if (!isActive) return;
+        
         direction = (transform.localRotation * Vector2.up).normalized;
 
-        if (autoShoot){
+        if (autoShoot)
+        {
             if (delayTimer >= shootDelaySeconds)
             {
                 if (shootTimer >= shootIntervalSeconds)
@@ -38,7 +34,6 @@ public class Gun: MonoBehaviour
                 {
                     shootTimer += Time.deltaTime;
                 }
-
             }
             else
             {
@@ -46,11 +41,43 @@ public class Gun: MonoBehaviour
             }
         }
     }
-    
+
     public void Shoot()
     {
-        GameObject go = Instantiate(bullet.gameObject, transform.position, Quaternion.identity);
+        SpriteRenderer bulletRenderer = bullet.GetComponent<SpriteRenderer>();
+        float bulletHeight = 0f;
+
+        if (bulletRenderer != null && bulletRenderer.sprite != null)
+        {
+            bulletHeight = bulletRenderer.bounds.size.y;
+        }
+
+        float offset = bulletHeight / 2f; 
+
+        Vector3 spawnOffset = direction * offset;
+        
+        Vector3 spawnPosition = transform.position + spawnOffset;
+
+        GameObject go = Instantiate(bullet.gameObject, spawnPosition, transform.rotation);
+        
         Bullet goBullet = go.GetComponent<Bullet>();
         goBullet.direction = direction;
+
+        currentFiredBullet = goBullet; 
+        
+        if (goBullet.isLaser)
+        {
+            goBullet.RemoveColliderDelayed(0.6f);
+        }
+
+        DespawnBulletIfLaser(currentFiredBullet);
+    }
+    private void DespawnBulletIfLaser(Bullet bullet)
+    {
+        if (bullet != null && bullet.isLaser)
+        {
+            bullet.FadeOutAndDestroy(); 
+            currentFiredBullet = null; 
+        }
     }
 }
