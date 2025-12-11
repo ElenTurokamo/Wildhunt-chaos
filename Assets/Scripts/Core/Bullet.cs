@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
     public bool isEnemy = false;
     
     public bool isLaser = false; 
+    public float destroyDuration = 0.5f;
+    public float initialDelay = 1.0f;
 
     void Start()
     {
@@ -34,28 +36,44 @@ public class Bullet : MonoBehaviour
 
     public void FadeOutAndDestroy()
     {
-        StartCoroutine(FadeRoutine());
+        StartCoroutine(ScaleOutRoutine());
+        RemoveColliderDelayed(initialDelay);
     }
 
-    private IEnumerator FadeRoutine()
-    {
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        if (sr != null)
+    private IEnumerator ScaleOutRoutine()
         {
-            float duration = 1f; 
-            float time = 0;
-            float startAlpha = sr.color.a;
+            SpriteRenderer sr = GetComponent<SpriteRenderer>();
+            if (sr == null)
+            {
+                Destroy(gameObject);
+                yield break;
+            }
 
-            while (time < duration)
+            yield return new WaitForSeconds(initialDelay);
+
+            Vector3 startScale = transform.localScale;
+            Vector3 startPos = transform.position;
+            float height = sr.bounds.size.y; 
+
+            float time = 0;
+
+            while (time < destroyDuration)
             {
                 time += Time.deltaTime;
-                float newAlpha = Mathf.Lerp(startAlpha, 0f, time / duration);
-                sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, newAlpha);
+                float progress = time / destroyDuration;
+                
+                float newScaleY = Mathf.Lerp(startScale.y, 0f, progress);
+                transform.localScale = new Vector3(startScale.x, newScaleY, startScale.z);
+
+
+                float lostHeight = height * startScale.y * progress; 
+                transform.position = startPos + Vector3.down * (lostHeight / 2f);
+                
                 yield return null;
             }
+
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
-    }
 
     public void RemoveColliderDelayed(float delay)
     {

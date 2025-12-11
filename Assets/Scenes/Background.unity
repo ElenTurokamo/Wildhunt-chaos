@@ -406,14 +406,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SRT TV
       objectReference: {fileID: 0}
-    - target: {fileID: 1492319163639107754, guid: 828747d6453651b4da21fe1bc5c4b479, type: 3}
-      propertyPath: m_IsGlobal
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1492319163639107754, guid: 828747d6453651b4da21fe1bc5c4b479, type: 3}
-      propertyPath: sharedProfile
-      value: 
-      objectReference: {fileID: 11400000, guid: 4248435611ae0ba468daf12471880ade, type: 2}
     - target: {fileID: 5268243255849015761, guid: 828747d6453651b4da21fe1bc5c4b479, type: 3}
       propertyPath: m_LocalPosition.x
       value: 267.35666

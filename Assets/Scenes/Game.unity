@@ -3113,12 +3113,16 @@ PrefabInstance:
       value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
+      propertyPath: eliteInterval
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
       propertyPath: bossPrefabs.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
       propertyPath: elitePatterns.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
       propertyPath: 'bossPrefabs.Array.data[0]'
@@ -3148,6 +3152,10 @@ PrefabInstance:
       propertyPath: 'elitePatterns.Array.data[4]'
       value: 
       objectReference: {fileID: 11400000, guid: 7a56485f9bfb9ee41a8a71aa300c2982, type: 2}
+    - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
+      propertyPath: 'elitePatterns.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 70b906f742b02744f99f226a246b4fdc, type: 2}
     - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
       propertyPath: 'normalPatterns.Array.data[6]'
       value: 
@@ -3459,7 +3467,7 @@ PrefabInstance:
       objectReference: {fileID: 333343141}
     - target: {fileID: 9172159840972191693, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: horizontalPadding
-      value: 1.8
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 9172159840972191693, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: floatingTextPrefab

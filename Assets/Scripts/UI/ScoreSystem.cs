@@ -46,14 +46,13 @@ public class ScoreSystem : MonoBehaviour
         UpdateUI();
     }
 
-    public void AddScore(int points)
+    public void AddScore(int points, Vector3 enemyPosition = default)
     {
         if (points == 0) return;
 
         currentScore += points;
 
-        if (currentScore > runHighScore)
-            runHighScore = currentScore;
+        if (currentScore > runHighScore) runHighScore = currentScore;
 
         if (currentScore > highScore)
         {
@@ -68,50 +67,72 @@ public class ScoreSystem : MonoBehaviour
         UpdateRunHighScoreUI();
         
         StartPulse(scoreText); 
-        if (currentScore >= runHighScore)
-        {
-             StartPulse(runHighScoreText);
-        }
+        if (currentScore >= runHighScore) StartPulse(runHighScoreText);
 
-        SpawnFloatingText(points);
+        SpawnFloatingText(points, enemyPosition);
     }
 
-private void SpawnFloatingText(int points)
+    private void SpawnFloatingText(int points, Vector3 worldPos)
     {
         if (floatingTextPrefab == null || scoreText == null) return;
 
         GameObject instance = Instantiate(floatingTextPrefab, scoreText.transform.parent);
         TMP_Text tmp = instance.GetComponent<TMP_Text>();
-        if (tmp == null)
-        {
-            Destroy(instance);
-            return;
-        }
+        if (tmp == null) { Destroy(instance); return; }
 
+        RectTransform rectTransform = instance.GetComponent<RectTransform>();
+        if (rectTransform == null) { Destroy(instance); return; }
+        
         tmp.text = "+" + points;
         
-        Vector3 spawnPoint = scoreText.transform.position;
-        float scoreTextWidth = scoreText.textBounds.size.x * scoreText.rectTransform.lossyScale.x;
-        
-        tmp.ForceMeshUpdate(); 
-        float floatingTextWidth = tmp.textBounds.size.x * tmp.rectTransform.lossyScale.x;
-        
-        switch (spawnPosition)
+        rectTransform.localPosition = new Vector3(rectTransform.localPosition.x, rectTransform.localPosition.y, 0);
+        rectTransform.localScale = Vector3.one;
+
+        if (worldPos != default)
         {
-            case FloatingTextPosition.RightEdge:
-                spawnPoint.x += (scoreTextWidth / 2f) + (floatingTextWidth / 2f) + horizontalPadding;
-                break;
-            case FloatingTextPosition.LeftEdge:
-                spawnPoint.x -= (scoreTextWidth / 2f) + (floatingTextWidth / 2f) + horizontalPadding;
-                break;
-            case FloatingTextPosition.Center:
-                spawnPoint.x += horizontalPadding; 
-                break;
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPos);
+
+            Camera uiCamera = scoreText.canvas.worldCamera;
+            
+            if (uiCamera == null) uiCamera = Camera.main;
+
+            RectTransform parentRect = scoreText.transform.parent as RectTransform;
+            Vector2 localPoint;
+            
+            bool isConverted = RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                parentRect, 
+                screenPos, 
+                uiCamera, 
+                out localPoint
+            );
+            if (isConverted)
+            {
+                localPoint.x += horizontalPadding; 
+                localPoint.y += verticalOffset;
+                rectTransform.localPosition = localPoint;
+            }
         }
-
-        spawnPoint.y += verticalOffset;
-
-        instance.transform.position = spawnPoint;
+        else
+        {
+            Vector3 spawnPoint = scoreText.transform.localPosition;
+            spawnPoint = scoreText.transform.position;
+            float scoreTextWidth = scoreText.textBounds.size.x * scoreText.rectTransform.lossyScale.x;
+            tmp.ForceMeshUpdate(); 
+            float floatingTextWidth = tmp.textBounds.size.x * tmp.rectTransform.lossyScale.x;
+            
+            switch (spawnPosition)
+            {
+                case FloatingTextPosition.RightEdge:
+                    spawnPoint.x += (scoreTextWidth / 2f) + (floatingTextWidth / 2f) + horizontalPadding;
+                    break;
+                case FloatingTextPosition.LeftEdge:
+                    spawnPoint.x -= (scoreTextWidth / 2f) + (floatingTextWidth / 2f) + horizontalPadding;
+                    break;
+                case FloatingTextPosition.Center:
+                    spawnPoint.x += horizontalPadding; 
+                    break;
+            }
+        }
 
         StartCoroutine(AnimateFloatingText(tmp));
     }

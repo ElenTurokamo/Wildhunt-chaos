@@ -465,7 +465,7 @@ MonoBehaviour:
   bullet: {fileID: 1268056597056580057, guid: ecd687dc171e4114db3ed02f5940a184, type: 3}
   autoShoot: 0
   shootIntervalSeconds: 3
-  shootDelaySeconds: 20
+  shootDelaySeconds: 2
   isActive: 0
 --- !u!1 &4359363088145073562
 GameObject:

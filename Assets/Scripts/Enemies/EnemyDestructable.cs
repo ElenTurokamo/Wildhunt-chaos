@@ -53,7 +53,7 @@ public class EnemyDestructable : MonoBehaviour
     {
         if (!canBeDestroyed) return;
 
-Bullet bullet = collision.GetComponent<Bullet>();
+    Bullet bullet = collision.GetComponent<Bullet>();
         if (bullet != null && !bullet.isEnemy)
         {
             if (AudioManager.instance != null)
@@ -76,7 +76,7 @@ Bullet bullet = collision.GetComponent<Bullet>();
             if (scoreSystem != null)
             {
                 int points = baseScore * threatCost;
-                scoreSystem.AddScore(points);
+                scoreSystem.AddScore(points, transform.position);
             }
 
             if (AudioManager.instance != null)

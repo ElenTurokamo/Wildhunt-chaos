@@ -103,16 +103,16 @@ public class ThreatSystem : MonoBehaviour
     public float GetMaxThreat() => maxThreat;
 
     // -----------------------------------------
-    //                 DEBUG
+    //                 DEBUG (ВКЛ/ВЫКЛ)
     // -----------------------------------------
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(10, 10, 300, 80),
-            $"Threat: {currentThreat:F1}/{maxThreat:F1}\n" +
-            $"Spent: {spentThisWave:F1}\n" +
-            $"DiffBonus: {difficultyBonus:F1}\n" +
-            $"TimeAlive: {timeAlive:F1}");
-    }
+    // private void OnGUI()
+    // {
+    //     GUI.Label(new Rect(10, 10, 300, 80),
+    //         $"Threat: {currentThreat:F1}/{maxThreat:F1}\n" +
+    //         $"Spent: {spentThisWave:F1}\n" +
+    //         $"DiffBonus: {difficultyBonus:F1}\n" +
+    //         $"TimeAlive: {timeAlive:F1}");
+    // }
 
     // -----------------------------------------
     //          ДОПОЛНИТЕЛЬНЫЕ МЕТОДЫ

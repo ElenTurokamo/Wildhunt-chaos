@@ -21,29 +21,29 @@ public class Gun : MonoBehaviour
         
         direction = (transform.localRotation * Vector2.up).normalized;
 
-        if (autoShoot)
+        if (delayTimer < shootDelaySeconds)
         {
-            if (delayTimer >= shootDelaySeconds)
+            delayTimer += Time.deltaTime;
+        }
+
+        if (autoShoot && delayTimer >= shootDelaySeconds)
+        {
+            if (shootTimer >= shootIntervalSeconds)
             {
-                if (shootTimer >= shootIntervalSeconds)
-                {
-                    Shoot();
-                    shootTimer = 0;
-                }
-                else
-                {
-                    shootTimer += Time.deltaTime;
-                }
+                Shoot();
+                shootTimer = 0;
             }
             else
             {
-                delayTimer += Time.deltaTime;
+                shootTimer += Time.deltaTime;
             }
         }
     }
 
     public void Shoot()
     {
+        if (delayTimer < shootDelaySeconds) return;
+
         SpriteRenderer bulletRenderer = bullet.GetComponent<SpriteRenderer>();
         float bulletHeight = 0f;
 
@@ -53,25 +53,18 @@ public class Gun : MonoBehaviour
         }
 
         float offset = bulletHeight / 2f; 
-
         Vector3 spawnOffset = direction * offset;
-        
         Vector3 spawnPosition = transform.position + spawnOffset;
 
         GameObject go = Instantiate(bullet.gameObject, spawnPosition, transform.rotation);
         
         Bullet goBullet = go.GetComponent<Bullet>();
         goBullet.direction = direction;
-
         currentFiredBullet = goBullet; 
-        
-        if (goBullet.isLaser)
-        {
-            goBullet.RemoveColliderDelayed(0.6f);
-        }
 
         DespawnBulletIfLaser(currentFiredBullet);
     }
+
     private void DespawnBulletIfLaser(Bullet bullet)
     {
         if (bullet != null && bullet.isLaser)
