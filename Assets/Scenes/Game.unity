@@ -3130,7 +3130,7 @@ PrefabInstance:
       objectReference: {fileID: 2839816345852371713, guid: 408177652c0aef045a2d698dcf32ef89, type: 3}
     - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
       propertyPath: normalPatterns.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
       propertyPath: 'elitePatterns.Array.data[0]'
@@ -3159,7 +3159,7 @@ PrefabInstance:
     - target: {fileID: 8345416337546785140, guid: f8bcf773aa49df34dbad0895aaa159f1, type: 3}
       propertyPath: 'normalPatterns.Array.data[6]'
       value: 
-      objectReference: {fileID: 11400000, guid: 350c4125e39a0604fbefac51287b214b, type: 2}
+      objectReference: {fileID: 11400000, guid: 46c0634a147942646ace7dfe274e171f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3261,6 +3261,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 938145419}
+    - target: {fileID: 3736737869916083532, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
+      objectReference: {fileID: 0}
     - target: {fileID: 5481035200154155066, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: m_margin.z
       value: -368.28918
@@ -3271,19 +3275,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5481035200154155066, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: m_fontColor.b
-      value: 1
+      value: 0.98039216
       objectReference: {fileID: 0}
     - target: {fileID: 5481035200154155066, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: m_fontColor.g
-      value: 0.50484604
+      value: 0.49411765
       objectReference: {fileID: 0}
     - target: {fileID: 5481035200154155066, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: m_fontColor.r
-      value: 0.4575472
+      value: 0.91764706
       objectReference: {fileID: 0}
     - target: {fileID: 5481035200154155066, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4294934901
+      value: 4294606570
       objectReference: {fileID: 0}
     - target: {fileID: 7077199357171465176, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: m_Name
@@ -3339,7 +3343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7320811113788930595, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -85.26001
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 8511003741487950697, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3371,7 +3375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8511003741487950697, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -43.814972
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 8511003741487950697, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3435,11 +3439,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9172159840972191693, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: pulseColor.g
-      value: 0.79757994
+      value: 0.7216981
       objectReference: {fileID: 0}
     - target: {fileID: 9172159840972191693, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: pulseColor.r
-      value: 0.7783019
+      value: 0.9640901
       objectReference: {fileID: 0}
     - target: {fileID: 9172159840972191693, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
       propertyPath: floatDuration
