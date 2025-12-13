@@ -82,6 +82,9 @@ TagManager:
   - name: Bosses 1
     uniqueID: 2843176561
     locked: 0
+  - name: Projectiles -1
+    uniqueID: 16478713
+    locked: 0
   - name: Projectiles
     uniqueID: 1800501743
     locked: 0

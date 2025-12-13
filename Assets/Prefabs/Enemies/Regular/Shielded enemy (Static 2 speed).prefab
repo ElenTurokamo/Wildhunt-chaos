@@ -246,7 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDestructable
   baseScore: 5
   threatCost: 1
-  health: 2
+  health: 4
   flashDuration: 0.1
   explosionPrefab: {fileID: 0}
   hitSoundName: EnemyHit-1
@@ -462,7 +462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDestructable
   baseScore: 15
   threatCost: 1
-  health: 2
+  health: 4
   flashDuration: 0.1
   explosionPrefab: {fileID: 1612062634570420469, guid: 74efb6b66c33917429b9526e1291b57e, type: 3}
   hitSoundName: EnemyHit-1

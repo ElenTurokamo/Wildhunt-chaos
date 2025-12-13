@@ -3,6 +3,7 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     public Bullet bullet;
+    public Bullet AltBullet;
     Vector2 direction;
 
     public bool autoShoot = false;
@@ -57,6 +58,31 @@ public class Gun : MonoBehaviour
         Vector3 spawnPosition = transform.position + spawnOffset;
 
         GameObject go = Instantiate(bullet.gameObject, spawnPosition, transform.rotation);
+        
+        Bullet goBullet = go.GetComponent<Bullet>();
+        goBullet.direction = direction;
+        currentFiredBullet = goBullet; 
+
+        DespawnBulletIfLaser(currentFiredBullet);
+    }
+
+    public void AltShoot()
+    {
+        if (delayTimer < shootDelaySeconds) return;
+
+        SpriteRenderer AltBulletRenderer = AltBullet.GetComponent<SpriteRenderer>();
+        float bulletHeight = 0f;
+
+        if (AltBulletRenderer != null && AltBulletRenderer.sprite != null)
+        {
+            bulletHeight = AltBulletRenderer.bounds.size.y;
+        }
+
+        float offset = bulletHeight / 2f; 
+        Vector3 spawnOffset = direction * offset;
+        Vector3 spawnPosition = transform.position + spawnOffset;
+
+        GameObject go = Instantiate(AltBullet.gameObject, spawnPosition, transform.rotation);
         
         Bullet goBullet = go.GetComponent<Bullet>();
         goBullet.direction = direction;

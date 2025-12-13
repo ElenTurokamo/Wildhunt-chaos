@@ -463,9 +463,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gun
   bullet: {fileID: 1268056597056580057, guid: ecd687dc171e4114db3ed02f5940a184, type: 3}
+  AltBullet: {fileID: 1268056597056580057, guid: 2c324ba2505e8f444acbf11ad63e46e5, type: 3}
   autoShoot: 0
   shootIntervalSeconds: 3
-  shootDelaySeconds: 2
+  shootDelaySeconds: 0.4
   isActive: 0
 --- !u!1 &4359363088145073562
 GameObject:
@@ -520,7 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca6d7fb35bbedd54da1acdf9970a8a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDestructable
-  baseScore: 10
+  baseScore: 200
   threatCost: 1
   health: 50
   flashDuration: 0.1
