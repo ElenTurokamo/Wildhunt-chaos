@@ -52,6 +52,12 @@ TagManager:
   - name: Midground
     uniqueID: 4162098581
     locked: 0
+  - name: DangerFields
+    uniqueID: 1175960369
+    locked: 0
+  - name: Interactable -1
+    uniqueID: 3637536921
+    locked: 0
   - name: Interactable
     uniqueID: 3494853403
     locked: 0

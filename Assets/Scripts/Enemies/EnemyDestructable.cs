@@ -6,6 +6,7 @@ public class EnemyDestructable : MonoBehaviour
     [Header("Настройки очков")]
     public int baseScore = 10;
     [HideInInspector] public int threatCost = 1;
+    [HideInInspector] public int finalScore;
 
     [Header("Настройки здоровья")]
     public int health = 3; 
@@ -20,6 +21,11 @@ public class EnemyDestructable : MonoBehaviour
     public string hitSoundName = "EnemyHit-1";
     public string deathSoundName = "EnemyExplosion-1";
 
+    [Header("Дроп валюты")]
+    public GameObject currencyPrefab;   
+    [Range(0f, 100f)]
+    public float currencyDropChance = 5f;   
+
     private bool canBeDestroyed = false;
     private ScoreSystem scoreSystem;
     private SpriteRenderer[] childRenderers;
@@ -29,6 +35,8 @@ public class EnemyDestructable : MonoBehaviour
     {
         scoreSystem = Object.FindFirstObjectByType<ScoreSystem>();
         childRenderers = GetComponentsInChildren<SpriteRenderer>();
+
+        if (finalScore == 0) finalScore = baseScore;
     }
 
     void Update()
@@ -76,8 +84,10 @@ public class EnemyDestructable : MonoBehaviour
             if (scoreSystem != null)
             {
                 int points = baseScore * threatCost;
-                scoreSystem.AddScore(points, transform.position);
+                scoreSystem.AddScore(finalScore, transform.position);
             }
+            
+            TryDropCurrency();
 
             if (AudioManager.instance != null)
             {
@@ -95,6 +105,17 @@ public class EnemyDestructable : MonoBehaviour
             }
     
             Destroy(gameObject);
+        }
+    }
+
+    private void TryDropCurrency()
+    {
+        if (currencyPrefab == null) return;
+
+        float roll = Random.Range(0f, 100f);
+        if (roll <= currencyDropChance)
+        {
+            Instantiate(currencyPrefab, transform.position, Quaternion.identity);
         }
     }
 

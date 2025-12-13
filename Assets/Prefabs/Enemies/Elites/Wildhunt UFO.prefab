@@ -415,7 +415,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1478056291
-  m_SortingLayer: 11
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 49417335881396728, guid: 54ba2da8400634d469bba4002b21a384, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -528,6 +528,8 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1612062634570420469, guid: 74efb6b66c33917429b9526e1291b57e, type: 3}
   hitSoundName: EnemyHit-1
   deathSoundName: EnemyExplosion-1
+  currencyPrefab: {fileID: 4831216234579773950, guid: 94068296860e0854d8edd6fd0ea20f4a, type: 3}
+  currencyDropChance: 20
 --- !u!114 &5764356159453798732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,7 +698,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 339106675
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: 6234176133674011997, guid: f944ad2136577704f85851162fd91246, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

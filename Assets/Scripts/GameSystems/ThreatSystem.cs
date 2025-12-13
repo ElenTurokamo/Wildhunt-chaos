@@ -42,6 +42,9 @@ public class ThreatSystem : MonoBehaviour
                   + Mathf.Min(reserveCap, difficultyBonus);
     }
 
+    public float GetTimeAlive() => timeAlive;
+
+
     // -----------------------------------------
     //                 ВОЛНА
     // -----------------------------------------

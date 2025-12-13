@@ -935,7 +935,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1472030677
-  m_SortingLayer: 17
+  m_SortingLayer: 20
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -3234,6 +3234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 7573322732534936834, guid: c39710a3a5f253a4fadad0b782124b7d, type: 3}
+      propertyPath: currencyText
+      value: 
+      objectReference: {fileID: 6207452953426230847}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3348,13 +3352,123 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 771648105362143538, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6207452953426230855}
+    - targetCorrespondingSourceObject: {fileID: 5333311356567479600, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6207452953426230854}
+    - targetCorrespondingSourceObject: {fileID: 2111311244701920867, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6207452953426230853}
+    - targetCorrespondingSourceObject: {fileID: 2555062697406549478, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6207452953426230852}
   m_SourcePrefab: {fileID: 100100000, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
 --- !u!1 &6207452953426230846 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7077199357171465176, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
   m_PrefabInstance: {fileID: 6207452953426230845}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6207452953426230847 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2845799949827833199, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+  m_PrefabInstance: {fileID: 6207452953426230845}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &6207452953426230848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2555062697406549478, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+  m_PrefabInstance: {fileID: 6207452953426230845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6207452953426230849 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2111311244701920867, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+  m_PrefabInstance: {fileID: 6207452953426230845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6207452953426230850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5333311356567479600, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+  m_PrefabInstance: {fileID: 6207452953426230845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6207452953426230851 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 771648105362143538, guid: 3fd22a31795b8c64ea60a6076c7cfee1, type: 3}
+  m_PrefabInstance: {fileID: 6207452953426230845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6207452953426230852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207452953426230848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead1fa1f015513a4fa12f84b709cc562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeartUIElement
+  fullHeartSprite: {fileID: 3884831322747113044, guid: 73b78a85e8a5a0c43a3bbfe9bcd83884, type: 3}
+  brokenHeartSprite: {fileID: -4524579941490717054, guid: 0a5b9399dc26f464e9cf7bb3d03a0e3b, type: 3}
+  emptyHeartSprite: {fileID: -4477808790398640171, guid: d014c0ab8d0243546b5f0e706180405d, type: 3}
+  shakeMagnitude: 5
+  shakeDuration: 0.5
+--- !u!114 &6207452953426230853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207452953426230849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead1fa1f015513a4fa12f84b709cc562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeartUIElement
+  fullHeartSprite: {fileID: 3884831322747113044, guid: 73b78a85e8a5a0c43a3bbfe9bcd83884, type: 3}
+  brokenHeartSprite: {fileID: -4524579941490717054, guid: 0a5b9399dc26f464e9cf7bb3d03a0e3b, type: 3}
+  emptyHeartSprite: {fileID: -4477808790398640171, guid: d014c0ab8d0243546b5f0e706180405d, type: 3}
+  shakeMagnitude: 5
+  shakeDuration: 0.5
+--- !u!114 &6207452953426230854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207452953426230850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ead1fa1f015513a4fa12f84b709cc562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HeartUIElement
+  fullHeartSprite: {fileID: 3884831322747113044, guid: 73b78a85e8a5a0c43a3bbfe9bcd83884, type: 3}
+  brokenHeartSprite: {fileID: -4524579941490717054, guid: 0a5b9399dc26f464e9cf7bb3d03a0e3b, type: 3}
+  emptyHeartSprite: {fileID: -4477808790398640171, guid: d014c0ab8d0243546b5f0e706180405d, type: 3}
+  shakeMagnitude: 5
+  shakeDuration: 0.5
+--- !u!114 &6207452953426230855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207452953426230851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f565d9d48ba2a94ba94845a0be8f7fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealthUI
+  hearts:
+  - {fileID: 6207452953426230854}
+  - {fileID: 6207452953426230853}
+  - {fileID: 6207452953426230852}
 --- !u!1001 &6680431399322133992
 PrefabInstance:
   m_ObjectHideFlags: 0

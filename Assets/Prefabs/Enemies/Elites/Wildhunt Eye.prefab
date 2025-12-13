@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 339106675
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: -6199720543617963891, guid: 8a08c4e3557564649b7bfdef5320828d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -254,7 +254,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 339106675
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 3
   m_Sprite: {fileID: 1015684013481136522, guid: 8438d43b0f7882a41acb39e7a906f529, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -366,7 +366,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 339106675
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 1
   m_Sprite: {fileID: -8219080203723595482, guid: d3bbaf1555a0c8541b805562dd36328c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -464,7 +464,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 339106675
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -496,6 +496,8 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1612062634570420469, guid: 74efb6b66c33917429b9526e1291b57e, type: 3}
   hitSoundName: EnemyHit-1
   deathSoundName: EnemyExplosion-1
+  currencyPrefab: {fileID: 4831216234579773950, guid: 94068296860e0854d8edd6fd0ea20f4a, type: 3}
+  currencyDropChance: 20
 --- !u!61 &7795122829797530916
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -633,6 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShooting
   bullet: {fileID: 6242397387540072151, guid: 6f63095993b0d7e4699d73ce1ee2c542, type: 3}
+  AltBullet: {fileID: 0}
   autoShoot: 1
   shootIntervalSeconds: 1
   shootDelaySeconds: 0
@@ -715,7 +718,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 339106675
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 2
   m_Sprite: {fileID: -5436558863286077478, guid: a775f922f0e02e2409bf4e0a872e7833, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
