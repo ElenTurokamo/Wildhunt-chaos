@@ -88,6 +88,9 @@ TagManager:
   - name: Bosses 1
     uniqueID: 2843176561
     locked: 0
+  - name: Power Ups
+    uniqueID: 2882513107
+    locked: 0
   - name: Projectiles -1
     uniqueID: 16478713
     locked: 0

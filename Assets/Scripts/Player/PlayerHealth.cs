@@ -12,24 +12,26 @@ public class PlayerHealth : MonoBehaviour
     [Header("Настройки жизней")]
     [SerializeField] private int _maxLives = 3;
     public int maxLives => _maxLives;
-    
     public int currentLives { get; private set; }
 
     [Header("Неуязвимость")]
-    [Tooltip("Продолжительность неуязвимости (сек)")]
+    [Tooltip("Продолжительность действия щита (сек)")]
     [SerializeField] private float invincibilityDuration = 2.0f;
-    [Tooltip("Частота мигания")]
-    [SerializeField] private float flashInterval = 0.1f;
+    
+    [Header("Щит")]
+    [Tooltip("Объект щита (дочерний), который будет включаться")]
+    [SerializeField] private GameObject shieldObject;
 
     private bool isInvincible = false;
-    private SpriteRenderer spriteRenderer;
 
     public static event Action<int> OnLivesChanged;
 
     void Start()
     {
         currentLives = _maxLives;
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        
+        if (shieldObject != null) 
+            shieldObject.SetActive(false);
 
         OnLivesChanged?.Invoke(currentLives);
     }
@@ -43,10 +45,7 @@ public class PlayerHealth : MonoBehaviour
         Bullet bullet = collision.GetComponent<Bullet>();
         if (bullet != null && bullet.isEnemy)
         {
-            if (!bullet.isLaser)
-            {
-                Destroy(bullet.gameObject);
-            }
+            if (!bullet.isLaser) Destroy(bullet.gameObject);
             tookDamage = true;
         }
 
@@ -67,7 +66,6 @@ public class PlayerHealth : MonoBehaviour
         if (isInvincible) return;
 
         currentLives -= damageAmount;
-
         OnLivesChanged?.Invoke(currentLives);
 
         if (currentLives <= 0)
@@ -76,25 +74,21 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
-            StartCoroutine(InvulnerabilityFrames());
+            StartCoroutine(ActivateShieldRoutine());
         }
     }
 
-    private IEnumerator InvulnerabilityFrames()
+    private IEnumerator ActivateShieldRoutine()
     {
         isInvincible = true;
 
-        if (spriteRenderer != null)
-        {
-            float timer = 0f;
-            while (timer < invincibilityDuration)
-            {
-                spriteRenderer.enabled = !spriteRenderer.enabled;
-                yield return new WaitForSeconds(flashInterval);
-                timer += flashInterval;
-            }
-            spriteRenderer.enabled = true;
-        }
+        if (shieldObject != null)
+            shieldObject.SetActive(true);
+
+        yield return new WaitForSeconds(invincibilityDuration);
+
+        if (shieldObject != null)
+            shieldObject.SetActive(false);
 
         isInvincible = false;
     }
@@ -102,11 +96,7 @@ public class PlayerHealth : MonoBehaviour
     private void PlayerDie()
     {
         if (gameplayUI != null) gameplayUI.SetActive(false);
-        if (pauseMenu != null) 
-        {
-            pauseMenu.SetActive(false);
-            // Destroy(pauseMenu); // Лучше просто скрыть, чем удалять
-        }
+        if (pauseMenu != null) pauseMenu.SetActive(false);
         if (gameOverUI != null) gameOverUI.SetActive(true);
 
         Time.timeScale = 0f;

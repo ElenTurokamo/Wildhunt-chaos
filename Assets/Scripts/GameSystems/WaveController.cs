@@ -161,10 +161,8 @@ public class WaveController : MonoBehaviour
         SpawnPattern(elitePatterns, ref lastElitePattern);
     }
 
-    // --- ИСПРАВЛЕННЫЙ МЕТОД SPAWNPATTERN ---
     void SpawnPattern(List<WavePattern> list, ref WavePattern lastPattern)
     {
-        // Проверка на пустой список
         if (list == null || list.Count == 0) return;
 
         WavePattern chosen = null;
