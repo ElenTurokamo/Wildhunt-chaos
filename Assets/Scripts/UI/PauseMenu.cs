@@ -21,6 +21,9 @@ public class PauseMenu : MonoBehaviour
         pauseUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        
+        if (AudioManager.instance != null)
+            AudioManager.instance.SetMuffled(false);
     }
 
     void Pause()
@@ -28,15 +31,19 @@ public class PauseMenu : MonoBehaviour
         pauseUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+
+        if (AudioManager.instance != null)
+            AudioManager.instance.SetMuffled(true);
     }
 
-public void GoToMenu()
-{
-    Time.timeScale = 1f;
-    AudioListener.pause = false;
+    public void GoToMenu()
+    {
+        Time.timeScale = 1f;
+        AudioListener.pause = false;
 
-    SceneManager.LoadScene("Bootstrap", LoadSceneMode.Single);
-}
+        if (AudioManager.instance != null)
+            AudioManager.instance.SetMuffled(false, 0.1f);
 
-
+        SceneManager.LoadScene("Bootstrap", LoadSceneMode.Single);
+    }
 }

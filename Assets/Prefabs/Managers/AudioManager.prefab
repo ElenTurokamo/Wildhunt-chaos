@@ -102,14 +102,14 @@ MonoBehaviour:
   - name: MenuMusic
     clip: {fileID: 8300000, guid: 7f3d01a6aaf5a4b4c9acc5ace94d0761, type: 3}
     mixerGroup: {fileID: -4916374132875042146, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
-    volume: 1
+    volume: 0.8
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: GameMusic
     clip: {fileID: 8300000, guid: 35c4e94e7a1829345b2ab5adb9a60247, type: 3}
     mixerGroup: {fileID: -4916374132875042146, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
-    volume: 1
+    volume: 0.6
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -130,14 +130,14 @@ MonoBehaviour:
   - name: EnemyExplosion-1
     clip: {fileID: 8300000, guid: 447e6f8401d72ac4196d201a47cbfb73, type: 3}
     mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
-    volume: 0.5
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: EnemyHit-1
     clip: {fileID: 8300000, guid: 170b421ef2536a64c86754033eb56758, type: 3}
     mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
-    volume: 0.7
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -163,9 +163,44 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: EnemyShoot-1
-    clip: {fileID: 8300000, guid: f6eb81f01426b9c49adac339d6032fd8, type: 3}
+    clip: {fileID: 8300000, guid: c1e261350fa315144b9f7b98f75f6e6f, type: 3}
+    mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Currency_Pickup-1
+    clip: {fileID: 8300000, guid: f6b145cacd6ad7e4fa4688d6a61130a9, type: 3}
     mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
     volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Enemy_Laser-1
+    clip: {fileID: 8300000, guid: 76b2dca2e1fac9e4f8a75ed8b29dce0a, type: 3}
+    mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player_Death-1
+    clip: {fileID: 8300000, guid: da011d0f1ae907f47850cd1e56e6039f, type: 3}
+    mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player_Hurt-1
+    clip: {fileID: 8300000, guid: da011d0f1ae907f47850cd1e56e6039f, type: 3}
+    mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Shield_Open-1
+    clip: {fileID: 8300000, guid: f36ff53e38be58d4897317dc25ad155a, type: 3}
+    mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}

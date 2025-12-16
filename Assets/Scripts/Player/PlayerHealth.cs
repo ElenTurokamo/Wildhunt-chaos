@@ -25,6 +25,9 @@ public class PlayerHealth : MonoBehaviour
     private bool isInvincible = false;
 
     public static event Action<int> OnLivesChanged;
+    public string playerDeathSoundName = "Player_Death-1";
+    public string playerHurtSoundName = "Player_Hurt-1";
+    public string OpenShieldSoundName = "Shield_Open-1";
 
     void Start()
     {
@@ -57,6 +60,10 @@ public class PlayerHealth : MonoBehaviour
 
         if (tookDamage)
         {
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySFXOneShot(playerHurtSoundName);
+            }
             TakeDamage(1);
         }
     }
@@ -70,6 +77,10 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentLives <= 0)
         {
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySFXOneShot(playerDeathSoundName);
+            }
             PlayerDie();
         }
         else
@@ -84,7 +95,10 @@ public class PlayerHealth : MonoBehaviour
 
         if (shieldObject != null)
             shieldObject.SetActive(true);
-
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySFXOneShot(OpenShieldSoundName);
+            }
         yield return new WaitForSeconds(invincibilityDuration);
 
         if (shieldObject != null)

@@ -14,8 +14,13 @@ public class AudioManager : MonoBehaviour
     private const string MUSIC_KEY = "MusicVolume";
     private const string SFX_KEY = "EffectsVolume";
 
+    private const string CUTOFF_KEY = "MasterCutoff"; 
+    private const float NORMAL_FREQ = 22000f; 
+    private const float MUFFLED_FREQ = 500f;
+
     private AudioSource currentMusicSource; 
     private Coroutine fadeCoroutine; 
+    private Coroutine muffleCoroutine;
 
     void Awake()
     {
@@ -44,6 +49,7 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         LoadVolume();
+        SetMuffled(false, 0f);
     }
 
     public void PlaySFXOneShot(string name)
@@ -69,7 +75,6 @@ public class AudioManager : MonoBehaviour
         fadeCoroutine = StartCoroutine(CrossFadeMusic(nextSound, fadeDuration));
     }
 
-    // --- НОВЫЙ МЕТОД: Остановка музыки с Fade Out ---
     public void StopMusic(float fadeDuration = 1.0f)
     {
         if (currentMusicSource == null || !currentMusicSource.isPlaying) return;
@@ -86,16 +91,14 @@ public class AudioManager : MonoBehaviour
         while (timer < duration)
         {
             timer += Time.deltaTime;
-            // Плавно уменьшаем громкость до 0
             currentMusicSource.volume = Mathf.Lerp(startVolume, 0f, timer / duration);
             yield return null;
         }
 
         currentMusicSource.Stop();
-        currentMusicSource.volume = startVolume; // Возвращаем громкость для будущего использования
+        currentMusicSource.volume = startVolume;
         currentMusicSource = null;
     }
-    // ------------------------------------------------
 
     private IEnumerator CrossFadeMusic(Sound nextSound, float duration)
     {
@@ -132,6 +135,32 @@ public class AudioManager : MonoBehaviour
 
         nextSource.volume = targetVolume;
         currentMusicSource = nextSource;
+    }
+
+    public void SetMuffled(bool isMuffled, float duration = 0.5f)
+    {
+        if (muffleCoroutine != null) StopCoroutine(muffleCoroutine);
+        muffleCoroutine = StartCoroutine(MuffleRoutine(isMuffled, duration));
+    }
+
+    private IEnumerator MuffleRoutine(bool isMuffled, float duration)
+    {
+        mainMixer.GetFloat(CUTOFF_KEY, out float currentFreq);
+        
+        float targetFreq = isMuffled ? MUFFLED_FREQ : NORMAL_FREQ;
+        float timer = 0f;
+
+        while (timer < duration)
+        {
+            timer += Time.unscaledDeltaTime; 
+            
+            float newFreq = Mathf.Lerp(currentFreq, targetFreq, timer / duration);
+            mainMixer.SetFloat(CUTOFF_KEY, newFreq);
+            
+            yield return null;
+        }
+
+        mainMixer.SetFloat(CUTOFF_KEY, targetFreq);
     }
 
     public void SetMasterVolume(float volume)

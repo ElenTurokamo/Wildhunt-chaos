@@ -9,6 +9,8 @@ public class Gun : MonoBehaviour
     [Header("Звуки выстрела")]
     public string playerShootSoundName = "PlayerShoot-1";
     public string enemyShootSoundName = "EnemyShoot-1";
+    public string enemyLaserSoundName = "Enemy_Laser-1";
+    public string playerLaserSoundName = "PlayerLaser-1";
 
     public Bullet bullet;
     public Bullet AltBullet;
@@ -81,7 +83,7 @@ public class Gun : MonoBehaviour
     {
         if (delayTimer < shootDelaySeconds) return;
 
-        PlayShootSound();
+        PlayLaserSound();
 
         SpriteRenderer AltBulletRenderer = AltBullet.GetComponent<SpriteRenderer>();
         float bulletHeight = 0f;
@@ -118,6 +120,15 @@ public class Gun : MonoBehaviour
         if (AudioManager.instance != null)
         {
             string soundName = isPlayer ? playerShootSoundName : enemyShootSoundName;
+            AudioManager.instance.PlaySFXOneShot(soundName);
+        }
+    }
+
+        private void PlayLaserSound()
+    {
+        if (AudioManager.instance != null)
+        {
+            string soundName = isPlayer ? playerLaserSoundName : enemyLaserSoundName;
             AudioManager.instance.PlaySFXOneShot(soundName);
         }
     }

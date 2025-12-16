@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 8104585}
   - component: {fileID: 8104589}
   - component: {fileID: 8104590}
+  - component: {fileID: 8104591}
   m_Layer: 0
   m_Name: Restart button
   m_TagString: Untagged
@@ -282,6 +283,23 @@ MonoBehaviour:
   startOffsetY: 20
   duration: 1
   delay: 0.4
+--- !u!114 &8104591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6099ef6539bfa4242aca140058b02a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFX2DSource
+  soundName: Play_UI
+  condition: 7
+  targetTag: 
+  destroyAfterPlay: 0
+  destroyDelay: 0
 --- !u!1 &10027936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,6 +2016,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1185087308}
+  - component: {fileID: 1185087310}
+  - component: {fileID: 1185087309}
   m_Layer: 0
   m_Name: Pause Menu
   m_TagString: Untagged
@@ -2021,6 +2041,40 @@ Transform:
   - {fileID: 1062762760}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1185087309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185087307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6099ef6539bfa4242aca140058b02a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFX2DSource
+  soundName: Play_UI
+  condition: 3
+  targetTag: 
+  destroyAfterPlay: 0
+  destroyDelay: 0
+--- !u!114 &1185087310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185087307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6099ef6539bfa4242aca140058b02a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFX2DSource
+  soundName: Play_UI
+  condition: 2
+  targetTag: 
+  destroyAfterPlay: 0
+  destroyDelay: 0
 --- !u!1 &1306484211
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,6 +2300,7 @@ GameObject:
   - component: {fileID: 1395298490}
   - component: {fileID: 1395298494}
   - component: {fileID: 1395298495}
+  - component: {fileID: 1395298496}
   m_Layer: 0
   m_Name: Menu button (1)
   m_TagString: Untagged
@@ -2395,6 +2450,23 @@ MonoBehaviour:
   startOffsetY: 20
   duration: 1
   delay: 0.4
+--- !u!114 &1395298496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395298488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6099ef6539bfa4242aca140058b02a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFX2DSource
+  soundName: Click_UI
+  condition: 7
+  targetTag: 
+  destroyAfterPlay: 0
+  destroyDelay: 0
 --- !u!1 &1433688323
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,9 +2629,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 477131009155998355, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1458269908}
-    - targetCorrespondingSourceObject: {fileID: 477131009155998355, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1458269910}
   m_SourcePrefab: {fileID: 100100000, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
 --- !u!1 &1458269907 stripped
 GameObject:
@@ -2586,23 +2655,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5921961735487781652, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
   m_PrefabInstance: {fileID: 1458269906}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1458269910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458269907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6099ef6539bfa4242aca140058b02a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SFX2DSource
-  soundName: MenuMusic
-  condition: 0
-  targetTag: 
-  destroyAfterPlay: 0
-  destroyDelay: 0
 --- !u!114 &1469942882 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1009177806166516651, guid: c39710a3a5f253a4fadad0b782124b7d, type: 3}
@@ -2626,6 +2678,7 @@ GameObject:
   - component: {fileID: 1721979207}
   - component: {fileID: 1721979206}
   - component: {fileID: 1721979205}
+  - component: {fileID: 1721979208}
   m_Layer: 5
   m_Name: Resume button
   m_TagString: Untagged
@@ -2747,6 +2800,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721979203}
   m_CullTransparentMesh: 1
+--- !u!114 &1721979208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721979203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6099ef6539bfa4242aca140058b02a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFX2DSource
+  soundName: Click_UI
+  condition: 7
+  targetTag: 
+  destroyAfterPlay: 0
+  destroyDelay: 0
 --- !u!1 &1859230513
 GameObject:
   m_ObjectHideFlags: 0
@@ -2927,6 +2997,7 @@ GameObject:
   - component: {fileID: 1887055382}
   - component: {fileID: 1887055381}
   - component: {fileID: 1887055380}
+  - component: {fileID: 1887055383}
   m_Layer: 5
   m_Name: Menu button
   m_TagString: Untagged
@@ -3048,6 +3119,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887055378}
   m_CullTransparentMesh: 1
+--- !u!114 &1887055383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887055378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6099ef6539bfa4242aca140058b02a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFX2DSource
+  soundName: Click_UI
+  condition: 7
+  targetTag: 
+  destroyAfterPlay: 0
+  destroyDelay: 0
 --- !u!1 &2036421452
 GameObject:
   m_ObjectHideFlags: 0
@@ -3518,10 +3606,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deco UI
       objectReference: {fileID: 0}
-    - target: {fileID: 1336188522607951175, guid: a9be68e2658b04940b70ab45d513ff29, type: 3}
-      propertyPath: transition
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2438362533017974137, guid: a9be68e2658b04940b70ab45d513ff29, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3601,10 +3685,6 @@ PrefabInstance:
     - target: {fileID: 2438362533017974137, guid: a9be68e2658b04940b70ab45d513ff29, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5447891464340051144, guid: a9be68e2658b04940b70ab45d513ff29, type: 3}
-      propertyPath: m_Camera
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
