@@ -16,5 +16,6 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4359363088145073562, guid: b38777cbaa62aa34db721db275121d56, type: 3}
   enemyPrefabAlt: {fileID: 0}
   threatCost: 30
-  spacing: 8
+  spacing: 7.5
+  minionBaseScore: 200
   centerX: 0

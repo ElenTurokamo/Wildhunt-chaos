@@ -29,12 +29,13 @@ public class EnemyDestructable : MonoBehaviour
     private bool canBeDestroyed = false;
     private ScoreSystem scoreSystem;
     private SpriteRenderer[] childRenderers;
-
+    private DeathSpawner deathSpawner;
 
     void Awake()
     {
         scoreSystem = Object.FindFirstObjectByType<ScoreSystem>();
         childRenderers = GetComponentsInChildren<SpriteRenderer>();
+        deathSpawner = GetComponent<DeathSpawner>();
 
         if (finalScore == 0) finalScore = baseScore;
     }
@@ -89,6 +90,11 @@ public class EnemyDestructable : MonoBehaviour
             
             TryDropCurrency();
 
+            if (deathSpawner != null)
+            {
+                 deathSpawner.TrySpawnOnDeath();
+            }
+            
             if (AudioManager.instance != null)
             {
                 AudioManager.instance.PlaySFXOneShot(deathSoundName);

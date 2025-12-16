@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1733336545
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 3115343334292018942, guid: c36606d424ff46c4ebded7a87267f2e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 8379907996789820859}
   - component: {fileID: 2589519301032965068}
   - component: {fileID: 4571113591024877079}
+  - component: {fileID: 5690881036652078425}
   m_Layer: 0
   m_Name: Regular enemy (Static 1 speed)
   m_TagString: Untagged
@@ -252,6 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDestructable
   baseScore: 10
   threatCost: 1
+  finalScore: 0
   health: 2
   flashDuration: 0.1
   explosionPrefab: {fileID: 1612062634570420469, guid: 74efb6b66c33917429b9526e1291b57e, type: 3}
@@ -259,6 +261,21 @@ MonoBehaviour:
   deathSoundName: EnemyExplosion-1
   currencyPrefab: {fileID: 4831216234579773950, guid: 94068296860e0854d8edd6fd0ea20f4a, type: 3}
   currencyDropChance: 5
+--- !u!114 &5690881036652078425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2956199916723022952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8380d590836caaf43b7039fbb540d954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathSpawner
+  objectToSpawn: {fileID: 1807663893595672868, guid: 6f4fc98733fdf8c4f8a3f75ba18a784b, type: 3}
+  spawnChance: 10
+  spawnedObjectLifetime: 0.2
 --- !u!1 &8965756241690956741
 GameObject:
   m_ObjectHideFlags: 0

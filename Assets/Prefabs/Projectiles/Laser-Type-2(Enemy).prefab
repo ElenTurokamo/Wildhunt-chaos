@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   direction: {x: 0, y: 1}
-  speed: 0.3
+  speed: 0.7
   velocity: {x: 0, y: 0}
   isEnemy: 1
   isLaser: 1
@@ -144,7 +144,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1800501743
-  m_SortingLayer: 14
+  m_SortingLayer: 18
   m_SortingOrder: 0
   m_Sprite: {fileID: -1102263790118589690, guid: 636f40d625cfe794fa70f98d34c1b6fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

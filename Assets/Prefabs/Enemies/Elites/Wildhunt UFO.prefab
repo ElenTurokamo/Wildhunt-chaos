@@ -415,7 +415,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1478056291
-  m_SortingLayer: 12
+  m_SortingLayer: 13
   m_SortingOrder: 0
   m_Sprite: {fileID: 49417335881396728, guid: 54ba2da8400634d469bba4002b21a384, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -523,7 +523,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDestructable
   baseScore: 200
   threatCost: 1
-  health: 50
+  finalScore: 0
+  health: 35
   flashDuration: 0.1
   explosionPrefab: {fileID: 1612062634570420469, guid: 74efb6b66c33917429b9526e1291b57e, type: 3}
   hitSoundName: EnemyHit-1
@@ -542,7 +543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9355c81a781b8944bbe6a11a56211b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  moveSpeed: 0.3
+  moveSpeed: 0.7
 --- !u!61 &2057671235911046515
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -698,7 +699,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 339106675
-  m_SortingLayer: 11
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 6234176133674011997, guid: f944ad2136577704f85851162fd91246, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
