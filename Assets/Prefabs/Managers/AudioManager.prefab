@@ -100,7 +100,7 @@ MonoBehaviour:
   mainMixer: {fileID: 24100000, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
   sounds:
   - name: MenuMusic
-    clip: {fileID: 8300000, guid: 47881b60192289243a1416f9aa0d2df2, type: 3}
+    clip: {fileID: 8300000, guid: 7f3d01a6aaf5a4b4c9acc5ace94d0761, type: 3}
     mixerGroup: {fileID: -4916374132875042146, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
     volume: 1
     pitch: 1
@@ -115,6 +115,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: GameMusicBoss
     clip: {fileID: 8300000, guid: 4c0acbda6ca0d1a41afeebc72b0a678a, type: 3}
+    mixerGroup: {fileID: -4916374132875042146, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: DeathMusic
+    clip: {fileID: 8300000, guid: 1248d9f7a8817354e96f10a842e1a4c7, type: 3}
     mixerGroup: {fileID: -4916374132875042146, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
     volume: 1
     pitch: 1
@@ -142,6 +149,20 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Click_UI
+    clip: {fileID: 8300000, guid: f6eb81f01426b9c49adac339d6032fd8, type: 3}
+    mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerShoot-1
+    clip: {fileID: 8300000, guid: 329bd76e4eb3e6d46b0a8381c99c1153, type: 3}
+    mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyShoot-1
     clip: {fileID: 8300000, guid: f6eb81f01426b9c49adac339d6032fd8, type: 3}
     mixerGroup: {fileID: -6503319523157330306, guid: 4e86bdb4f477eff4bb2e2bdebf258659, type: 2}
     volume: 1

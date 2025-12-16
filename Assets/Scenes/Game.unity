@@ -2486,6 +2486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1321288720232033891, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
+      propertyPath: isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2368846839658694080, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2542,6 +2546,10 @@ PrefabInstance:
       propertyPath: shieldObject
       value: 
       objectReference: {fileID: 1458269909}
+    - target: {fileID: 6719070326037575013, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
+      propertyPath: isPlayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2549,6 +2557,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 477131009155998355, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1458269908}
+    - targetCorrespondingSourceObject: {fileID: 477131009155998355, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1458269910}
   m_SourcePrefab: {fileID: 100100000, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
 --- !u!1 &1458269907 stripped
 GameObject:
@@ -2575,6 +2586,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5921961735487781652, guid: b58a50a46e6b0734fb158ff400eb5594, type: 3}
   m_PrefabInstance: {fileID: 1458269906}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1458269910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458269907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6099ef6539bfa4242aca140058b02a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFX2DSource
+  soundName: MenuMusic
+  condition: 0
+  targetTag: 
+  destroyAfterPlay: 0
+  destroyDelay: 0
 --- !u!114 &1469942882 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1009177806166516651, guid: c39710a3a5f253a4fadad0b782124b7d, type: 3}

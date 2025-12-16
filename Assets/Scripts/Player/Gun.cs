@@ -2,6 +2,14 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    [Header("Настройки владельца")]
+    [Tooltip("Если true, это оружие принадлежит игроку, иначе - врагу.")]
+    public bool isPlayer = false; 
+
+    [Header("Звуки выстрела")]
+    public string playerShootSoundName = "PlayerShoot-1";
+    public string enemyShootSoundName = "EnemyShoot-1";
+
     public Bullet bullet;
     public Bullet AltBullet;
     Vector2 direction;
@@ -45,6 +53,8 @@ public class Gun : MonoBehaviour
     {
         if (delayTimer < shootDelaySeconds) return;
 
+        PlayShootSound();
+
         SpriteRenderer bulletRenderer = bullet.GetComponent<SpriteRenderer>();
         float bulletHeight = 0f;
 
@@ -61,6 +71,7 @@ public class Gun : MonoBehaviour
         
         Bullet goBullet = go.GetComponent<Bullet>();
         goBullet.direction = direction;
+        goBullet.isEnemy = !isPlayer; 
         currentFiredBullet = goBullet; 
 
         DespawnBulletIfLaser(currentFiredBullet);
@@ -69,6 +80,8 @@ public class Gun : MonoBehaviour
     public void AltShoot()
     {
         if (delayTimer < shootDelaySeconds) return;
+
+        PlayShootSound();
 
         SpriteRenderer AltBulletRenderer = AltBullet.GetComponent<SpriteRenderer>();
         float bulletHeight = 0f;
@@ -86,6 +99,7 @@ public class Gun : MonoBehaviour
         
         Bullet goBullet = go.GetComponent<Bullet>();
         goBullet.direction = direction;
+        goBullet.isEnemy = !isPlayer; 
         currentFiredBullet = goBullet; 
 
         DespawnBulletIfLaser(currentFiredBullet);
@@ -97,6 +111,14 @@ public class Gun : MonoBehaviour
         {
             bullet.FadeOutAndDestroy(); 
             currentFiredBullet = null; 
+        }
+    }
+    private void PlayShootSound()
+    {
+        if (AudioManager.instance != null)
+        {
+            string soundName = isPlayer ? playerShootSoundName : enemyShootSoundName;
+            AudioManager.instance.PlaySFXOneShot(soundName);
         }
     }
 }
