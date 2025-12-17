@@ -38,6 +38,8 @@ public class ScoreSystem : MonoBehaviour
         if (scoreText != null)
         {
             defaultScoreColor = scoreText.color;
+            // SaveSystem.InitializeNewGame(); 
+            // УДАЛЕНИЕ ФАЙЛА СОХРАНЕНИЯ 
         }
         saveData = SaveSystem.Load();
         highScore = saveData != null ? saveData.highScore : 0;

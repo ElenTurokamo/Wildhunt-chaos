@@ -1,0 +1,1625 @@
+fileFormatVersion: 2
+guid: 65687cf79e62ae647ae20018dda007f6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -419893275373269315
+    second: Shop_Notification_Open_0
+  - first:
+      213: -2968744358902071151
+    second: Shop_Notification_Open_1
+  - first:
+      213: -8666793967577272738
+    second: Shop_Notification_Open_2
+  - first:
+      213: -2183615822460248847
+    second: Shop_Notification_Open_3
+  - first:
+      213: -7619115470728930319
+    second: Shop_Notification_Open_4
+  - first:
+      213: -8175846716701468888
+    second: Shop_Notification_Open_5
+  - first:
+      213: 2449932151974206571
+    second: Shop_Notification_Open_6
+  - first:
+      213: -2383747751840501248
+    second: Shop_Notification_Open_7
+  - first:
+      213: -280526561620857582
+    second: Shop_Notification_Open_8
+  - first:
+      213: 1282521079480050562
+    second: Shop_Notification_Open_9
+  - first:
+      213: -7199846562762296264
+    second: Shop_Notification_Open_10
+  - first:
+      213: -7634237271011911587
+    second: Shop_Notification_Open_11
+  - first:
+      213: -3643190273321758914
+    second: Shop_Notification_Open_12
+  - first:
+      213: 2395447850611877090
+    second: Shop_Notification_Open_13
+  - first:
+      213: 6441515011176829775
+    second: Shop_Notification_Open_14
+  - first:
+      213: 3323110611406915477
+    second: Shop_Notification_Open_15
+  - first:
+      213: 3234264625026281464
+    second: Shop_Notification_Open_16
+  - first:
+      213: -4254423380186591855
+    second: Shop_Notification_Open_17
+  - first:
+      213: -4583653645094458033
+    second: Shop_Notification_Open_18
+  - first:
+      213: 6931638399957122810
+    second: Shop_Notification_Open_19
+  - first:
+      213: 6642176773281287853
+    second: Shop_Notification_Open_20
+  - first:
+      213: 3432111051256977105
+    second: Shop_Notification_Open_21
+  - first:
+      213: -1645196154868715422
+    second: Shop_Notification_Open_22
+  - first:
+      213: -3345970781908160900
+    second: Shop_Notification_Open_23
+  - first:
+      213: 7111741156414170065
+    second: Shop_Notification_Open_24
+  - first:
+      213: 3262291538490111569
+    second: Shop_Notification_Open_25
+  - first:
+      213: 7539009824286681487
+    second: Shop_Notification_Open_26
+  - first:
+      213: -830200514198035843
+    second: Shop_Notification_Open_27
+  - first:
+      213: 4616346596173943937
+    second: Shop_Notification_Open_28
+  - first:
+      213: 867190942791206679
+    second: Shop_Notification_Open_29
+  - first:
+      213: 7186350151317879507
+    second: Shop_Notification_Open_30
+  - first:
+      213: -5337435104613559225
+    second: Shop_Notification_Open_31
+  - first:
+      213: 5026816228179844941
+    second: Shop_Notification_Open_32
+  - first:
+      213: 6762756328466282861
+    second: Shop_Notification_Open_33
+  - first:
+      213: -8744494629867005295
+    second: Shop_Notification_Open_34
+  - first:
+      213: -7032289767752282367
+    second: Shop_Notification_Open_35
+  - first:
+      213: 7603125636305987541
+    second: Shop_Notification_Open_36
+  - first:
+      213: -7261900199976242841
+    second: Shop_Notification_Open_37
+  - first:
+      213: 8899702092589691476
+    second: Shop_Notification_Open_38
+  - first:
+      213: -6613526293850353685
+    second: Shop_Notification_Open_39
+  - first:
+      213: 6808091028688475243
+    second: Shop_Notification_Open_40
+  - first:
+      213: -3311153382347754506
+    second: Shop_Notification_Open_41
+  - first:
+      213: -6241834520921837704
+    second: Shop_Notification_Open_42
+  - first:
+      213: -6183397183185896865
+    second: Shop_Notification_Open_43
+  - first:
+      213: 7474307416988579658
+    second: Shop_Notification_Open_44
+  - first:
+      213: -5292761127008690347
+    second: Shop_Notification_Open_45
+  - first:
+      213: -7028815986617323526
+    second: Shop_Notification_Open_46
+  - first:
+      213: -912470662935462533
+    second: Shop_Notification_Open_47
+  - first:
+      213: 6201253612383775360
+    second: Shop_Notification_Open_48
+  - first:
+      213: -3154509968476870193
+    second: Shop_Notification_Open_49
+  - first:
+      213: 5306691734075802639
+    second: Shop_Notification_Open_50
+  - first:
+      213: 1243287444574052927
+    second: Shop_Notification_Open_51
+  - first:
+      213: 5063908064001665114
+    second: Shop_Notification_Open_52
+  - first:
+      213: 6477571424161295749
+    second: Shop_Notification_Open_53
+  - first:
+      213: -3336918131702766095
+    second: Shop_Notification_Open_54
+  - first:
+      213: -8626891507618591284
+    second: Shop_Notification_Open_55
+  - first:
+      213: -9163026899318089552
+    second: Shop_Notification_Open_56
+  - first:
+      213: -1647039964592868669
+    second: Shop_Notification_Open_57
+  - first:
+      213: 420572909537396484
+    second: Shop_Notification_Open_58
+  - first:
+      213: 1606663400609738552
+    second: Shop_Notification_Open_59
+  - first:
+      213: 6994083815248427770
+    second: Shop_Notification_Open_60
+  - first:
+      213: -701201845555734548
+    second: Shop_Notification_Open_61
+  - first:
+      213: 1666211617365465184
+    second: Shop_Notification_Open_62
+  - first:
+      213: 6364071970616174021
+    second: Shop_Notification_Open_63
+  - first:
+      213: -7746223342707714037
+    second: Shop_Notification_Open_64
+  - first:
+      213: -5885741319517722246
+    second: Shop_Notification_Open_65
+  - first:
+      213: 5612788906791578255
+    second: Shop_Notification_Open_66
+  - first:
+      213: -1472014387485917036
+    second: Shop_Notification_Open_67
+  - first:
+      213: -5967989941997477071
+    second: Shop_Notification_Open_68
+  - first:
+      213: 7059108138719836687
+    second: Shop_Notification_Open_69
+  - first:
+      213: -2091825152610121962
+    second: Shop_Notification_Open_70
+  - first:
+      213: 4260734482642584173
+    second: Shop_Notification_Open_71
+  - first:
+      213: -1394175322708421379
+    second: Shop_Notification_Open_72
+  - first:
+      213: 164002623715172600
+    second: Shop_Notification_Open_73
+  - first:
+      213: 6020848931433213554
+    second: Shop_Notification_Open_74
+  - first:
+      213: 3122429494760052457
+    second: Shop_Notification_Open_75
+  - first:
+      213: 4904572456416049720
+    second: Shop_Notification_Open_76
+  - first:
+      213: -8729162265180918587
+    second: Shop_Notification_Open_77
+  - first:
+      213: -5365489158475575427
+    second: Shop_Notification_Open_78
+  - first:
+      213: -2476473528746581300
+    second: Shop_Notification_Open_79
+  - first:
+      213: -8412759188690371080
+    second: Shop_Notification_Open_80
+  - first:
+      213: 697915763807808597
+    second: Shop_Notification_Open_81
+  - first:
+      213: 8280007468391856533
+    second: Shop_Notification_Open_82
+  - first:
+      213: 2645748649524586516
+    second: Shop_Notification_Open_83
+  - first:
+      213: -2225859975579596685
+    second: Shop_Notification_Open_84
+  - first:
+      213: 8833621317431345083
+    second: Shop_Notification_Open_85
+  - first:
+      213: -5305815607937415239
+    second: Shop_Notification_Open_86
+  - first:
+      213: -5291122798809001001
+    second: Shop_Notification_Open_87
+  - first:
+      213: -8944399497719723114
+    second: Shop_Notification_Open_88
+  - first:
+      213: 86092376943818592
+    second: Shop_Notification_Open_89
+  - first:
+      213: -4523745270336805677
+    second: Shop_Notification_Open_90
+  - first:
+      213: -2425638039740362958
+    second: Shop_Notification_Open_91
+  - first:
+      213: 1806715972936700760
+    second: Shop_Notification_Open_92
+  - first:
+      213: -3738088751993517683
+    second: Shop_Notification_Open_93
+  - first:
+      213: -490456895218978362
+    second: Shop_Notification_Open_94
+  - first:
+      213: 1030995253272058407
+    second: Shop_Notification_Open_95
+  - first:
+      213: 2533689733523554715
+    second: Shop_Notification_Open_96
+  - first:
+      213: 8842450834166151435
+    second: Shop_Notification_Open_97
+  - first:
+      213: -2880816614835244967
+    second: Shop_Notification_Open_98
+  - first:
+      213: 3230877845621288929
+    second: Shop_Notification_Open_99
+  - first:
+      213: 2110316562006425344
+    second: Shop_Notification_Open_100
+  - first:
+      213: -4732159627260435262
+    second: Shop_Notification_Open_101
+  - first:
+      213: -1237441775203223668
+    second: Shop_Notification_Open_102
+  - first:
+      213: 844324704764894698
+    second: Shop_Notification_Open_103
+  - first:
+      213: 8872348776039872134
+    second: Shop_Notification_Open_104
+  - first:
+      213: 5023982962113891710
+    second: Shop_Notification_Open_105
+  - first:
+      213: -405993907617238572
+    second: Shop_Notification_Open_106
+  - first:
+      213: -2702495467532213292
+    second: Shop_Notification_Open_107
+  - first:
+      213: -1338847345589372277
+    second: Shop_Notification_Open_108
+  - first:
+      213: 7150981142407811732
+    second: Shop_Notification_Open_109
+  - first:
+      213: 5467660226383319309
+    second: Shop_Notification_Open_110
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shop_Notification_Open_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe0dcd6a4d3c2af0800000000000000
+      internalID: -419893275373269315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19082b21cb6ecc6d0800000000000000
+      internalID: -2968744358902071151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5eee0d1ecc59b780800000000000000
+      internalID: -8666793967577272738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fc95509afc32b1e0800000000000000
+      internalID: -2183615822460248847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fbd480e8d6734690800000000000000
+      internalID: -7619115470728930319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82717f88abe898e80800000000000000
+      internalID: -8175846716701468888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6c1b3adf48eff120800000000000000
+      internalID: 2449932151974206571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0023961ac0a3beed0800000000000000
+      internalID: -2383747751840501248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21de688149e5b1cf0800000000000000
+      internalID: -280526561620857582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 283eb5f602e6cc110800000000000000
+      internalID: 1282521079480050562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8347c3592b1051c90800000000000000
+      internalID: -7199846562762296264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d58994266adbd0690800000000000000
+      internalID: -7634237271011911587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f8f75bfb9c07dc0800000000000000
+      internalID: -3643190273321758914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_13
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4a1b5e0275e3120800000000000000
+      internalID: 2395447850611877090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f439a8826cbd46950800000000000000
+      internalID: 6441515011176829775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_15
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5978d369e7f0e1e20800000000000000
+      internalID: 3323110611406915477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_16
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ffad446a8a62ec20800000000000000
+      internalID: 3234264625026281464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_17
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19d8cd30a7045f4c0800000000000000
+      internalID: -4254423380186591855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_18
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d68b68b479360c0800000000000000
+      internalID: -4583653645094458033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_19
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afeb6ec3660223060800000000000000
+      internalID: 6931638399957122810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_20
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae08c26590cd2c50800000000000000
+      internalID: 6642176773281287853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_21
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d65dd721de41af20800000000000000
+      internalID: 3432111051256977105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_22
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260363350d61b29e0800000000000000
+      internalID: -1645196154868715422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_23
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e27833d49b091d0800000000000000
+      internalID: -3345970781908160900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_24
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d3a792f6eaf1b260800000000000000
+      internalID: 7111741156414170065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_25
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1563771bedcf54d20800000000000000
+      internalID: 3262291538490111569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_26
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f89a9c6ed71ff9860800000000000000
+      internalID: 7539009824286681487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_27
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7221eae7098a74f0800000000000000
+      internalID: -830200514198035843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_28
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 184180155ce801040800000000000000
+      internalID: 4616346596173943937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_29
+      rect:
+        serializedVersion: 2
+        x: 3712
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71781816191e80c00800000000000000
+      internalID: 867190942791206679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_30
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3da70e0436b0bb360800000000000000
+      internalID: 7186350151317879507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_31
+      rect:
+        serializedVersion: 2
+        x: 3968
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7441fc12d0f9de5b0800000000000000
+      internalID: -5337435104613559225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_32
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4f14dfe9b6d2c540800000000000000
+      internalID: 5026816228179844941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_33
+      rect:
+        serializedVersion: 2
+        x: 4224
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d69f1c4dc032add50800000000000000
+      internalID: 6762756328466282861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_34
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a5776e67055a680800000000000000
+      internalID: -8744494629867005295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_35
+      rect:
+        serializedVersion: 2
+        x: 4480
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10fc28307b9486e90800000000000000
+      internalID: -7032289767752282367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_36
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d72faeab7ab38960800000000000000
+      internalID: 7603125636305987541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_37
+      rect:
+        serializedVersion: 2
+        x: 4736
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761f31a4e3c883b90800000000000000
+      internalID: -7261900199976242841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_38
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 452fb9b86e7128b70800000000000000
+      internalID: 8899702092589691476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_39
+      rect:
+        serializedVersion: 2
+        x: 4992
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bef085e20e80834a0800000000000000
+      internalID: -6613526293850353685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_40
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b64108348b23b7e50800000000000000
+      internalID: 6808091028688475243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_41
+      rect:
+        serializedVersion: 2
+        x: 5248
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f33450ca8b6c02d0800000000000000
+      internalID: -3311153382347754506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_42
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87feea9e29c8069a0800000000000000
+      internalID: -6241834520921837704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_43
+      rect:
+        serializedVersion: 2
+        x: 5504
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5abd0fd509203aa0800000000000000
+      internalID: -6183397183185896865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_44
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47fba3cef21ab760800000000000000
+      internalID: 7474307416988579658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_45
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55f96a71cc55c86b0800000000000000
+      internalID: -5292761127008690347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_46
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff6616b911a47e90800000000000000
+      internalID: -7028815986617323526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_47
+      rect:
+        serializedVersion: 2
+        x: 6016
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7d34cb34c04653f0800000000000000
+      internalID: -912470662935462533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_48
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a2e380e474f0650800000000000000
+      internalID: 6201253612383775360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_49
+      rect:
+        serializedVersion: 2
+        x: 6272
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9e180a5ede834d0800000000000000
+      internalID: -3154509968476870193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Notification_Open_50
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f04071e140825a940800000000000000
+      internalID: 5306691734075802639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d6443ccdcb6a9de47bc247623c360cc5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":51.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Shop_Notification_Open_0: -419893275373269315
+      Shop_Notification_Open_1: -2968744358902071151
+      Shop_Notification_Open_10: -7199846562762296264
+      Shop_Notification_Open_11: -7634237271011911587
+      Shop_Notification_Open_12: -3643190273321758914
+      Shop_Notification_Open_13: 2395447850611877090
+      Shop_Notification_Open_14: 6441515011176829775
+      Shop_Notification_Open_15: 3323110611406915477
+      Shop_Notification_Open_16: 3234264625026281464
+      Shop_Notification_Open_17: -4254423380186591855
+      Shop_Notification_Open_18: -4583653645094458033
+      Shop_Notification_Open_19: 6931638399957122810
+      Shop_Notification_Open_2: -8666793967577272738
+      Shop_Notification_Open_20: 6642176773281287853
+      Shop_Notification_Open_21: 3432111051256977105
+      Shop_Notification_Open_22: -1645196154868715422
+      Shop_Notification_Open_23: -3345970781908160900
+      Shop_Notification_Open_24: 7111741156414170065
+      Shop_Notification_Open_25: 3262291538490111569
+      Shop_Notification_Open_26: 7539009824286681487
+      Shop_Notification_Open_27: -830200514198035843
+      Shop_Notification_Open_28: 4616346596173943937
+      Shop_Notification_Open_29: 867190942791206679
+      Shop_Notification_Open_3: -2183615822460248847
+      Shop_Notification_Open_30: 7186350151317879507
+      Shop_Notification_Open_31: -5337435104613559225
+      Shop_Notification_Open_32: 5026816228179844941
+      Shop_Notification_Open_33: 6762756328466282861
+      Shop_Notification_Open_34: -8744494629867005295
+      Shop_Notification_Open_35: -7032289767752282367
+      Shop_Notification_Open_36: 7603125636305987541
+      Shop_Notification_Open_37: -7261900199976242841
+      Shop_Notification_Open_38: 8899702092589691476
+      Shop_Notification_Open_39: -6613526293850353685
+      Shop_Notification_Open_4: -7619115470728930319
+      Shop_Notification_Open_40: 6808091028688475243
+      Shop_Notification_Open_41: -3311153382347754506
+      Shop_Notification_Open_42: -6241834520921837704
+      Shop_Notification_Open_43: -6183397183185896865
+      Shop_Notification_Open_44: 7474307416988579658
+      Shop_Notification_Open_45: -5292761127008690347
+      Shop_Notification_Open_46: -7028815986617323526
+      Shop_Notification_Open_47: -912470662935462533
+      Shop_Notification_Open_48: 6201253612383775360
+      Shop_Notification_Open_49: -3154509968476870193
+      Shop_Notification_Open_5: -8175846716701468888
+      Shop_Notification_Open_50: 5306691734075802639
+      Shop_Notification_Open_6: 2449932151974206571
+      Shop_Notification_Open_7: -2383747751840501248
+      Shop_Notification_Open_8: -280526561620857582
+      Shop_Notification_Open_9: 1282521079480050562
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

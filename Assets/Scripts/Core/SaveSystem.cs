@@ -5,6 +5,21 @@ public static class SaveSystem
 {
     private static string SavePath => Path.Combine(Application.persistentDataPath, "save.json");
 
+    public static void InitializeNewGame()
+    {
+        if (File.Exists(SavePath))
+        {
+            File.Delete(SavePath);
+            Debug.Log($"[SaveSystem] Старый файл сохранения удален: {SavePath}");
+        }
+
+        SaveData newSave = new SaveData(); 
+        
+        Save(newSave); 
+        
+        Debug.Log("[SaveSystem] Создан новый пустой файл сохранения.");
+    }
+
     public static void Save(SaveData data)
     {
         string json = JsonUtility.ToJson(data, true);

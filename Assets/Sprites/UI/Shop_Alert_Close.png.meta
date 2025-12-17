@@ -1,0 +1,1625 @@
+fileFormatVersion: 2
+guid: 440abbcb51f9b8f4e969e2cff28d4cb7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4240727244575501087
+    second: Shop_Alert_Close_0
+  - first:
+      213: 2735933526332620724
+    second: Shop_Alert_Close_1
+  - first:
+      213: 7071022868362858290
+    second: Shop_Alert_Close_2
+  - first:
+      213: 150629614359670894
+    second: Shop_Alert_Close_3
+  - first:
+      213: 3879167030801019657
+    second: Shop_Alert_Close_4
+  - first:
+      213: -9192934420104870290
+    second: Shop_Alert_Close_5
+  - first:
+      213: -6142441468198998813
+    second: Shop_Alert_Close_6
+  - first:
+      213: 6567992373078520252
+    second: Shop_Alert_Close_7
+  - first:
+      213: 4553228259519769887
+    second: Shop_Alert_Close_8
+  - first:
+      213: 5557997706188863517
+    second: Shop_Alert_Close_9
+  - first:
+      213: 3887979566726578251
+    second: Shop_Alert_Close_10
+  - first:
+      213: 9121450731729888828
+    second: Shop_Alert_Close_11
+  - first:
+      213: -2878049039261831342
+    second: Shop_Alert_Close_12
+  - first:
+      213: 5278160105427803173
+    second: Shop_Alert_Close_13
+  - first:
+      213: 7717867998480726643
+    second: Shop_Alert_Close_14
+  - first:
+      213: 4349766801712142889
+    second: Shop_Alert_Close_15
+  - first:
+      213: 2875498947265947002
+    second: Shop_Alert_Close_16
+  - first:
+      213: 2571965952250105879
+    second: Shop_Alert_Close_17
+  - first:
+      213: 4095162008020979814
+    second: Shop_Alert_Close_18
+  - first:
+      213: -5704874126189293258
+    second: Shop_Alert_Close_19
+  - first:
+      213: -577370635858496584
+    second: Shop_Alert_Close_20
+  - first:
+      213: 6868159624006011333
+    second: Shop_Alert_Close_21
+  - first:
+      213: -626167195431145872
+    second: Shop_Alert_Close_22
+  - first:
+      213: 6236599629071491939
+    second: Shop_Alert_Close_23
+  - first:
+      213: 6325426694206826252
+    second: Shop_Alert_Close_24
+  - first:
+      213: -6758154563527884259
+    second: Shop_Alert_Close_25
+  - first:
+      213: 6439192285578189343
+    second: Shop_Alert_Close_26
+  - first:
+      213: -189106938467573251
+    second: Shop_Alert_Close_27
+  - first:
+      213: 4813304990653271060
+    second: Shop_Alert_Close_28
+  - first:
+      213: 2476206507948837827
+    second: Shop_Alert_Close_29
+  - first:
+      213: 1966092837843923625
+    second: Shop_Alert_Close_30
+  - first:
+      213: 8670873389461584557
+    second: Shop_Alert_Close_31
+  - first:
+      213: -3566321135542951622
+    second: Shop_Alert_Close_32
+  - first:
+      213: -2516584257483531727
+    second: Shop_Alert_Close_33
+  - first:
+      213: 7970642023676554114
+    second: Shop_Alert_Close_34
+  - first:
+      213: 6697108156798605955
+    second: Shop_Alert_Close_35
+  - first:
+      213: 5702617273925689076
+    second: Shop_Alert_Close_36
+  - first:
+      213: -6230600176345972798
+    second: Shop_Alert_Close_37
+  - first:
+      213: 5510569706690586911
+    second: Shop_Alert_Close_38
+  - first:
+      213: 127122236608505686
+    second: Shop_Alert_Close_39
+  - first:
+      213: -4747583960666246335
+    second: Shop_Alert_Close_40
+  - first:
+      213: -3268713457748753943
+    second: Shop_Alert_Close_41
+  - first:
+      213: 1559378618647708152
+    second: Shop_Alert_Close_42
+  - first:
+      213: -4298737779448452337
+    second: Shop_Alert_Close_43
+  - first:
+      213: -2871346122851681799
+    second: Shop_Alert_Close_44
+  - first:
+      213: -1877614148256570299
+    second: Shop_Alert_Close_45
+  - first:
+      213: -8977175965660974377
+    second: Shop_Alert_Close_46
+  - first:
+      213: -5284777469174676073
+    second: Shop_Alert_Close_47
+  - first:
+      213: -7913826063814060930
+    second: Shop_Alert_Close_48
+  - first:
+      213: -8410469134264263022
+    second: Shop_Alert_Close_49
+  - first:
+      213: 6460441782781773252
+    second: Shop_Alert_Close_50
+  - first:
+      213: 5637733709374882209
+    second: Shop_Alert_Close_51
+  - first:
+      213: -184647826586217062
+    second: Shop_Alert_Close_52
+  - first:
+      213: -2619495848797879167
+    second: Shop_Alert_Close_53
+  - first:
+      213: 4884984606031187245
+    second: Shop_Alert_Close_54
+  - first:
+      213: -4214761164602026334
+    second: Shop_Alert_Close_55
+  - first:
+      213: -2207235117657549493
+    second: Shop_Alert_Close_56
+  - first:
+      213: 4623934899838174862
+    second: Shop_Alert_Close_57
+  - first:
+      213: 4775558871355270749
+    second: Shop_Alert_Close_58
+  - first:
+      213: -683129656345527462
+    second: Shop_Alert_Close_59
+  - first:
+      213: 6397813299039902895
+    second: Shop_Alert_Close_60
+  - first:
+      213: -1942881162694871420
+    second: Shop_Alert_Close_61
+  - first:
+      213: -4325675747336675720
+    second: Shop_Alert_Close_62
+  - first:
+      213: 8117500286190424403
+    second: Shop_Alert_Close_63
+  - first:
+      213: 8991702722811438585
+    second: Shop_Alert_Close_64
+  - first:
+      213: 5142108228903097217
+    second: Shop_Alert_Close_65
+  - first:
+      213: -1808944011376939143
+    second: Shop_Alert_Close_66
+  - first:
+      213: 4227334241478748775
+    second: Shop_Alert_Close_67
+  - first:
+      213: -4534256515006851927
+    second: Shop_Alert_Close_68
+  - first:
+      213: 5519308532440605385
+    second: Shop_Alert_Close_69
+  - first:
+      213: -3119881787183008893
+    second: Shop_Alert_Close_70
+  - first:
+      213: -4009556739839766854
+    second: Shop_Alert_Close_71
+  - first:
+      213: -197454376649594407
+    second: Shop_Alert_Close_72
+  - first:
+      213: -6227413703636735233
+    second: Shop_Alert_Close_73
+  - first:
+      213: -8454981065208125754
+    second: Shop_Alert_Close_74
+  - first:
+      213: 5408563807847525390
+    second: Shop_Alert_Close_75
+  - first:
+      213: -4779396442291577266
+    second: Shop_Alert_Close_76
+  - first:
+      213: 4816789557220647358
+    second: Shop_Alert_Close_77
+  - first:
+      213: -1216670499095608322
+    second: Shop_Alert_Close_78
+  - first:
+      213: 5554547110301680762
+    second: Shop_Alert_Close_79
+  - first:
+      213: 209215220703309703
+    second: Shop_Alert_Close_80
+  - first:
+      213: -5789993861144876682
+    second: Shop_Alert_Close_81
+  - first:
+      213: -6993375043525248543
+    second: Shop_Alert_Close_82
+  - first:
+      213: 1798351364700323567
+    second: Shop_Alert_Close_83
+  - first:
+      213: 3303427568618405605
+    second: Shop_Alert_Close_84
+  - first:
+      213: -7293647588767217082
+    second: Shop_Alert_Close_85
+  - first:
+      213: 4684573451918120585
+    second: Shop_Alert_Close_86
+  - first:
+      213: -363043074307708460
+    second: Shop_Alert_Close_87
+  - first:
+      213: 7526308815166385785
+    second: Shop_Alert_Close_88
+  - first:
+      213: 241010471323912274
+    second: Shop_Alert_Close_89
+  - first:
+      213: 6975238315536368531
+    second: Shop_Alert_Close_90
+  - first:
+      213: -7260615601020394426
+    second: Shop_Alert_Close_91
+  - first:
+      213: -2440074250010358190
+    second: Shop_Alert_Close_92
+  - first:
+      213: -715986031894169372
+    second: Shop_Alert_Close_93
+  - first:
+      213: 7794877372324717228
+    second: Shop_Alert_Close_94
+  - first:
+      213: 6716866070122754197
+    second: Shop_Alert_Close_95
+  - first:
+      213: 5875952042669714189
+    second: Shop_Alert_Close_96
+  - first:
+      213: 1771093876331544520
+    second: Shop_Alert_Close_97
+  - first:
+      213: 4185417444368313900
+    second: Shop_Alert_Close_98
+  - first:
+      213: -1921434187774740518
+    second: Shop_Alert_Close_99
+  - first:
+      213: 5203049851447376047
+    second: Shop_Alert_Close_100
+  - first:
+      213: 3982049399010527492
+    second: Shop_Alert_Close_101
+  - first:
+      213: 474034822653714461
+    second: Shop_Alert_Close_102
+  - first:
+      213: 152095989594853646
+    second: Shop_Alert_Close_103
+  - first:
+      213: -2560330421832797064
+    second: Shop_Alert_Close_104
+  - first:
+      213: 134073361272780170
+    second: Shop_Alert_Close_105
+  - first:
+      213: -5068115775573104107
+    second: Shop_Alert_Close_106
+  - first:
+      213: -4932256078777307319
+    second: Shop_Alert_Close_107
+  - first:
+      213: 4856411680468697154
+    second: Shop_Alert_Close_108
+  - first:
+      213: -1472302320258130598
+    second: Shop_Alert_Close_109
+  - first:
+      213: 4915441758922832862
+    second: Shop_Alert_Close_110
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shop_Alert_Close_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e491c51a09e525c0800000000000000
+      internalID: -4240727244575501087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf332eeb0df7f520800000000000000
+      internalID: 2735933526332620724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23f8e6bb5d1512260800000000000000
+      internalID: 7071022868362858290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e60ff8016d4271200800000000000000
+      internalID: 150629614359670894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9033d4f9cd195d530800000000000000
+      internalID: 3879167030801019657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e660036e9d22c6080800000000000000
+      internalID: -9192934420104870290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ecae5a570aa1caa0800000000000000
+      internalID: -6142441468198998813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb1f1dcb342362b50800000000000000
+      internalID: 6567992373078520252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d22fd5af0503f30800000000000000
+      internalID: 4553228259519769887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d18b2db5779f12d40800000000000000
+      internalID: 5557997706188863517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4007b801d0e4f530800000000000000
+      internalID: 3887979566726578251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c36acfcec17e59e70800000000000000
+      internalID: 9121450731729888828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25fe4a8b5ad1f08d0800000000000000
+      internalID: -2878049039261831342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_13
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c99a7a6aacf3940800000000000000
+      internalID: 5278160105427803173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37a7cc8bd006b1b60800000000000000
+      internalID: 7717867998480726643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_15
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ad6df2cd97d5c30800000000000000
+      internalID: 4349766801712142889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_16
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a75ebc7be03d7e720800000000000000
+      internalID: 2875498947265947002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_17
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 710544e186571b320800000000000000
+      internalID: 2571965952250105879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_18
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66014c13620f4d830800000000000000
+      internalID: 4095162008020979814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_19
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6319b2c353734d0b0800000000000000
+      internalID: -5704874126189293258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_20
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b3b9e93774ccf7f0800000000000000
+      internalID: -577370635858496584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_21
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c90f89f9ca905f50800000000000000
+      internalID: 6868159624006011333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_22
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ee25ad0486f47f0800000000000000
+      internalID: -626167195431145872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_23
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 363a329d15adc8650800000000000000
+      internalID: 6236599629071491939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_24
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c07a8f8901e68c750800000000000000
+      internalID: 6325426694206826252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_25
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d124cbf0b363632a0800000000000000
+      internalID: -6758154563527884259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_26
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ad256744b9c5950800000000000000
+      internalID: 6439192285578189343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_27
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df1241ccd38206df0800000000000000
+      internalID: -189106938467573251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_28
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41cc083136b4cc240800000000000000
+      internalID: 4813304990653271060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_29
+      rect:
+        serializedVersion: 2
+        x: 3712
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cb0dc013b04d5220800000000000000
+      internalID: 2476206507948837827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_30
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a2702be407f84b10800000000000000
+      internalID: 1966092837843923625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_31
+      rect:
+        serializedVersion: 2
+        x: 3968
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daabe3f4861255870800000000000000
+      internalID: 8670873389461584557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_32
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a31aef882d1e18ec0800000000000000
+      internalID: -3566321135542951622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_33
+      rect:
+        serializedVersion: 2
+        x: 4224
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13a9a5583fb431dd0800000000000000
+      internalID: -2516584257483531727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_34
+      rect:
+        serializedVersion: 2
+        x: 4352
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28baa05b0b86d9e60800000000000000
+      internalID: 7970642023676554114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_35
+      rect:
+        serializedVersion: 2
+        x: 4480
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38a1a54c268e0fc50800000000000000
+      internalID: 6697108156798605955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_36
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fed8566234c32f40800000000000000
+      internalID: 5702617273925689076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_37
+      rect:
+        serializedVersion: 2
+        x: 4736
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf796796267889a0800000000000000
+      internalID: -6230600176345972798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_38
+      rect:
+        serializedVersion: 2
+        x: 4864
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f192255b3f9797c40800000000000000
+      internalID: 5510569706690586911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_39
+      rect:
+        serializedVersion: 2
+        x: 4992
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6576a1c2001a3c100800000000000000
+      internalID: 127122236608505686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_40
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1437523aa813d1eb0800000000000000
+      internalID: -4747583960666246335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_41
+      rect:
+        serializedVersion: 2
+        x: 5248
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e1c856bd6233a2d0800000000000000
+      internalID: -3268713457748753943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_42
+      rect:
+        serializedVersion: 2
+        x: 5376
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f106da779604a510800000000000000
+      internalID: 1559378618647708152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_43
+      rect:
+        serializedVersion: 2
+        x: 5504
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0b6c69e3c0d754c0800000000000000
+      internalID: -4298737779448452337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_44
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f9fa301aede628d0800000000000000
+      internalID: -2871346122851681799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_45
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5446be351ef51f5e0800000000000000
+      internalID: -1877614148256570299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_46
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d27a98b50aaa6380800000000000000
+      internalID: -8977175965660974377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_47
+      rect:
+        serializedVersion: 2
+        x: 6016
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7950bd844e2b8a6b0800000000000000
+      internalID: -5284777469174676073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_48
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e74922ccf117c2290800000000000000
+      internalID: -7913826063814060930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_49
+      rect:
+        serializedVersion: 2
+        x: 6272
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29e9ac902e2084b80800000000000000
+      internalID: -8410469134264263022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Alert_Close_50
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c58cc2929918a950800000000000000
+      internalID: 6460441782781773252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a8f8dc1229d7d4244b1ed5d2190fd801
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":51.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Shop_Alert_Close_0: -4240727244575501087
+      Shop_Alert_Close_1: 2735933526332620724
+      Shop_Alert_Close_10: 3887979566726578251
+      Shop_Alert_Close_11: 9121450731729888828
+      Shop_Alert_Close_12: -2878049039261831342
+      Shop_Alert_Close_13: 5278160105427803173
+      Shop_Alert_Close_14: 7717867998480726643
+      Shop_Alert_Close_15: 4349766801712142889
+      Shop_Alert_Close_16: 2875498947265947002
+      Shop_Alert_Close_17: 2571965952250105879
+      Shop_Alert_Close_18: 4095162008020979814
+      Shop_Alert_Close_19: -5704874126189293258
+      Shop_Alert_Close_2: 7071022868362858290
+      Shop_Alert_Close_20: -577370635858496584
+      Shop_Alert_Close_21: 6868159624006011333
+      Shop_Alert_Close_22: -626167195431145872
+      Shop_Alert_Close_23: 6236599629071491939
+      Shop_Alert_Close_24: 6325426694206826252
+      Shop_Alert_Close_25: -6758154563527884259
+      Shop_Alert_Close_26: 6439192285578189343
+      Shop_Alert_Close_27: -189106938467573251
+      Shop_Alert_Close_28: 4813304990653271060
+      Shop_Alert_Close_29: 2476206507948837827
+      Shop_Alert_Close_3: 150629614359670894
+      Shop_Alert_Close_30: 1966092837843923625
+      Shop_Alert_Close_31: 8670873389461584557
+      Shop_Alert_Close_32: -3566321135542951622
+      Shop_Alert_Close_33: -2516584257483531727
+      Shop_Alert_Close_34: 7970642023676554114
+      Shop_Alert_Close_35: 6697108156798605955
+      Shop_Alert_Close_36: 5702617273925689076
+      Shop_Alert_Close_37: -6230600176345972798
+      Shop_Alert_Close_38: 5510569706690586911
+      Shop_Alert_Close_39: 127122236608505686
+      Shop_Alert_Close_4: 3879167030801019657
+      Shop_Alert_Close_40: -4747583960666246335
+      Shop_Alert_Close_41: -3268713457748753943
+      Shop_Alert_Close_42: 1559378618647708152
+      Shop_Alert_Close_43: -4298737779448452337
+      Shop_Alert_Close_44: -2871346122851681799
+      Shop_Alert_Close_45: -1877614148256570299
+      Shop_Alert_Close_46: -8977175965660974377
+      Shop_Alert_Close_47: -5284777469174676073
+      Shop_Alert_Close_48: -7913826063814060930
+      Shop_Alert_Close_49: -8410469134264263022
+      Shop_Alert_Close_5: -9192934420104870290
+      Shop_Alert_Close_50: 6460441782781773252
+      Shop_Alert_Close_6: -6142441468198998813
+      Shop_Alert_Close_7: 6567992373078520252
+      Shop_Alert_Close_8: 4553228259519769887
+      Shop_Alert_Close_9: 5557997706188863517
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
