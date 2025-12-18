@@ -1,16 +1,22 @@
 using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseUI;
+    public ShopManager shopManager;
     private bool isPaused = false;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (shopManager != null && shopManager.IsShopOpen)
+            {
+                shopManager.CloseShop();
+                return; 
+            }
+
             if (isPaused) Resume();
             else Pause();
         }
@@ -40,10 +46,8 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         AudioListener.pause = false;
-
         if (AudioManager.instance != null)
             AudioManager.instance.SetMuffled(false, 0.1f);
-
         SceneManager.LoadScene("Bootstrap", LoadSceneMode.Single);
     }
 }

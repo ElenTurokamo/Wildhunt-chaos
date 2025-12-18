@@ -39,10 +39,9 @@ public class WaveController : MonoBehaviour
 
     private float timeSinceElite = 0f;
 
-    // --- ПЕРЕМЕННЫЕ ДЛЯ ОТСЛЕЖИВАНИЯ ПОВТОРОВ ---
     private WavePattern lastElitePattern;
     private WavePattern lastNormalPattern;
-    private WavePattern lastRarePattern; // <--- ДОБАВИЛ НОВУЮ ПЕРЕМЕННУЮ
+    private WavePattern lastRarePattern; 
 
     private readonly List<Transform> activeGroups = new();
 
@@ -143,13 +142,10 @@ public class WaveController : MonoBehaviour
         
         if (roll < 0.85f - rareBoost)
         {
-            // Обычная волна
             SpawnPattern(normalPatterns, ref lastNormalPattern);
         }
         else
         {
-            // Редкая волна
-            // ИСПРАВЛЕНО: передаем переменную lastRarePattern вместо null
             SpawnPattern(rarePatterns, ref lastRarePattern); 
         }
     }
@@ -183,7 +179,6 @@ public class WaveController : MonoBehaviour
             while (chosen == lastPattern && attempts > 0);
         }
 
-        // --- ВАЖНАЯ ПРОВЕРКА ОТ NULL REFERENCE ---
         if (chosen == null)
         {
             Debug.LogWarning("WaveController: Выбран пустой паттерн (null). Проверьте списки в Инспекторе на наличие пустых полей (None).");
@@ -192,7 +187,6 @@ public class WaveController : MonoBehaviour
 
         lastPattern = chosen;
 
-        // Теперь вызов безопасен
         Transform group = chosen.Spawn(this);
         if (group != null)
             activeGroups.Add(group);
@@ -211,7 +205,7 @@ public class WaveController : MonoBehaviour
         if (bossPrefabs.Count == 0) return;
 
         int i = Random.Range(0, bossPrefabs.Count);
-        if (bossPrefabs[i] != null) // Проверка на всякий случай
+        if (bossPrefabs[i] != null) 
         {
             currentBoss = Instantiate(bossPrefabs[i], bossSpawnPoint.position, Quaternion.identity);
         }
@@ -220,5 +214,10 @@ public class WaveController : MonoBehaviour
     public void RegisterGroup(Transform g)
     {
         activeGroups.Add(g);
+    }
+
+    public float GetTimeUntilElite()
+    {
+        return eliteInterval - timeSinceElite;  
     }
 }

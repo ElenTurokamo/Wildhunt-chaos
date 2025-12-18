@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private GameObject gameplayUI;
     [SerializeField] private GameObject gameOverUI;
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject shopAlertUI;
 
     [Header("Настройки жизней")]
     [SerializeField] private int _maxLives = 3;
@@ -111,7 +112,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (gameplayUI != null) gameplayUI.SetActive(false);
         if (pauseMenu != null) pauseMenu.SetActive(false);
-        if (gameOverUI != null) gameOverUI.SetActive(true);
+        if (shopAlertUI != null) shopAlertUI.SetActive(false);
+        if (gameOverUI != null) gameOverUI.SetActive(true);        
 
         Time.timeScale = 0f;
         Destroy(gameObject);
