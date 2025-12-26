@@ -53,14 +53,25 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 43a50355f1b8be749846f115deadd54c, type: 2}
   - {fileID: 11400000, guid: 1ad013734e3414e438e4b94ab3c0d57b, type: 2}
   - {fileID: 11400000, guid: 350c4125e39a0604fbefac51287b214b, type: 2}
-  elitePatterns: []
+  - {fileID: 11400000, guid: 46c0634a147942646ace7dfe274e171f, type: 2}
+  elitePatterns:
+  - {fileID: 11400000, guid: 22731407a869bfc4c87c8991bc321eb3, type: 2}
+  - {fileID: 11400000, guid: 7dd3952a876a7b245994f222c9f2dd0e, type: 2}
+  - {fileID: 11400000, guid: 23ffdf054fda24042a878f389c5280f0, type: 2}
+  - {fileID: 11400000, guid: 31f9ee9ba1e91d046a60071a92812c68, type: 2}
+  - {fileID: 11400000, guid: 7a56485f9bfb9ee41a8a71aa300c2982, type: 2}
+  - {fileID: 11400000, guid: 70b906f742b02744f99f226a246b4fdc, type: 2}
   rarePatterns: []
-  baseDelay: 4
+  bossPrefabs:
+  - {fileID: 2839816345852371713, guid: 408177652c0aef045a2d698dcf32ef89, type: 3}
+  bossSpawnPoint: {fileID: 8115839442595975925}
+  bossInterval: 60
+  bossBlockTime: 20
+  eliteInterval: 20
+  eliteChance: 0.15
+  baseDelay: 3
   minDelay: 1.2
   difficultyGrowth: 0.03
-  bossPrefab: {fileID: 2839816345852371713, guid: 408177652c0aef045a2d698dcf32ef89, type: 3}
-  bossSpawnPoint: {fileID: 8115839442595975925}
-  bossInterval: 20
   threat: {fileID: 7120536501229675050}
 --- !u!114 &7120536501229675050
 MonoBehaviour:
@@ -76,6 +87,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ThreatSystem
   baseThreat: 20
   growthRate: 0.5
+  reserveCap: 25
+  difficultyMultiplier: 0.05
+  allowDebt: 1
+  maxDebt: 8
 --- !u!1 &5198575860168960338
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +119,38 @@ Transform:
   m_LocalPosition: {x: 0, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6324997042873446253}
   m_Father: {fileID: 7353635910176394733}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5916868833975410134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6324997042873446253}
+  m_Layer: 0
+  m_Name: BossWave
+  m_TagString: BossActive
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6324997042873446253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5916868833975410134}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8115839442595975925}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

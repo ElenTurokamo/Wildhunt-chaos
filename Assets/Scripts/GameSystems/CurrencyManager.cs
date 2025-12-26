@@ -54,7 +54,6 @@ public class CurrencyManager : MonoBehaviour
             timer += Time.deltaTime;
             float t = timer / pulseDuration;
             
-            // Простой пинг-понг эффект: увеличение и возврат
             if (t < 0.5f)
                 currencyText.transform.localScale = Vector3.Lerp(originalScale, targetScale, t * 2);
             else

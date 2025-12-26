@@ -44,13 +44,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ea2192a3c73a34281dda1099f97cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopManager
+  currencyManager: {fileID: 7573322732534936834}
+  waveController: {fileID: 0}
   shopAlertUI: {fileID: 0}
   alertTimerImg: {fileID: 0}
   shopUI: {fileID: 0}
   alertAnimator: {fileID: 0}
-  waveController: {fileID: 0}
-  initialDelay: 60
-  shopCooldown: 120
+  itemsContainer: {fileID: 0}
+  cardPrefab: {fileID: 6144419618747269705, guid: 0f47600520c6b8348a83af16617bf5be, type: 3}
+  availableItems:
+  - {fileID: 11400000, guid: 7b538df7c2a898945a2b64eb6ab1c7fa, type: 2}
+  - {fileID: 11400000, guid: ce569c583a8de7848aa536cad13c8a01, type: 2}
+  - {fileID: 11400000, guid: 1c233e587cb4a4b46aa28df03e924a24, type: 2}
+  - {fileID: 11400000, guid: 870878b651c23404e9005a922e452704, type: 2}
+  healingBg: {fileID: -3959074134080707421, guid: 8bbbf87ef974a2049b71ab3691998905, type: 3}
+  defenseBg: {fileID: -3931478716794170322, guid: 3b23ad9d442bee9499b3d51d2ec6fdf6, type: 3}
+  buffBg: {fileID: -8836703098843142681, guid: 2a0e33bab79365442b7e4b8f8a618642, type: 3}
+  healingColor: {r: 0.56078434, g: 1, b: 0.57254905, a: 1}
+  defenseColor: {r: 0.56078434, g: 0.8235294, b: 1, a: 1}
+  buffColor: {r: 1, g: 0.56078434, b: 0.89411765, a: 1}
+  initialDelay: 30
+  shopCooldown: 60
   alertTimeWindow: 10
   closeAnimDuration: 1.4
   openKey: 102
