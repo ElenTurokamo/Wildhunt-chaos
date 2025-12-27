@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3b23ad9d442bee9499b3d51d2ec6fdf6
+guid: 26db48546d2aa14458c6b5fa7cb09f44
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3931478716794170322
-    second: Shop_Defence_Card_0
+      213: 9024317255042823099
+    second: Close_Shop_Button_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shop_Defence_Card_0
+      name: Close_Shop_Button_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 96
+        width: 88
+        height: 88
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e24997bdfe49079c0800000000000000
-      internalID: -3931478716794170322
+      spriteID: bb371470bb0dc3d70800000000000000
+      internalID: 9024317255042823099
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c283bc96820a8a64880a4f8a1882f3ae
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Shop_Defence_Card_0: -3931478716794170322
+      Close_Shop_Button_0: 9024317255042823099
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

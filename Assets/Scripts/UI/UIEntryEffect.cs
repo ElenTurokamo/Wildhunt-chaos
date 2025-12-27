@@ -5,14 +5,16 @@ using System.Collections;
 public class UIEntryEffect : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private float startOffsetY = 10f; // Смещение по Y (5 может быть мало для UI, попробуйте 50)
-    [SerializeField] private float duration = 1.0f;    // Длительность анимации
-    [SerializeField] private float delay = 0f;         // Задержка перед стартом (для эффекта "лесенки")
+    [SerializeField] private float startOffsetY = 10f;
+    [SerializeField] private float duration = 1.0f;
+    [SerializeField] private float delay = 0f;
+    [SerializeField] private bool replayOnEnable = false;
 
     private RectTransform _rectTransform;
     private CanvasGroup _canvasGroup;
     private Vector2 _finalPosition;
     private Vector2 _startPosition;
+    private bool _hasPlayed;
 
     private void Awake()
     {
@@ -21,25 +23,37 @@ public class UIEntryEffect : MonoBehaviour
 
         _finalPosition = _rectTransform.anchoredPosition;
         _startPosition = _finalPosition + new Vector2(0, startOffsetY);
-
-        // Сразу скрываем и смещаем
-        _canvasGroup.alpha = 0f;
-        _rectTransform.anchoredPosition = _startPosition;
     }
 
-    private IEnumerator Start()
+    private void OnEnable()
     {
+        if (replayOnEnable || !_hasPlayed)
+        {
+            StartCoroutine(AnimateRoutine());
+        }
+        else
+        {
+            _canvasGroup.alpha = 1f;
+            _rectTransform.anchoredPosition = _finalPosition;
+        }
+    }
+
+    private IEnumerator AnimateRoutine()
+    {
+        _hasPlayed = true;
+        
+        _canvasGroup.alpha = 0f;
+        _rectTransform.anchoredPosition = _startPosition;
+
         if (delay > 0)
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSecondsRealtime(delay);
 
         float elapsedTime = 0f;
 
         while (elapsedTime < duration)
         {
-            elapsedTime += Time.deltaTime;
+            elapsedTime += Time.unscaledDeltaTime;
             float percentage = Mathf.Clamp01(elapsedTime / duration);
-            
-            // Используем SmoothStep для более плавного движения
             float curve = Mathf.SmoothStep(0f, 1f, percentage);
 
             _canvasGroup.alpha = curve;

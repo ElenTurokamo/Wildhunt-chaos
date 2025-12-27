@@ -958,6 +958,7 @@ MonoBehaviour:
   startOffsetY: 20
   duration: 1
   delay: 0.1
+  replayOnEnable: 0
 --- !u!225 &391025274
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1777,6 +1778,7 @@ MonoBehaviour:
   startOffsetY: 20
   duration: 1
   delay: 0
+  replayOnEnable: 0
 --- !u!225 &671576520
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2874,7 +2876,7 @@ Camera:
   field of view: 34
   orthographic: 1
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -3272,6 +3274,7 @@ MonoBehaviour:
   startOffsetY: 20
   duration: 0.8
   delay: 1.1
+  replayOnEnable: 0
 --- !u!225 &1309163354
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3690,6 +3693,7 @@ MonoBehaviour:
   startOffsetY: 20
   duration: 1
   delay: 0.1
+  replayOnEnable: 0
 --- !u!225 &1451941954
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4302,6 +4306,7 @@ MonoBehaviour:
   startOffsetY: 20
   duration: 0.8
   delay: 1.2
+  replayOnEnable: 0
 --- !u!225 &1915266934
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5148,6 +5153,7 @@ MonoBehaviour:
   startOffsetY: 20
   duration: 0.8
   delay: 1
+  replayOnEnable: 0
 --- !u!225 &7603444762407261414
 CanvasGroup:
   m_ObjectHideFlags: 0
